@@ -142,9 +142,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Dubai Skyline Silhouette */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-contain bg-repeat-x bg-bottom opacity-30" style={{ backgroundImage: 'url(/images/dubai-skyline.svg)' }}></div>
-      
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-subtle-bounce z-20">
         <ArrowDown className="h-8 w-8 text-white/70" />
