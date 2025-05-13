@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Paintbrush, Droplet, Building } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,12 +33,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <Paintbrush className={`h-6 w-6 transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`} />
             <span className={`text-2xl font-parafina font-bold tracking-tighter transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
               DecoPaints
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -47,11 +49,27 @@ const Navigation = () => {
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="p-4 grid gap-2">
-                  {['Marmorino', 'Limewash', 'Concrete Texture', 'Pearl Finish', 'Gold & Silver Leaf', 'Brick Finish', 'Stencil Painting'].map((item) => (
-                    <a key={item} href="#" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
-                      <span className="text-deco-plum">{item}</span>
-                    </a>
-                  ))}
+                  <Link to="/paints/marmorino" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Marmorino</span>
+                  </Link>
+                  <Link to="/paints/limewash" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Limewash</span>
+                  </Link>
+                  <Link to="/paints/concrete-texture" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Concrete Texture</span>
+                  </Link>
+                  <Link to="/paints/pearl-finish" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Pearl Finish</span>
+                  </Link>
+                  <Link to="/paints/gold-silver-leaf" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Gold & Silver Leaf</span>
+                  </Link>
+                  <Link to="/paints/brick-finish" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Brick Finish</span>
+                  </Link>
+                  <Link to="/paints/stencil-painting" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Stencil Painting</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -63,11 +81,24 @@ const Navigation = () => {
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="p-4 grid gap-2">
-                  {['Micro-Topping & Micro-Cement', 'Terrazzo Flooring', 'Resin Bound Surface', 'Decorative Epoxy Flooring', 'Metallic Epoxy Flooring', 'Stamped Concrete'].map((item) => (
-                    <a key={item} href="#" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
-                      <span className="text-deco-plum">{item}</span>
-                    </a>
-                  ))}
+                  <Link to="/flooring/micro-cement" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Micro-Topping & Micro-Cement</span>
+                  </Link>
+                  <Link to="/flooring/terrazzo-flooring" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Terrazzo Flooring</span>
+                  </Link>
+                  <Link to="/flooring/resin-bound-surface" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Resin Bound Surface</span>
+                  </Link>
+                  <Link to="/flooring/decorative-epoxy" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Decorative Epoxy Flooring</span>
+                  </Link>
+                  <Link to="/flooring/metallic-epoxy" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Metallic Epoxy Flooring</span>
+                  </Link>
+                  <Link to="/flooring/stamped-concrete" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Stamped Concrete</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -79,12 +110,9 @@ const Navigation = () => {
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="p-4 grid gap-2">
-                  <a href="#" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
-                    <span className="text-deco-plum">UAE Emirates Hub</span>
-                  </a>
-                  <a href="#" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                  <Link to="/locations" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
                     <span className="text-deco-plum">Dubai Districts</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -95,11 +123,21 @@ const Navigation = () => {
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="p-4 grid gap-2">
-                  {['About', 'Careers', 'Blog', 'Sustainability', 'Press & Media'].map((item) => (
-                    <a key={item} href="#" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
-                      <span className="text-deco-plum">{item}</span>
-                    </a>
-                  ))}
+                  <Link to="/about" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">About</span>
+                  </Link>
+                  <Link to="/careers" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Careers</span>
+                  </Link>
+                  <Link to="/blog" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Blog</span>
+                  </Link>
+                  <Link to="/sustainability" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Sustainability</span>
+                  </Link>
+                  <Link to="/press-media" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                    <span className="text-deco-plum">Press & Media</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -113,10 +151,10 @@ const Navigation = () => {
           </nav>
 
           {/* Get Estimate Button */}
-          <a href="#" className="hidden md:flex items-center btn-cta">
+          <Link to="/contact" className="hidden md:flex items-center btn-cta">
             <Paintbrush className="mr-2 h-4 w-4" />
             Get Estimate
-          </a>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button 
@@ -133,12 +171,12 @@ const Navigation = () => {
       <div className={`lg:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="container mx-auto px-4 py-8">
           <div className="flex justify-between items-center mb-8">
-            <a href="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <Paintbrush className="h-6 w-6 text-deco-plum" />
               <span className="text-2xl font-parafina font-bold tracking-tighter text-deco-plum">
                 DecoPaints
               </span>
-            </a>
+            </Link>
             
             <button onClick={toggleMobileMenu} aria-label="Close menu">
               <X size={24} className="text-deco-plum" />
@@ -152,9 +190,13 @@ const Navigation = () => {
                 <span className="text-deco-plum">Paints</span>
               </div>
               <div className="grid gap-3 pl-2">
-                {['Marmorino', 'Limewash', 'Concrete Texture', 'Pearl Finish', 'Gold & Silver Leaf', 'Brick Finish', 'Stencil Painting'].map((item) => (
-                  <a key={item} href="#" className="text-deco-plum/80 hover:text-deco-plum">{item}</a>
-                ))}
+                <Link to="/paints/marmorino" className="text-deco-plum/80 hover:text-deco-plum">Marmorino</Link>
+                <Link to="/paints/limewash" className="text-deco-plum/80 hover:text-deco-plum">Limewash</Link>
+                <Link to="/paints/concrete-texture" className="text-deco-plum/80 hover:text-deco-plum">Concrete Texture</Link>
+                <Link to="/paints/pearl-finish" className="text-deco-plum/80 hover:text-deco-plum">Pearl Finish</Link>
+                <Link to="/paints/gold-silver-leaf" className="text-deco-plum/80 hover:text-deco-plum">Gold & Silver Leaf</Link>
+                <Link to="/paints/brick-finish" className="text-deco-plum/80 hover:text-deco-plum">Brick Finish</Link>
+                <Link to="/paints/stencil-painting" className="text-deco-plum/80 hover:text-deco-plum">Stencil Painting</Link>
               </div>
             </div>
             
@@ -164,9 +206,12 @@ const Navigation = () => {
                 <span className="text-deco-plum">Flooring</span>
               </div>
               <div className="grid gap-3 pl-2">
-                {['Micro-Topping & Micro-Cement', 'Terrazzo Flooring', 'Resin Bound Surface', 'Decorative Epoxy Flooring', 'Metallic Epoxy Flooring', 'Stamped Concrete'].map((item) => (
-                  <a key={item} href="#" className="text-deco-plum/80 hover:text-deco-plum">{item}</a>
-                ))}
+                <Link to="/flooring/micro-cement" className="text-deco-plum/80 hover:text-deco-plum">Micro-Topping & Micro-Cement</Link>
+                <Link to="/flooring/terrazzo-flooring" className="text-deco-plum/80 hover:text-deco-plum">Terrazzo Flooring</Link>
+                <Link to="/flooring/resin-bound-surface" className="text-deco-plum/80 hover:text-deco-plum">Resin Bound Surface</Link>
+                <Link to="/flooring/decorative-epoxy" className="text-deco-plum/80 hover:text-deco-plum">Decorative Epoxy Flooring</Link>
+                <Link to="/flooring/metallic-epoxy" className="text-deco-plum/80 hover:text-deco-plum">Metallic Epoxy Flooring</Link>
+                <Link to="/flooring/stamped-concrete" className="text-deco-plum/80 hover:text-deco-plum">Stamped Concrete</Link>
               </div>
             </div>
             
@@ -176,8 +221,7 @@ const Navigation = () => {
                 <span className="text-deco-plum">Locations</span>
               </div>
               <div className="grid gap-3 pl-2">
-                <a href="#" className="text-deco-plum/80 hover:text-deco-plum">UAE Emirates Hub</a>
-                <a href="#" className="text-deco-plum/80 hover:text-deco-plum">Dubai Districts</a>
+                <Link to="/locations" className="text-deco-plum/80 hover:text-deco-plum">Dubai Districts</Link>
               </div>
             </div>
             
@@ -186,9 +230,11 @@ const Navigation = () => {
                 <span className="text-deco-plum">Company</span>
               </div>
               <div className="grid gap-3 pl-2">
-                {['About', 'Careers', 'Blog', 'Sustainability', 'Press & Media'].map((item) => (
-                  <a key={item} href="#" className="text-deco-plum/80 hover:text-deco-plum">{item}</a>
-                ))}
+                <Link to="/about" className="text-deco-plum/80 hover:text-deco-plum">About</Link>
+                <Link to="/careers" className="text-deco-plum/80 hover:text-deco-plum">Careers</Link>
+                <Link to="/blog" className="text-deco-plum/80 hover:text-deco-plum">Blog</Link>
+                <Link to="/sustainability" className="text-deco-plum/80 hover:text-deco-plum">Sustainability</Link>
+                <Link to="/press-media" className="text-deco-plum/80 hover:text-deco-plum">Press & Media</Link>
               </div>
             </div>
             
@@ -201,10 +247,10 @@ const Navigation = () => {
               </div>
             </div>
             
-            <a href="#" className="btn-cta w-full text-center mt-6 flex items-center justify-center">
+            <Link to="/contact" className="btn-cta w-full text-center mt-6 flex items-center justify-center">
               <Paintbrush className="mr-2 h-4 w-4" />
               Get Estimate
-            </a>
+            </Link>
           </nav>
         </div>
         

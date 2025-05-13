@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Instagram, Facebook, Twitter, Youtube, Paintbrush } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -23,10 +24,24 @@ const Footer = () => {
               Premium decorative paints and flooring solutions crafted with artisanal techniques and premium materials.
             </p>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors font-grosa">Paints</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors font-grosa">Flooring</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors font-grosa">Locations</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors font-grosa">Company</a></li>
+              <li>
+                <div className="text-white/80 hover:text-white transition-colors font-grosa cursor-pointer">Paints</div>
+                <ul className="pl-4 mt-2 space-y-1">
+                  <li><Link to="/paints/marmorino" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Marmorino</Link></li>
+                  <li><Link to="/paints/limewash" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Limewash</Link></li>
+                  <li><Link to="/paints/concrete-texture" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Concrete Texture</Link></li>
+                </ul>
+              </li>
+              <li>
+                <div className="text-white/80 hover:text-white transition-colors font-grosa cursor-pointer">Flooring</div>
+                <ul className="pl-4 mt-2 space-y-1">
+                  <li><Link to="/flooring/micro-cement" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Micro-Cement</Link></li>
+                  <li><Link to="/flooring/terrazzo-flooring" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Terrazzo Flooring</Link></li>
+                  <li><Link to="/flooring/decorative-epoxy" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Decorative Epoxy</Link></li>
+                </ul>
+              </li>
+              <li><Link to="/locations" className="text-white/80 hover:text-white transition-colors font-grosa">Locations</Link></li>
+              <li><Link to="/about" className="text-white/80 hover:text-white transition-colors font-grosa">Company</Link></li>
             </ul>
           </div>
           
