@@ -1,7 +1,7 @@
-
 import React from 'react';
-import { Instagram, Facebook, Twitter, Youtube, Paintbrush } from 'lucide-react';
+import { Instagram, Facebook, Twitter, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -13,9 +13,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand Column */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <Paintbrush className="h-6 w-6 text-deco-gold" />
-              <h3 className="text-xl font-parafina font-bold">DecoPaints</h3>
+            <div className="mb-6">
+              <Logo variant="light" className="mb-6" />
             </div>
             <p className="text-white/70 font-grosa mb-6">
               Premium decorative paints and flooring solutions crafted with artisanal techniques and premium materials.
@@ -117,9 +116,6 @@ const Footer = () => {
             <div className="flex space-x-6 text-sm font-grosa">
               <a href="#" className="text-white/60 hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="text-white/60 hover:text-white transition-colors">Terms of Service</a>
-              <span className="text-white/60">
-                <span className="text-deco-gold">العربية</span> | English
-              </span>
             </div>
           </div>
         </div>

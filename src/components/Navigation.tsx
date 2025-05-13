@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Paintbrush } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,12 +33,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <Paintbrush className={`h-6 w-6 transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`} />
-            <span className={`text-2xl font-parafina font-bold tracking-tighter transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
-              DecoPaints
-            </span>
-          </Link>
+          <Logo variant={isScrolled ? 'dark' : 'light'} />
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -203,12 +198,7 @@ const Navigation = () => {
       <div className={`lg:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="container mx-auto px-4 py-8">
           <div className="flex justify-between items-center mb-8">
-            <Link to="/" className="flex items-center gap-2">
-              <Paintbrush className="h-6 w-6 text-deco-plum" />
-              <span className="text-2xl font-parafina font-bold tracking-tighter text-deco-plum">
-                DecoPaints
-              </span>
-            </Link>
+            <Logo variant="dark" />
             
             <button onClick={toggleMobileMenu} aria-label="Close menu">
               <X size={24} className="text-deco-plum" />
