@@ -54,9 +54,7 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute top-24 left-0 right-0 h-0.5 bg-deco-lavender/30"></div>
-              
+              {/* Timeline Process Steps */}
               <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                 {[
                   { title: "Consultation", icon: <Paintbrush className="h-8 w-8 text-deco-plum" />, desc: "In-depth understanding of your vision and space requirements" },
@@ -66,7 +64,7 @@ const Index = () => {
                   { title: "Completion", icon: <Paintbrush className="h-8 w-8 text-deco-plum" />, desc: "Final inspection and maintenance guidance" }
                 ].map((step, index) => (
                   <div key={index} className="flex flex-col items-center">
-                    <div className="relative z-10">
+                    <div className="z-10">
                       <div className="rounded-full bg-white p-4 shadow-md border-2 border-deco-gold/30 mb-6">
                         {step.icon}
                       </div>
