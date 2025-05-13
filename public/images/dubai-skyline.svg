@@ -1,3 +1,50 @@
-<svg width="1440" height="120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Empty SVG - Previous Dubai skyline removed -->
+
+<svg width="1440" height="120" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+  <g fill="white" fill-opacity="0.15">
+    <!-- Burj Khalifa -->
+    <path d="M700 0L690 120H710L700 0Z" />
+    <path d="M695 30L685 120H695V30Z" />
+    <path d="M705 30L715 120H705V30Z" />
+
+    <!-- Dubai Frame -->
+    <path d="M500 40H540V120H500V40Z" />
+    <path d="M505 45H535V55H505V45Z" />
+    <path d="M505 65H535V75H505V65Z" />
+    <path d="M505 85H535V95H505V85Z" />
+    <path d="M505 105H535V115H505V105Z" />
+
+    <!-- Emirates Towers -->
+    <path d="M600 50L590 120H610L600 50Z" />
+    <path d="M640 60L630 120H650L640 60Z" />
+    
+    <!-- Museum of the Future -->
+    <path d="M800 60C820 50 840 50 860 60V120H800V60Z" />
+    <path d="M815 70H845V80H815V70Z" />
+    <path d="M815 90H845V100H815V90Z" />
+
+    <!-- Additional Buildings -->
+    <rect x="200" y="70" width="30" height="50" />
+    <rect x="240" y="60" width="20" height="60" />
+    <rect x="270" y="80" width="25" height="40" />
+    <rect x="305" y="50" width="15" height="70" />
+    <rect x="330" y="70" width="20" height="50" />
+    <rect x="360" y="40" width="30" height="80" />
+    <rect x="400" y="75" width="25" height="45" />
+    <rect x="435" y="65" width="15" height="55" />
+    <rect x="460" y="55" width="20" height="65" />
+    
+    <rect x="760" y="75" width="30" height="45" />
+    <rect x="870" y="65" width="25" height="55" />
+    <rect x="905" y="80" width="15" height="40" />
+    <rect x="930" y="70" width="20" height="50" />
+    <rect x="960" y="40" width="30" height="80" />
+    <rect x="1000" y="75" width="25" height="45" />
+    <rect x="1035" y="65" width="15" height="55" />
+    <rect x="1060" y="55" width="20" height="65" />
+    <rect x="1090" y="70" width="30" height="50" />
+    <rect x="1130" y="60" width="20" height="60" />
+    <rect x="1160" y="80" width="25" height="40" />
+    <rect x="1195" y="50" width="15" height="70" />
+    <rect x="1220" y="70" width="20" height="50" />
+  </g>
 </svg>
