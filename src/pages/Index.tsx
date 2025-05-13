@@ -7,6 +7,7 @@ import FeaturedCollections from '../components/FeaturedCollections';
 import Footer from '../components/Footer';
 import { TextureGrid, GeometricDivider, GoldAccent } from '../components/TextureUtils';
 import { Paintbrush, Droplet } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   useEffect(() => {
@@ -41,9 +42,6 @@ const Index = () => {
         
         {/* Process Experience Section */}
         <section className="section bg-deco-beige relative overflow-hidden">
-          {/* Subtle Geometric Pattern */}
-          <div className="absolute inset-0 geometric-pattern opacity-5"></div>
-          
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto mb-16 text-center">
               <h2 className="font-parafina text-3xl md:text-4xl font-bold mb-4">Our Artisanal Process</h2>
@@ -76,10 +74,10 @@ const Index = () => {
               </div>
               
               <div className="mt-16 text-center">
-                <a href="#" className="btn-cta inline-flex items-center gap-2">
-                  <Paintbrush className="h-5 w-5" />
+                <Link to="/contact" className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all">
+                  <Paintbrush className="h-5 w-5 mr-2" />
                   Schedule Consultation
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -88,13 +86,13 @@ const Index = () => {
       <Footer />
       
       {/* Floating Get Estimate Button */}
-      <a 
-        href="#" 
-        className="fixed bottom-8 right-8 bg-deco-denim text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:bg-opacity-90 z-40 group flex items-center gap-2"
+      <Link 
+        to="/contact" 
+        className="fixed bottom-8 right-8 bg-deco-denim text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all z-40 group flex items-center gap-2"
       >
         <Paintbrush className="h-5 w-5 group-hover:animate-pulse" />
         Get Estimate
-      </a>
+      </Link>
     </div>
   );
 };

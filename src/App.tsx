@@ -12,9 +12,14 @@ import BlogPage from "./pages/BlogPage";
 import SustainabilityPage from "./pages/SustainabilityPage";
 import PressMediaPage from "./pages/PressMediaPage";
 import ContactPage from "./pages/ContactPage";
-import LocationsPage from "./pages/LocationsPage";
 import ProductPage from "./pages/ProductPage";
 import NotFound from "./pages/NotFound";
+
+// Location Pages
+import LocationsIndex from "./pages/locations/LocationsIndex";
+import DubaiPage from "./pages/locations/DubaiPage";
+import AbuDhabiPage from "./pages/locations/AbuDhabiPage";
+// Import other emirate pages when they're created
 
 // Paint Product Pages
 import MarmolinoPage from "./pages/paints/MarmolinoPage";
@@ -51,8 +56,13 @@ const App = () => {
             <Route path="/sustainability" element={<SustainabilityPage />} />
             <Route path="/press-media" element={<PressMediaPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/locations" element={<LocationsPage />} />
             <Route path="/product/:type/:id" element={<ProductPage />} />
+            
+            {/* Location Pages */}
+            <Route path="/locations" element={<LocationsIndex />} />
+            <Route path="/locations/dubai" element={<DubaiPage />} />
+            <Route path="/locations/abudhabi" element={<AbuDhabiPage />} />
+            {/* Add other emirate routes when they're created */}
             
             {/* Paint Product Pages */}
             <Route path="/paints/marmorino" element={<MarmolinoPage />} />

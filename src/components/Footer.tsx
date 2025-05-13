@@ -6,9 +6,6 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-deco-plum text-white relative overflow-hidden">
-      {/* Subtle Geometric Pattern */}
-      <div className="absolute inset-0 geometric-pattern opacity-5"></div>
-      
       {/* Gold accent line */}
       <div className="h-1 w-full bg-deco-gold"></div>
       
@@ -23,32 +20,39 @@ const Footer = () => {
             <p className="text-white/70 font-grosa mb-6">
               Premium decorative paints and flooring solutions crafted with artisanal techniques and premium materials.
             </p>
-            <ul className="space-y-3">
-              <li>
-                <div className="text-white/80 hover:text-white transition-colors font-grosa cursor-pointer">Paints</div>
-                <ul className="pl-4 mt-2 space-y-1">
-                  <li><Link to="/paints/marmorino" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Marmorino</Link></li>
-                  <li><Link to="/paints/limewash" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Limewash</Link></li>
-                  <li><Link to="/paints/concrete-texture" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Concrete Texture</Link></li>
-                </ul>
-              </li>
-              <li>
-                <div className="text-white/80 hover:text-white transition-colors font-grosa cursor-pointer">Flooring</div>
-                <ul className="pl-4 mt-2 space-y-1">
-                  <li><Link to="/flooring/micro-cement" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Micro-Cement</Link></li>
-                  <li><Link to="/flooring/terrazzo-flooring" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Terrazzo Flooring</Link></li>
-                  <li><Link to="/flooring/decorative-epoxy" className="text-white/70 hover:text-white transition-colors font-grosa text-sm">Decorative Epoxy</Link></li>
-                </ul>
-              </li>
-              <li><Link to="/locations" className="text-white/80 hover:text-white transition-colors font-grosa">Locations</Link></li>
-              <li><Link to="/about" className="text-white/80 hover:text-white transition-colors font-grosa">Company</Link></li>
+          </div>
+          
+          {/* Decorative Paints */}
+          <div>
+            <h3 className="text-lg font-parafina font-bold mb-6">Decorative Paints</h3>
+            <ul className="space-y-2 font-grosa">
+              <li><Link to="/paints/marmorino" className="text-white/70 hover:text-white transition-colors">Marmorino</Link></li>
+              <li><Link to="/paints/limewash" className="text-white/70 hover:text-white transition-colors">Limewash</Link></li>
+              <li><Link to="/paints/concrete-texture" className="text-white/70 hover:text-white transition-colors">Concrete Texture</Link></li>
+              <li><Link to="/paints/pearl-finish" className="text-white/70 hover:text-white transition-colors">Pearl Finish</Link></li>
+              <li><Link to="/paints/gold-silver-leaf" className="text-white/70 hover:text-white transition-colors">Gold & Silver Leaf</Link></li>
+              <li><Link to="/paints/brick-finish" className="text-white/70 hover:text-white transition-colors">Brick Finish</Link></li>
+              <li><Link to="/paints/stencil-painting" className="text-white/70 hover:text-white transition-colors">Stencil Painting</Link></li>
             </ul>
           </div>
           
-          {/* Contact Information */}
+          {/* Decorative Flooring */}
+          <div>
+            <h3 className="text-lg font-parafina font-bold mb-6">Decorative Flooring</h3>
+            <ul className="space-y-2 font-grosa">
+              <li><Link to="/flooring/micro-cement" className="text-white/70 hover:text-white transition-colors">Micro-Topping & Micro-Cement</Link></li>
+              <li><Link to="/flooring/terrazzo-flooring" className="text-white/70 hover:text-white transition-colors">Terrazzo Flooring</Link></li>
+              <li><Link to="/flooring/resin-bound-surface" className="text-white/70 hover:text-white transition-colors">Resin Bound Surface</Link></li>
+              <li><Link to="/flooring/decorative-epoxy" className="text-white/70 hover:text-white transition-colors">Decorative Epoxy Flooring</Link></li>
+              <li><Link to="/flooring/metallic-epoxy" className="text-white/70 hover:text-white transition-colors">Metallic Epoxy Flooring</Link></li>
+              <li><Link to="/flooring/stamped-concrete" className="text-white/70 hover:text-white transition-colors">Stamped Concrete</Link></li>
+            </ul>
+          </div>
+          
+          {/* Contact & Newsletter */}
           <div>
             <h3 className="text-lg font-parafina font-bold mb-6">Contact</h3>
-            <ul className="space-y-3 font-grosa">
+            <ul className="space-y-3 font-grosa mb-8">
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-deco-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -71,12 +75,9 @@ const Footer = () => {
                 </address>
               </li>
             </ul>
-          </div>
-          
-          {/* Social Links */}
-          <div>
-            <h3 className="text-lg font-parafina font-bold mb-6">Follow Us</h3>
-            <div className="flex space-x-4">
+            
+            {/* Social Links */}
+            <div className="flex space-x-4 mb-6">
               <a href="#" className="bg-white/10 hover:bg-deco-gold hover:text-deco-plum p-3 rounded-full transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
@@ -91,40 +92,8 @@ const Footer = () => {
               </a>
             </div>
             
-            {/* Awards and Certifications */}
-            <div className="mt-8">
-              <h4 className="text-sm font-bold text-white/90 mb-4 font-grosa">Awards & Certifications</h4>
-              <div className="flex flex-wrap gap-4">
-                <div className="bg-white/10 p-2 rounded">
-                  <img src="/images/award-1.svg" alt="Design Award" className="h-10 w-auto" />
-                </div>
-                <div className="bg-white/10 p-2 rounded">
-                  <img src="/images/certification-1.svg" alt="UAE Green Building" className="h-10 w-auto" />
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Newsletter Subscription */}
-          <div className="relative">
-            <h3 className="text-lg font-parafina font-bold mb-6">Stay Updated</h3>
-            <p className="text-white/80 mb-4 text-sm font-grosa">Subscribe to receive updates on new finishes and exclusive offers.</p>
-            <form className="flex flex-col space-y-3">
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="px-4 py-2 rounded-full bg-white/10 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-deco-gold font-grosa"
-              />
-              <button 
-                type="submit" 
-                className="px-4 py-2 rounded-full bg-deco-gold text-deco-plum hover:bg-opacity-90 transition-colors font-grosa font-medium"
-              >
-                Subscribe
-              </button>
-            </form>
-            
             {/* WhatsApp Business Link */}
-            <div className="mt-6">
+            <div>
               <a 
                 href="https://wa.me/971503119537"
                 className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-colors font-grosa"
@@ -157,7 +126,7 @@ const Footer = () => {
       </div>
       
       {/* Dubai Skyline Silhouette */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-contain bg-repeat-x bg-bottom opacity-10" style={{ backgroundImage: 'url(/images/dubai-skyline.svg)' }}></div>
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-contain bg-repeat-x bg-bottom opacity-10" style={{ backgroundImage: 'url(/dubai-skyline.svg)' }}></div>
     </footer>
   );
 };

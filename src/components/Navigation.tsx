@@ -110,9 +110,59 @@ const Navigation = () => {
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="p-4 grid gap-2">
-                  <Link to="/locations" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
-                    <span className="text-deco-plum">Dubai Districts</span>
+                  <Link to="/locations" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa font-medium">
+                    <span className="text-deco-plum">All Locations</span>
                   </Link>
+                  <div className="border-t border-gray-100 my-2"></div>
+                  
+                  {/* Dubai with sublocations */}
+                  <div className="group/sub relative">
+                    <Link to="/locations/dubai" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                      <span className="text-deco-plum">Dubai</span>
+                    </Link>
+                  </div>
+                  
+                  {/* Abu Dhabi with sublocations */}
+                  <div className="group/sub relative">
+                    <Link to="/locations/abudhabi" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                      <span className="text-deco-plum">Abu Dhabi</span>
+                    </Link>
+                  </div>
+                  
+                  {/* Sharjah with sublocations */}
+                  <div className="group/sub relative">
+                    <Link to="/locations/sharjah" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                      <span className="text-deco-plum">Sharjah</span>
+                    </Link>
+                  </div>
+                  
+                  {/* Ajman with sublocations */}
+                  <div className="group/sub relative">
+                    <Link to="/locations/ajman" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                      <span className="text-deco-plum">Ajman</span>
+                    </Link>
+                  </div>
+                  
+                  {/* Ras Al Khaimah with sublocations */}
+                  <div className="group/sub relative">
+                    <Link to="/locations/rak" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                      <span className="text-deco-plum">Ras Al Khaimah</span>
+                    </Link>
+                  </div>
+                  
+                  {/* Fujairah with sublocations */}
+                  <div className="group/sub relative">
+                    <Link to="/locations/fujairah" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                      <span className="text-deco-plum">Fujairah</span>
+                    </Link>
+                  </div>
+                  
+                  {/* Umm Al Quwain with sublocations */}
+                  <div className="group/sub relative">
+                    <Link to="/locations/uaq" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
+                      <span className="text-deco-plum">Umm Al Quwain</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -151,7 +201,7 @@ const Navigation = () => {
           </nav>
 
           {/* Get Estimate Button */}
-          <Link to="/contact" className="hidden md:flex items-center btn-cta">
+          <Link to="/contact" className="hidden md:inline-flex items-center bg-deco-denim text-white px-6 py-2 rounded-full hover:shadow-md transition-all">
             <Paintbrush className="mr-2 h-4 w-4" />
             Get Estimate
           </Link>
@@ -221,7 +271,15 @@ const Navigation = () => {
                 <span className="text-deco-plum">Locations</span>
               </div>
               <div className="grid gap-3 pl-2">
-                <Link to="/locations" className="text-deco-plum/80 hover:text-deco-plum">Dubai Districts</Link>
+                <Link to="/locations" className="text-deco-plum/80 hover:text-deco-plum font-medium">All Locations</Link>
+                <div className="h-px bg-gray-100 my-2"></div>
+                <Link to="/locations/dubai" className="text-deco-plum/80 hover:text-deco-plum">Dubai</Link>
+                <Link to="/locations/abudhabi" className="text-deco-plum/80 hover:text-deco-plum">Abu Dhabi</Link>
+                <Link to="/locations/sharjah" className="text-deco-plum/80 hover:text-deco-plum">Sharjah</Link>
+                <Link to="/locations/ajman" className="text-deco-plum/80 hover:text-deco-plum">Ajman</Link>
+                <Link to="/locations/rak" className="text-deco-plum/80 hover:text-deco-plum">Ras Al Khaimah</Link>
+                <Link to="/locations/fujairah" className="text-deco-plum/80 hover:text-deco-plum">Fujairah</Link>
+                <Link to="/locations/uaq" className="text-deco-plum/80 hover:text-deco-plum">Umm Al Quwain</Link>
               </div>
             </div>
             
@@ -247,15 +305,14 @@ const Navigation = () => {
               </div>
             </div>
             
-            <Link to="/contact" className="btn-cta w-full text-center mt-6 flex items-center justify-center">
-              <Paintbrush className="mr-2 h-4 w-4" />
-              Get Estimate
+            <Link to="/contact" className="bg-deco-denim text-white px-6 py-3 rounded-full text-center">
+              <span className="flex items-center justify-center">
+                <Paintbrush className="mr-2 h-4 w-4" />
+                Get Estimate
+              </span>
             </Link>
           </nav>
         </div>
-        
-        {/* Decorative Elements for Mobile Menu */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 opacity-5 geometric-pattern"></div>
       </div>
     </header>
   );
