@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Paintbrush, Droplet, Building } from 'lucide-react';
+import { Menu, X, Paintbrush } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
@@ -43,9 +43,8 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <div className="group relative cursor-pointer">
-              <span className={`flex items-center gap-1 link-hover font-medium transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
-                <Paintbrush className="h-4 w-4" />
-                Paints
+              <span className={`link-hover font-medium transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
+                Decorative Paints
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="p-4 grid gap-2">
@@ -75,8 +74,7 @@ const Navigation = () => {
             </div>
             
             <div className="group relative cursor-pointer">
-              <span className={`flex items-center gap-1 link-hover font-medium transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
-                <Droplet className="h-4 w-4" />
+              <span className={`link-hover font-medium transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
                 Flooring
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -104,8 +102,7 @@ const Navigation = () => {
             </div>
             
             <div className="group relative cursor-pointer">
-              <span className={`flex items-center gap-1 link-hover font-medium transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
-                <Building className="h-4 w-4" />
+              <span className={`link-hover font-medium transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
                 Locations
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -115,49 +112,42 @@ const Navigation = () => {
                   </Link>
                   <div className="border-t border-gray-100 my-2"></div>
                   
-                  {/* Dubai with sublocations */}
                   <div className="group/sub relative">
                     <Link to="/locations/dubai" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
                       <span className="text-deco-plum">Dubai</span>
                     </Link>
                   </div>
                   
-                  {/* Abu Dhabi with sublocations */}
                   <div className="group/sub relative">
                     <Link to="/locations/abudhabi" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
                       <span className="text-deco-plum">Abu Dhabi</span>
                     </Link>
                   </div>
                   
-                  {/* Sharjah with sublocations */}
                   <div className="group/sub relative">
                     <Link to="/locations/sharjah" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
                       <span className="text-deco-plum">Sharjah</span>
                     </Link>
                   </div>
                   
-                  {/* Ajman with sublocations */}
                   <div className="group/sub relative">
                     <Link to="/locations/ajman" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
                       <span className="text-deco-plum">Ajman</span>
                     </Link>
                   </div>
                   
-                  {/* Ras Al Khaimah with sublocations */}
                   <div className="group/sub relative">
                     <Link to="/locations/rak" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
                       <span className="text-deco-plum">Ras Al Khaimah</span>
                     </Link>
                   </div>
                   
-                  {/* Fujairah with sublocations */}
                   <div className="group/sub relative">
                     <Link to="/locations/fujairah" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
                       <span className="text-deco-plum">Fujairah</span>
                     </Link>
                   </div>
                   
-                  {/* Umm Al Quwain with sublocations */}
                   <div className="group/sub relative">
                     <Link to="/locations/uaq" className="block px-4 py-2 hover:bg-deco-beige rounded-md transition-colors font-grosa">
                       <span className="text-deco-plum">Umm Al Quwain</span>
@@ -191,18 +181,10 @@ const Navigation = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Language Selector */}
-            <div className="flex items-center space-x-2">
-              <span className={`text-sm transition-colors ${isScrolled ? 'text-deco-lavender' : 'text-white/70'}`}>
-                <span className={isScrolled ? 'text-deco-gold' : 'text-deco-gold'}>العربية</span> | English
-              </span>
-            </div>
           </nav>
 
           {/* Get Estimate Button */}
           <Link to="/contact" className="hidden md:inline-flex items-center bg-deco-denim text-white px-6 py-2 rounded-full hover:shadow-md transition-all">
-            <Paintbrush className="mr-2 h-4 w-4" />
             Get Estimate
           </Link>
 
@@ -235,9 +217,8 @@ const Navigation = () => {
           
           <nav className="mt-10 flex flex-col space-y-6 font-grosa">
             <div className="border-b border-deco-beige pb-4">
-              <div className="font-medium text-lg mb-4 flex items-center gap-2">
-                <Paintbrush className="h-5 w-5 text-deco-plum" />
-                <span className="text-deco-plum">Paints</span>
+              <div className="font-medium text-lg mb-4">
+                <span className="text-deco-plum">Decorative Paints</span>
               </div>
               <div className="grid gap-3 pl-2">
                 <Link to="/paints/marmorino" className="text-deco-plum/80 hover:text-deco-plum">Marmorino</Link>
@@ -251,8 +232,7 @@ const Navigation = () => {
             </div>
             
             <div className="border-b border-deco-beige pb-4">
-              <div className="font-medium text-lg mb-4 flex items-center gap-2">
-                <Droplet className="h-5 w-5 text-deco-plum" />
+              <div className="font-medium text-lg mb-4">
                 <span className="text-deco-plum">Flooring</span>
               </div>
               <div className="grid gap-3 pl-2">
@@ -266,8 +246,7 @@ const Navigation = () => {
             </div>
             
             <div className="border-b border-deco-beige pb-4">
-              <div className="font-medium text-lg mb-4 flex items-center gap-2">
-                <Building className="h-5 w-5 text-deco-plum" />
+              <div className="font-medium text-lg mb-4">
                 <span className="text-deco-plum">Locations</span>
               </div>
               <div className="grid gap-3 pl-2">
@@ -296,20 +275,8 @@ const Navigation = () => {
               </div>
             </div>
             
-            {/* Language Selector */}
-            <div className="flex justify-center border-b border-deco-beige pb-4">
-              <div className="flex items-center space-x-4">
-                <a href="#" className="text-deco-gold">العربية</a>
-                <span>|</span>
-                <a href="#" className="text-deco-plum font-medium">English</a>
-              </div>
-            </div>
-            
             <Link to="/contact" className="bg-deco-denim text-white px-6 py-3 rounded-full text-center">
-              <span className="flex items-center justify-center">
-                <Paintbrush className="mr-2 h-4 w-4" />
-                Get Estimate
-              </span>
+              Get Estimate
             </Link>
           </nav>
         </div>
