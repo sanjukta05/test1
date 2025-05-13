@@ -41,6 +41,7 @@
     --deco-lavender: 272 12% 69%;
     --deco-denim: 195 30% 57%;
     --deco-misty: 195 28% 84%;
+    --deco-gold: 43 53% 62%;
   }
  
   .dark {
@@ -82,15 +83,27 @@
     @apply bg-background text-foreground;
   }
 
-  /* Import custom fonts here */
-  /* Example:
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-  */
+  /* Import custom fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 }
 
 @layer components {
   .btn-cta {
     @apply bg-deco-denim text-white px-6 py-3 rounded-full shadow-sm hover:bg-opacity-90 transition-all font-medium;
+  }
+
+  .btn-secondary {
+    @apply bg-deco-plum bg-opacity-90 text-white px-6 py-3 rounded-full shadow-sm hover:bg-opacity-100 transition-all font-medium;
+  }
+
+  .btn-outline {
+    @apply border-2 border-deco-denim text-deco-denim px-6 py-3 rounded-full hover:bg-deco-denim hover:text-white transition-all font-medium;
+  }
+
+  .btn-gold {
+    @apply bg-deco-gold text-deco-plum px-6 py-3 rounded-full shadow-sm hover:brightness-105 transition-all font-medium;
   }
 
   .section {
@@ -99,6 +112,103 @@
 
   .link-hover {
     @apply relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-deco-plum after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  /* Texture classes */
+  .texture-marble {
+    background-image: url('/textures/marble-texture.jpg');
+    background-size: cover;
+    @apply bg-blend-overlay;
+  }
+
+  .texture-concrete {
+    background-image: url('/textures/concrete-texture.jpg');
+    background-size: cover;
+    @apply bg-blend-overlay;
+  }
+
+  .texture-limewash {
+    background-image: url('/textures/limewash-texture.jpg');
+    background-size: cover;
+    @apply bg-blend-overlay;
+  }
+
+  .texture-terrazzo {
+    background-image: url('/textures/terrazzo-texture.jpg');
+    background-size: cover;
+    @apply bg-blend-overlay;
+  }
+
+  .gold-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gold-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg, 
+      transparent, 
+      rgba(212, 185, 106, 0.15), 
+      transparent
+    );
+    transform: skewX(-25deg);
+    animation: shimmer 4s infinite ease-in-out;
+  }
+
+  .pearl-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pearl-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.25), 
+      transparent
+    );
+    transform: skewX(-25deg);
+    animation: shimmer 6s infinite ease-in-out;
+  }
+
+  .arch-shape {
+    position: relative;
+  }
+
+  .arch-shape::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: inherit;
+    border-radius: 100% 100% 0 0;
+    transform: scaleX(1.5);
+    z-index: -1;
+  }
+
+  .geometric-pattern {
+    background-image: url('/textures/geometric-pattern.svg');
+    background-size: 300px;
+    background-repeat: repeat;
+    @apply bg-blend-overlay bg-opacity-5;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, hsla(var(--deco-plum), 0.95), hsla(var(--deco-plum), 0.8));
   }
 }
 
@@ -113,6 +223,17 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes shimmer {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
 @layer utilities {
   .animate-subtle-bounce {
     animation: subtle-bounce 2s infinite ease-in-out;
@@ -120,6 +241,14 @@
 
   .animate-fade-in {
     animation: fade-in 1s ease-out forwards;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 4s infinite ease-in-out;
+  }
+
+  .animate-float {
+    animation: float 5s infinite ease-in-out;
   }
   
   .scrollbar-hide {
