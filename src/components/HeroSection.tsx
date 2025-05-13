@@ -17,7 +17,7 @@ const HeroSection = () => {
     {
       image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
       heading: 'Artisan Craftsmanship',
-      subheading: 'Techniques Perfected in the Heart of Dubai'
+      subheading: 'Techniques Perfected by Master Craftsmen'
     },
     {
       image: 'https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80',
@@ -90,7 +90,7 @@ const HeroSection = () => {
         </svg>
       </button>
 
-      {/* Arab-inspired Arch Motif */}
+      {/* Arch Motif */}
       <div className="absolute bottom-0 left-0 right-0 h-80 bg-arch-gradient opacity-50"></div>
 
       {/* Hero Indicators */}

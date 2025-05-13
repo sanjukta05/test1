@@ -7,8 +7,8 @@ const BrandPromise = () => {
   
   const brandValues = [
     {
-      title: "Emirati Craftsmanship",
-      description: "Techniques perfected in the heart of Dubai, our artisans blend traditional methods with modern innovation to create surfaces of unparalleled beauty and durability.",
+      title: "Master Craftsmanship",
+      description: "Techniques perfected by our artisans, blending traditional methods with modern innovation to create surfaces of unparalleled beauty and durability.",
       icon: <Paintbrush className="h-12 w-12 text-deco-plum" />,
     },
     {
@@ -18,7 +18,7 @@ const BrandPromise = () => {
     },
     {
       title: "Lifetime Elegance",
-      description: "Surfaces that endure like the Emirates. Our commitment to quality ensures your investment maintains its beauty and integrity for generations to come.",
+      description: "Surfaces that endure. Our commitment to quality ensures your investment maintains its beauty and integrity for generations to come.",
       icon: <Building className="h-12 w-12 text-deco-plum" />,
     },
   ];
