@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 interface TextureSampleProps {
@@ -54,7 +55,18 @@ export const ArchAccent: React.FC<{
     </div>;
 };
 export const GeometricDivider: React.FC = () => {
-  return;
+  return (
+    <div className="py-12 relative overflow-hidden">
+      <div className="container mx-auto px-4 relative">
+        <div className="h-0.5 bg-deco-gold/30 w-full"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="bg-white px-8">
+            <div className="w-12 h-12 rotate-45 border-2 border-deco-gold/50"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 export const GoldAccent: React.FC<{
   width?: string;
