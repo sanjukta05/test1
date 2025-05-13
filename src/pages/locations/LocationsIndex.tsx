@@ -120,7 +120,7 @@ const LocationsIndex = () => {
                   </Button>
                 </Link>
                 <a href="https://wa.me/971503119537">
-                  <Button className="bg-[#25D366] hover:bg-[#25D366]/90">
+                  <Button className="bg-deco-denim hover:bg-deco-denim/90">
                     WhatsApp Inquiry
                   </Button>
                 </a>

@@ -19,11 +19,20 @@ import NotFound from "./pages/NotFound";
 import LocationsIndex from "./pages/locations/LocationsIndex";
 import DubaiPage from "./pages/locations/DubaiPage";
 import AbuDhabiPage from "./pages/locations/AbuDhabiPage";
-// Import other emirate pages when they're created
+import SharjahPage from "./pages/locations/SharjahPage";
+import AjmanPage from "./pages/locations/AjmanPage";
+import RasAlKhaimahPage from "./pages/locations/RasAlKhaimahPage";
+import FujairahPage from "./pages/locations/FujairahPage";
+import UmmAlQuwainPage from "./pages/locations/UmmAlQuwainPage";
 
 // Location District Pages
 import DubaiDistricts from "./pages/locations/dubai/DubaiDistricts";
 import AbuDhabiDistricts from "./pages/locations/abudhabi/AbuDhabiDistricts";
+import SharjahDistricts from "./pages/locations/sharjah/SharjahDistricts";
+import AjmanDistricts from "./pages/locations/ajman/AjmanDistricts";
+import RAKDistricts from "./pages/locations/rak/RAKDistricts";
+import FujairahDistricts from "./pages/locations/fujairah/FujairahDistricts";
+import UAQDistricts from "./pages/locations/uaq/UAQDistricts";
 
 // Paint Product Pages
 import MarmolinoPage from "./pages/paints/MarmolinoPage";
@@ -66,10 +75,20 @@ const App = () => {
             <Route path="/locations" element={<LocationsIndex />} />
             <Route path="/locations/dubai" element={<DubaiPage />} />
             <Route path="/locations/abudhabi" element={<AbuDhabiPage />} />
+            <Route path="/locations/sharjah" element={<SharjahPage />} />
+            <Route path="/locations/ajman" element={<AjmanPage />} />
+            <Route path="/locations/rak" element={<RasAlKhaimahPage />} />
+            <Route path="/locations/fujairah" element={<FujairahPage />} />
+            <Route path="/locations/uaq" element={<UmmAlQuwainPage />} />
             
             {/* Location District Pages */}
             <Route path="/locations/dubai/:district" element={<DubaiDistricts />} />
             <Route path="/locations/abudhabi/:district" element={<AbuDhabiDistricts />} />
+            <Route path="/locations/sharjah/:district" element={<SharjahDistricts />} />
+            <Route path="/locations/ajman/:district" element={<AjmanDistricts />} />
+            <Route path="/locations/rak/:district" element={<RAKDistricts />} />
+            <Route path="/locations/fujairah/:district" element={<FujairahDistricts />} />
+            <Route path="/locations/uaq/:district" element={<UAQDistricts />} />
             
             {/* Paint Product Pages */}
             <Route path="/paints/marmorino" element={<MarmolinoPage />} />
