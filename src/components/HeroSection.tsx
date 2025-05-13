@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ArrowDown, Paintbrush, Droplet, Arch } from 'lucide-react';
+import { ArrowDown, Paintbrush, Droplet, Building } from 'lucide-react';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -127,7 +127,7 @@ const HeroSection = () => {
               href="#discover" 
               className={`btn-outline inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}
             >
-              <Arch className="w-5 h-5" />
+              <Building className="w-5 h-5" />
               Discover Our Finishes
             </a>
             

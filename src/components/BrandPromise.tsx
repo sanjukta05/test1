@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Droplet, Arch, Paintbrush } from 'lucide-react';
+import { Droplet, Building, Paintbrush } from 'lucide-react';
 
 const BrandPromise = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -19,7 +19,7 @@ const BrandPromise = () => {
     {
       title: "Lifetime Elegance",
       description: "Surfaces that endure like the Emirates. Our commitment to quality ensures your investment maintains its beauty and integrity for generations to come.",
-      icon: <Arch className="h-12 w-12 text-deco-plum" />,
+      icon: <Building className="h-12 w-12 text-deco-plum" />,
     },
   ];
 

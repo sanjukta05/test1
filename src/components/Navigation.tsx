@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Paintbrush, Droplet, Arch } from 'lucide-react';
+import { Menu, X, Paintbrush, Droplet, Building } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -75,7 +74,7 @@ const Navigation = () => {
             
             <div className="group relative cursor-pointer">
               <span className={`flex items-center gap-1 link-hover font-medium transition-colors ${isScrolled ? 'text-deco-plum' : 'text-white'}`}>
-                <Arch className="h-4 w-4" />
+                <Building className="h-4 w-4" />
                 Locations
               </span>
               <div className="absolute left-0 top-full mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -173,7 +172,7 @@ const Navigation = () => {
             
             <div className="border-b border-deco-beige pb-4">
               <div className="font-medium text-lg mb-4 flex items-center gap-2">
-                <Arch className="h-5 w-5 text-deco-plum" />
+                <Building className="h-5 w-5 text-deco-plum" />
                 <span className="text-deco-plum">Locations</span>
               </div>
               <div className="grid gap-3 pl-2">
