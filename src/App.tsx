@@ -21,6 +21,10 @@ import DubaiPage from "./pages/locations/DubaiPage";
 import AbuDhabiPage from "./pages/locations/AbuDhabiPage";
 // Import other emirate pages when they're created
 
+// Location District Pages
+import DubaiDistricts from "./pages/locations/dubai/DubaiDistricts";
+import AbuDhabiDistricts from "./pages/locations/abudhabi/AbuDhabiDistricts";
+
 // Paint Product Pages
 import MarmolinoPage from "./pages/paints/MarmolinoPage";
 import LimewashPage from "./pages/paints/LimewashPage";
@@ -62,7 +66,10 @@ const App = () => {
             <Route path="/locations" element={<LocationsIndex />} />
             <Route path="/locations/dubai" element={<DubaiPage />} />
             <Route path="/locations/abudhabi" element={<AbuDhabiPage />} />
-            {/* Add other emirate routes when they're created */}
+            
+            {/* Location District Pages */}
+            <Route path="/locations/dubai/:district" element={<DubaiDistricts />} />
+            <Route path="/locations/abudhabi/:district" element={<AbuDhabiDistricts />} />
             
             {/* Paint Product Pages */}
             <Route path="/paints/marmorino" element={<MarmolinoPage />} />

@@ -9,21 +9,36 @@ import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react';
 
 const DubaiPage = () => {
   useEffect(() => {
-    document.title = "Dubai | DecoPaints";
+    document.title = "Dubai's Best Decorative Paints & Flooring Company | DecoPaints";
   }, []);
   
   const districts = [
-    "Downtown", "Marina", "Jumeirah", "Palm", "Business Bay", 
-    "Deira", "Al Barsha", "JLT", "JVC", "Arabian Ranches", "Hills Estate", 
-    "DIFC", "Silicon Oasis", "Al Quoz", "Mirdif", 
-    "International City", "Motor City", "Dubai Land", "Creek Harbour"
+    { name: "Downtown", slug: "downtown" },
+    { name: "Marina", slug: "marina" },
+    { name: "Jumeirah", slug: "jumeirah" },
+    { name: "Palm", slug: "palm" },
+    { name: "Business Bay", slug: "business-bay" },
+    { name: "Deira", slug: "deira" },
+    { name: "Al Barsha", slug: "al-barsha" },
+    { name: "JLT", slug: "jlt" },
+    { name: "JVC", slug: "jvc" },
+    { name: "Arabian Ranches", slug: "arabian-ranches" },
+    { name: "Hills Estate", slug: "hills-estate" },
+    { name: "DIFC", slug: "difc" },
+    { name: "Silicon Oasis", slug: "silicon-oasis" },
+    { name: "Al Quoz", slug: "al-quoz" },
+    { name: "Mirdif", slug: "mirdif" },
+    { name: "International City", slug: "international-city" },
+    { name: "Motor City", slug: "motor-city" },
+    { name: "Dubai Land", slug: "dubai-land" },
+    { name: "Creek Harbour", slug: "creek-harbour" }
   ];
   
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <PageHeader 
-        title="Dubai Services"
+        title="Dubai's Best Decorative Paints & Flooring Company"
         description="Premium decorative finishes for Dubai's luxury properties"
         backgroundImage="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=2000&h=600"
       />
@@ -66,7 +81,7 @@ const DubaiPage = () => {
                   <div className="flex flex-wrap gap-4">
                     <Link to="/contact">
                       <Button className="bg-deco-denim hover:bg-deco-denim/90">
-                        Schedule Consultation
+                        Get Estimate
                       </Button>
                     </Link>
                     <a href="https://wa.me/971503119537">
@@ -101,14 +116,21 @@ const DubaiPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Dubai Districts We Serve</h2>
               <p className="text-center mb-12 max-w-3xl mx-auto text-deco-plum/80">
                 Our expert team provides premium decorative finishing services throughout Dubai, with specialized 
-                knowledge of each district's architectural styles and design preferences.
+                knowledge of each district's architectural styles and design preferences. Click on a district to learn more.
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {districts.map(district => (
-                  <div key={district} className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-                    <h3 className="font-medium text-deco-plum">{district}</h3>
-                  </div>
+                  <Link 
+                    key={district.name} 
+                    to={`/locations/dubai/${district.slug}`}
+                    className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow group"
+                  >
+                    <h3 className="font-medium text-deco-plum group-hover:text-deco-denim transition-colors">
+                      {district.name}
+                      <ExternalLink className="inline-block ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </h3>
+                  </Link>
                 ))}
               </div>
             </div>

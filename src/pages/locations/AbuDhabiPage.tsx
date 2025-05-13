@@ -9,19 +9,26 @@ import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react';
 
 const AbuDhabiPage = () => {
   useEffect(() => {
-    document.title = "Abu Dhabi | DecoPaints";
+    document.title = "Abu Dhabi's Best Decorative Paints & Flooring Company | DecoPaints";
   }, []);
   
   const districts = [
-    "Al Reem Island", "Al Raha Beach", "Saadiyat Island", "Yas Island", 
-    "Khalifa City", "Al Bateen", "Corniche", "Al Maryah Island", "Masdar City"
+    { name: "Al Reem Island", slug: "al-reem-island" }, 
+    { name: "Al Raha Beach", slug: "al-raha-beach" },
+    { name: "Saadiyat Island", slug: "saadiyat-island" }, 
+    { name: "Yas Island", slug: "yas-island" }, 
+    { name: "Khalifa City", slug: "khalifa-city" }, 
+    { name: "Al Bateen", slug: "al-bateen" },
+    { name: "Corniche", slug: "corniche" }, 
+    { name: "Al Maryah Island", slug: "al-maryah-island" }, 
+    { name: "Masdar City", slug: "masdar-city" }
   ];
   
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <PageHeader 
-        title="Abu Dhabi Services"
+        title="Abu Dhabi's Best Decorative Paints & Flooring Company"
         description="Premium decorative finishes for the capital's luxury properties"
         backgroundImage="https://images.unsplash.com/photo-1551041377-19c3d646fca0?auto=format&fit=crop&q=80&w=2000&h=600"
       />
@@ -64,7 +71,7 @@ const AbuDhabiPage = () => {
                   <div className="flex flex-wrap gap-4">
                     <Link to="/contact">
                       <Button className="bg-deco-denim hover:bg-deco-denim/90">
-                        Schedule Consultation
+                        Get Estimate
                       </Button>
                     </Link>
                     <a href="https://wa.me/971504118372">
@@ -99,14 +106,21 @@ const AbuDhabiPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Abu Dhabi Districts We Serve</h2>
               <p className="text-center mb-12 max-w-3xl mx-auto text-deco-plum/80">
                 Our expert team provides premium decorative finishing services throughout Abu Dhabi, with specialized 
-                knowledge of each district's architectural styles and design preferences.
+                knowledge of each district's architectural styles and design preferences. Click on a district to learn more.
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {districts.map(district => (
-                  <div key={district} className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
-                    <h3 className="font-medium text-deco-plum">{district}</h3>
-                  </div>
+                  <Link 
+                    key={district.name} 
+                    to={`/locations/abudhabi/${district.slug}`}
+                    className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow group"
+                  >
+                    <h3 className="font-medium text-deco-plum group-hover:text-deco-denim transition-colors">
+                      {district.name}
+                      <ExternalLink className="inline-block ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </h3>
+                  </Link>
                 ))}
               </div>
             </div>
