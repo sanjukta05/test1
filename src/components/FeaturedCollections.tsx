@@ -35,12 +35,8 @@ const collections = [
   }
 ];
 
-const roomTypes = ["All", "Living Room", "Kitchen", "Bathroom", "Bedroom", "Office"];
-const styles = ["All", "Contemporary", "Classic", "Industrial", "Minimalist", "Art Deco"];
-
 const FeaturedCollections = () => {
-  const [activeRoomType, setActiveRoomType] = useState("All");
-  const [activeStyle, setActiveStyle] = useState("All");
+  // Remove state related to filters, since filters are gone
   const [hoveredCollection, setHoveredCollection] = useState<number | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -65,43 +61,6 @@ const FeaturedCollections = () => {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="mb-10 space-y-6">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-            <div className="text-sm font-medium text-deco-plum/70 flex items-center mr-2">Room Type:</div>
-            {roomTypes.map((type) => (
-              <button
-                key={type}
-                className={`px-4 py-2 rounded-full text-sm transition-all ${
-                  activeRoomType === type 
-                    ? 'bg-deco-plum text-white' 
-                    : 'bg-deco-beige text-deco-plum hover:bg-deco-lavender/20'
-                }`}
-                onClick={() => setActiveRoomType(type)}
-              >
-                {type}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-            <div className="text-sm font-medium text-deco-plum/70 flex items-center mr-2">Style:</div>
-            {styles.map((style) => (
-              <button
-                key={style}
-                className={`px-4 py-2 rounded-full text-sm transition-all ${
-                  activeStyle === style 
-                    ? 'bg-deco-plum text-white' 
-                    : 'bg-deco-beige text-deco-plum hover:bg-deco-lavender/20'
-                }`}
-                onClick={() => setActiveStyle(style)}
-              >
-                {style}
-              </button>
-            ))}
-          </div>
-        </div>
-        
         {/* Collection Gallery */}
         <div className="relative">
           {/* Scroll Arrows */}
@@ -175,4 +134,3 @@ const FeaturedCollections = () => {
 };
 
 export default FeaturedCollections;
-
