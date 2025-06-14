@@ -86,7 +86,7 @@ const SustainabilityPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <img src="https://images.unsplash.com/photo-1605453338589-320e13a91fde?auto=format&fit=crop&q=80&w=1000&h=600" alt="Raw material sourcing" className="rounded-lg shadow-md h-full w-full object-cover" />
+                    <img src="/lovable-uploads/4d7745d5-a235-4778-8620-db73f529a77b.png" alt="" className="rounded-lg shadow-md h-full w-full object-cover" />
                   </div>
                 </div>
               </TabsContent>
@@ -94,7 +94,7 @@ const SustainabilityPage = () => {
               <TabsContent value="packaging" className="mt-6">
                 <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
                   <div>
-                    <img src="https://images.unsplash.com/photo-1595278069441-2cf29f8005a4?auto=format&fit=crop&q=80&w=1000&h=600" alt="Sustainable packaging" className="rounded-lg shadow-md h-full w-full object-cover" />
+                    <img src="/lovable-uploads/c6c449b5-dadc-454e-9643-bdecc8853896.png" alt="" className="rounded-lg shadow-md h-full w-full object-cover" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-4">Packaging Innovation</h3>
@@ -127,7 +127,7 @@ const SustainabilityPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <img src="https://images.unsplash.com/photo-1588062104813-3b9f165ae16b?auto=format&fit=crop&q=80&w=1000&h=600" alt="Solar panels on facility" className="rounded-lg shadow-md h-full w-full object-cover" />
+                    <img src="/lovable-uploads/45cebf87-1be7-44bd-8123-a08b8b8b0e80.png" alt="" className="rounded-lg shadow-md h-full w-full object-cover" />
                   </div>
                 </div>
               </TabsContent>
@@ -135,7 +135,7 @@ const SustainabilityPage = () => {
               <TabsContent value="community" className="mt-6">
                 <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
                   <div>
-                    <img src="https://images.unsplash.com/photo-1560252829-804f1aedf1be?auto=format&fit=crop&q=80&w=1000&h=600" alt="Community project" className="rounded-lg shadow-md h-full w-full object-cover" />
+                    <img src="/lovable-uploads/9ad311a1-805b-4eae-8223-7bb8fe09cc77.png" alt="" className="rounded-lg shadow-md h-full w-full object-cover" />
                   </div>
                   <div>
                     <h3 className="mb-4 text-5xl font-normal">Supporting Local Communities</h3>
