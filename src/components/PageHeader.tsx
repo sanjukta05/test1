@@ -26,7 +26,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       
       <div className="container mx-auto px-4 relative z-10">
         <div className={`max-w-4xl ${centered ? 'mx-auto text-center' : 'ml-0 text-left'}`}>
-          <h1 className="font-distrampler text-5xl md:text-5xl text-white mb-4 font-normal lg:text-6xl">
+          <h1 className="font-distrampler text-5xl md:text-5xl text-white mb-4 font-normal my-0 py-0 lg:text-6xl">
             {title}
           </h1>
           

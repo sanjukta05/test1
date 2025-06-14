@@ -1,30 +1,22 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
 const AboutPage = () => {
   useEffect(() => {
     document.title = "About | DecoPaints";
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader 
-        title="About DecoPaints"
-        description="Crafting Premium Finishes Since 2010"
-        backgroundImage="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=80&w=2000&h=600"
-      />
+      <PageHeader title="About DecoPaints" description="Crafting Premium Finishes Since 2010" backgroundImage="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=80&w=2000&h=600" />
       
       <main className="flex-grow">
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+                <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Story</h2>
                 <p className="text-lg mb-6 text-deco-plum/80">
                   Founded in 2010, DecoPaints began with a singular vision: to bring the timeless beauty of 
                   artisanal finishes to contemporary spaces. Our journey started in the heart of Dubai with 
@@ -38,11 +30,7 @@ const AboutPage = () => {
                 </p>
               </div>
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=600"
-                  alt="DecoPaints craftsmen at work" 
-                  className="rounded-lg shadow-lg"
-                />
+                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=600" alt="DecoPaints craftsmen at work" className="rounded-lg shadow-lg" />
                 <div className="absolute -bottom-6 -right-6 bg-deco-plum text-white p-4 rounded-lg shadow-lg">
                   <p className="font-bold">13+ Years</p>
                   <p className="text-sm">of Artistic Excellence</p>
@@ -54,7 +42,7 @@ const AboutPage = () => {
 
         <section className="py-16 md:py-24 bg-deco-beige">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Our Values</h2>
+            <h2 className="text-3xl mb-12 text-center font-normal md:text-5xl">Our Values</h2>
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -101,7 +89,7 @@ const AboutPage = () => {
 
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-3xl mb-12 text-center font-normal md:text-5xl">Frequently Asked Questions</h2>
             
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
@@ -152,13 +140,13 @@ const AboutPage = () => {
         
         <section className="py-16 md:py-24 bg-deco-plum text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Expertise at Your Service</h2>
+            <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Expertise at Your Service</h2>
             <p className="text-xl mb-12 max-w-3xl mx-auto text-white/90">
               Transform your space with the region's most trusted decorative finishing experts.
             </p>
             
             <a href="#estimate" className="bg-deco-denim hover:bg-opacity-90 text-white font-medium py-4 px-8 rounded-full transition-colors inline-flex items-center">
-              <span>Get a Personalized Estimate</span>
+              <span className="text-lg">Get a Personalized Estimate</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
@@ -168,8 +156,6 @@ const AboutPage = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AboutPage;
