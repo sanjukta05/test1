@@ -3,31 +3,31 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Shield, History, Layers, Wind } from 'lucide-react';
 
-// Titles matching their images
+// Update the titles here:
 const finishedProjects = [
   {
     image: "/lovable-uploads/77846c41-588f-4d24-ab63-d65b10cffbef.png",
-    title: "Warm Modern Bedroom",
+    title: "Luxury Bedroom",
   },
   {
     image: "/lovable-uploads/a846e2ce-7fc7-4041-9b51-8ee9b33f7379.png",
-    title: "Elegant Wood Kitchen",
+    title: "Bathroom",
   },
   {
     image: "/lovable-uploads/05be3b1d-6149-4264-9ecd-d0abf61558c4.png",
-    title: "Deep Blue Lounge",
+    title: "Minimal Bathroom",
   },
   {
     image: "/lovable-uploads/faee09c5-816c-4b94-87a0-66d42a63a9be.png",
-    title: "Minimal Dining Area",
+    title: "Living Area",
   },
   {
     image: "/lovable-uploads/5a7b46fd-8260-4993-8ca0-7db3cc056d17.png",
-    title: "Cozy Living Room",
+    title: "Bedroom",
   },
   {
     image: "/lovable-uploads/d6d88a4a-9fd8-4ed8-96aa-433fd7230c54.png",
-    title: "Peaceful Reading Nook",
+    title: "Minimal Bedroom",
   }
 ];
 
@@ -129,7 +129,6 @@ const LimewashPage = () => {
           description: "Limewash is remarkably durable despite its soft appearance. If needed after many years, refreshing is simple with a new thin application that bonds seamlessly with the original finish."
         }
       ]}
-      // Now sending both images and titles:
       finishedProjects={finishedProjects}
       inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
@@ -138,3 +137,4 @@ const LimewashPage = () => {
 };
 
 export default LimewashPage;
+
