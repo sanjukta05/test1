@@ -16,21 +16,30 @@ const AboutPage = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Story</h2>
-                <p className="text-lg mb-6 text-deco-plum/80">
+                <h2 className="font-distrampler text-5xl mb-6 font-normal">Our Story</h2>
+                <p className="font-circular text-xl mb-6 text-deco-plum/80">
                   Founded in 2010, DecoPaints began with a singular vision: to bring the timeless beauty of 
                   artisanal finishes to contemporary spaces. Our journey started in the heart of Dubai with 
                   a small team of passionate craftsmen dedicated to preserving traditional techniques while 
                   embracing innovation.
                 </p>
-                <p className="text-lg mb-6 text-deco-plum/80">
+                <p className="font-circular text-xl mb-6 text-deco-plum/80">
                   Today, we've grown into the UAE's premier provider of luxury decorative finishes, with a 
                   portfolio spanning residential palaces, commercial landmarks, and hospitality icons across 
                   the Emirates.
                 </p>
               </div>
-              <div className="relative">
-                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=600" alt="DecoPaints craftsmen at work" className="rounded-lg shadow-lg" />
+              <div className="relative flex flex-col items-center space-y-6">
+                <img 
+                  src="/lovable-uploads/879dd430-1a68-471a-a24d-ba955c5e5cb5.png" 
+                  alt="Modern luxury bedroom interior with neutral tones and artistic finishes" 
+                  className="rounded-lg shadow-lg w-full object-cover max-h-[370px] mb-5"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=600" 
+                  alt="DecoPaints craftsmen at work" 
+                  className="rounded-lg shadow-lg w-full object-cover max-h-[220px]" 
+                />
                 <div className="absolute -bottom-6 -right-6 bg-deco-plum text-white p-4 rounded-lg shadow-lg">
                   <p className="font-bold">13+ Years</p>
                   <p className="text-sm">of Artistic Excellence</p>
