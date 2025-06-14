@@ -21,6 +21,34 @@ const inProgressTitles = [
   "Emirates Hills"
 ];
 
+// Finished project images and their descriptive titles:
+const finishedProjects = [
+  {
+    image: "/lovable-uploads/a1380385-7acb-40bd-9f89-aca5d7162af7.png",
+    title: "Colorful Terrazzo Floor – Luxury Living Room"
+  },
+  {
+    image: "/lovable-uploads/cb3fbbca-6a68-4b2a-97d7-73bf89cd91b3.png",
+    title: "Geometric Black & Gold Terrazzo – Grand Entrance"
+  },
+  {
+    image: "/lovable-uploads/c3fabbb7-f3ad-4f59-94d4-c5335dd356a3.png",
+    title: "Classic Beige Terrazzo – Sculptural Staircase"
+  },
+  {
+    image: "/lovable-uploads/b9778cbe-5f5a-489e-bdd8-49b225952568.png",
+    title: "Red Hexagon Terrazzo Tiles – Modern Kitchen"
+  },
+  {
+    image: "/lovable-uploads/ad4d2868-157f-486f-88d6-cbe6bc527f0e.png",
+    title: "Contemporary Red & Black Terrazzo – Patterned Kitchen"
+  },
+  {
+    image: "/lovable-uploads/c5f18927-a1c8-467e-9e62-529c0818c1de.png",
+    title: "Dark Terrazzo Spa Retreat – Luxurious Bathroom"
+  }
+];
+
 const TerrazzoFlooringPage = () => {
   useEffect(() => {
     document.title = "Terrazzo Flooring | DecoPaints";
@@ -103,6 +131,7 @@ const TerrazzoFlooringPage = () => {
       ]}
       inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
+      finishedProjects={finishedProjects}
     />
   );
 };
