@@ -3,7 +3,12 @@ import React from 'react';
 
 export default function DubaiSkyline() {
   return (
-    <section className="relative bg-gradient-to-r from-deco-plum to-deco-plum/90 py-12 overflow-hidden">
+    <section
+      className="relative py-12 overflow-hidden"
+      style={{
+        background: "linear-gradient(to right, rgba(57,41,86,0.90), rgba(57,41,86,0.90)), url('/lovable-uploads/e464d2ed-3dfc-489e-9ecb-1340c2c82f79.png') center/cover no-repeat"
+      }}
+    >
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-parafina text-3xl text-white mb-6">Serving All Emirates in the UAE</h2>
