@@ -3,6 +3,34 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Paintbrush, Layers, Star, Shield } from 'lucide-react';
 
+// NEW finishedProjects array with your uploaded images and custom titles
+const finishedProjects = [
+  {
+    image: "/lovable-uploads/4416aa9c-bdde-456d-b4f2-ca799a83ee4f.png",
+    title: "Modern Living Room – Dramatic Metallic Swirl"
+  },
+  {
+    image: "/lovable-uploads/57e8d13e-ce98-4288-96e7-23863c86b973.png",
+    title: "Art Studio – Bronze & Aqua Epoxy Statement"
+  },
+  {
+    image: "/lovable-uploads/287a1f0b-704d-45d4-8654-0ce1816885ee.png",
+    title: "Contemporary Kitchen – Gold Veined Gloss"
+  },
+  {
+    image: "/lovable-uploads/207fc2f6-6f7c-45a7-81e2-ea04475b6299.png",
+    title: "Luxury Bathroom – Graphite Reflections"
+  },
+  {
+    image: "/lovable-uploads/be13f47c-0e57-4032-9259-1abf6cb57372.png",
+    title: "Designer Bath Suite – Marble Metallic Blend"
+  },
+  {
+    image: "/lovable-uploads/856eac3d-70de-45f0-8d31-f36ebb78fc91.png",
+    title: "Premium Kitchen – Flowing Metallic Counter"
+  }
+];
+
 const inProgressProjects = [
   "/lovable-uploads/46dee5bb-41b5-47b3-83c5-ec809c487dd9.png",
   "/lovable-uploads/65835dc2-dcc6-459d-bba3-6005ef83056b.png",
@@ -101,6 +129,7 @@ const MetallicEpoxyPage = () => {
           description: "Every 3-5 years, depending on traffic, a professional maintenance coat can restore the original brilliance and protect the metallic effects from degradation."
         }
       ]}
+      finishedProjects={finishedProjects}
       inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
     />
