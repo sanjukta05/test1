@@ -3,20 +3,20 @@ import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 
 const wallFinishImages = [
-  "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
-  "https://images.unsplash.com/photo-1486718448742-163732cd1544",
-  "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace",
-  "/lovable-uploads/pearlfinish.png",
-  "/lovable-uploads/9.png",
-  "/lovable-uploads/conwall.jpg"
+  "/lovable-uploads/mar-rb.png",
+  "/lovable-uploads/lime-rb.png",
+  "/lovable-uploads/con-rb.png",
+  "/lovable-uploads/brick-rb",
+  "/lovable-uploads/pearl-finish.png",
+  "/lovable-uploads/gold-rb.jpg"
 ];
 const floorFinishImages = [
-  "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151",
-  "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
-  "https://images.unsplash.com/photo-1504893524553-b855bce32c67",
-  "/lovable-uploads/terrazzo.png",
-  "/lovable-uploads/626c9756-9fc9-437a-8645-6508c66ee745.png",
-  "/lovable-uploads/goldleaf.png"
+  "/lovable-uploads/tera-rb.png",
+  "/lovable-uploads/cement-rb.png",
+  "/lovable-uploads/rb-rb.png",
+  "/lovable-uploads/meta-rb.jpg",
+  "/lovable-uploads/deco-rb.png",
+  "/lovable-uploads/stamped-rb.png"
 ];
 
 const DistinctiveFinishesTabs = () => (
