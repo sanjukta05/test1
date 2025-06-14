@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Clock, Star, Layers, Paintbrush } from 'lucide-react';
@@ -8,6 +7,15 @@ const TerrazzoFlooringPage = () => {
     document.title = "Terrazzo Flooring | DecoPaints";
     window.scrollTo(0, 0);
   }, []);
+
+  const inProgressTitles = [
+    "Business Bay",
+    "Dubai Marina",
+    "The Springs",
+    "The Meadows",
+    "Palm Jumeirah",
+    "Emirates Hills"
+  ];
 
   return (
     <ProductLayout
@@ -83,6 +91,7 @@ const TerrazzoFlooringPage = () => {
           description: "With proper care, terrazzo will last for generations. We offer comprehensive maintenance programs to ensure your investment retains its beauty for decades."
         }
       ]}
+      inProgressTitles={inProgressTitles}
     />
   );
 };

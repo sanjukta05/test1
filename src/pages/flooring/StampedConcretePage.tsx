@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Sun, Paintbrush, Layers, Home } from 'lucide-react';
@@ -8,6 +7,15 @@ const StampedConcretePage = () => {
     document.title = "Stamped Concrete | DecoPaints";
     window.scrollTo(0, 0);
   }, []);
+
+  const inProgressTitles = [
+    "Business Bay",
+    "Dubai Marina",
+    "The Springs",
+    "The Meadows",
+    "Palm Jumeirah",
+    "Emirates Hills"
+  ];
 
   return (
     <ProductLayout
@@ -83,6 +91,7 @@ const StampedConcretePage = () => {
           description: "Due to Dubai's intense UV exposure, we recommend resealing exterior stamped concrete every 1-2 years to maintain color integrity and surface protection."
         }
       ]}
+      inProgressTitles={inProgressTitles}
     />
   );
 };

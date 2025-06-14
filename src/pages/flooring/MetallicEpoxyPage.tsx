@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Paintbrush, Layers, Star, Shield } from 'lucide-react';
@@ -8,6 +7,15 @@ const MetallicEpoxyPage = () => {
     document.title = "Metallic Epoxy Flooring | DecoPaints";
     window.scrollTo(0, 0);
   }, []);
+
+  const inProgressTitles = [
+    "Business Bay",
+    "Dubai Marina",
+    "The Springs",
+    "The Meadows",
+    "Palm Jumeirah",
+    "Emirates Hills"
+  ];
 
   return (
     <ProductLayout
@@ -83,6 +91,7 @@ const MetallicEpoxyPage = () => {
           description: "Every 3-5 years, depending on traffic, a professional maintenance coat can restore the original brilliance and protect the metallic effects from degradation."
         }
       ]}
+      inProgressTitles={inProgressTitles}
     />
   );
 };

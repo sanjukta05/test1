@@ -1,7 +1,15 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Sun, Droplet, Layers, Paintbrush } from 'lucide-react';
+
+const inProgressTitles = [
+  "Business Bay",
+  "Dubai Marina",
+  "The Springs",
+  "The Meadows",
+  "Palm Jumeirah",
+  "Emirates Hills"
+];
 
 const ResinBoundSurfacePage = () => {
   useEffect(() => {
@@ -83,6 +91,7 @@ const ResinBoundSurfacePage = () => {
           description: "Depending on traffic and sun exposure, a maintenance coat may be recommended every 3-5 years to maintain optimal appearance and protection."
         }
       ]}
+      inProgressTitles={inProgressTitles}
     />
   );
 };

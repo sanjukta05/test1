@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Shield, Droplet, Clock, Star } from 'lucide-react';
@@ -8,6 +7,15 @@ const DecorativeEpoxyPage = () => {
     document.title = "Decorative Epoxy Flooring | DecoPaints";
     window.scrollTo(0, 0);
   }, []);
+
+  const inProgressTitles = [
+    "Business Bay",
+    "Dubai Marina",
+    "The Springs",
+    "The Meadows",
+    "Palm Jumeirah",
+    "Emirates Hills"
+  ];
 
   return (
     <ProductLayout
@@ -83,6 +91,7 @@ const DecorativeEpoxyPage = () => {
           description: "With proper care, decorative epoxy should maintain its appearance for 7-10 years before requiring a maintenance coat, depending on traffic and use patterns."
         }
       ]}
+      inProgressTitles={inProgressTitles}
     />
   );
 };

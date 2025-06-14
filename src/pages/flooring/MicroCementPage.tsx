@@ -3,6 +3,15 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Droplet, Star, Home, Layers } from 'lucide-react';
 
+const inProgressTitles = [
+  "Business Bay",
+  "Dubai Marina",
+  "The Springs",
+  "The Meadows",
+  "Palm Jumeirah",
+  "Emirates Hills"
+];
+
 const MicroCementPage = () => {
   useEffect(() => {
     document.title = "Micro-Cement & Micro-Topping | DecoPaints";
@@ -15,7 +24,7 @@ const MicroCementPage = () => {
       title="Micro-Cement & Micro-Topping"
       heroTitle="Seamless Contemporary Flooring"
       heroDescription="Modern, minimalist surfaces with subtle texture that create uninterrupted expanses of sophisticated flooring perfect for contemporary spaces."
-      heroImage="/public/textures/concrete-texture.jpg"
+      heroImage="/lovable-uploads/8dbe1205-3074-4563-b29e-0a2356d97437.png"
       benefits={[
         {
           title: "Seamless Installation",
@@ -83,6 +92,7 @@ const MicroCementPage = () => {
           description: "In the rare event of damage, localized repairs can be performed by our skilled technicians without requiring replacement of entire floor sections."
         }
       ]}
+      inProgressTitles={inProgressTitles}
     />
   );
 };
