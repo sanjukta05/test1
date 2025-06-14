@@ -95,19 +95,19 @@ const MicroCementPage = () => {
       ]}
       applications={[
         {
-          title: "Luxury Villas",
-          description: "Create elegant, continuous flooring throughout living spaces that provides a sophisticated backdrop for high-end furnishings and architectural details.",
-          image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: 'Luxury Salon Interior',
+          description: 'Elegant salon featuring microcement floors, gold and brown accents, and a sophisticated minimalist palette designed for premium experiences.',
+          image: '/lovable-uploads/e26e05d2-8c81-4285-821a-cfc7f22a46c6.png'
         },
         {
-          title: "Penthouse Apartments",
-          description: "Deliver contemporary sophistication with floors that create visual continuity across open-concept living spaces, enhancing the sense of spaciousness.",
-          image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA"
+          title: 'Skyline View Living Room',
+          description: 'Open-plan living room with seamless microcement flooring and panoramic Dubai skyline views, perfect for luxurious contemporary residences.',
+          image: '/lovable-uploads/5cae5b23-9ebb-4278-b677-315e447f7da5.png'
         },
         {
-          title: "Boutique Retail",
-          description: "Provide sophisticated, durable flooring that creates the perfect backdrop for merchandise display while withstanding the demands of commercial traffic.",
-          image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: 'Indoor-Outdoor Villa Lounge',
+          description: 'Modern villa lounge with soft-toned microcement floors extending to a tranquil outdoor courtyard, blending interior luxury with nature.',
+          image: '/lovable-uploads/0e03c827-6e85-400d-9107-616b5be9d7de.png'
         }
       ]}
       techSpecs={[
