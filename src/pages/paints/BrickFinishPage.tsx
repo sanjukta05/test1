@@ -15,7 +15,7 @@ const BrickFinishPage = () => {
       title="Brick Finish"
       heroTitle="Authentic Brick Texture"
       heroDescription="Create the perfect authentic-looking brick surfaces without the structural requirements of actual masonry, perfect for feature walls and themed environments."
-      heroImage="/public/textures/concrete-texture.jpg"
+      heroImage="/lovable-uploads/cfd03ba6-d524-4e1c-945c-5f2e8bee8d53.png"
       benefits={[
         {
           title: "Lightweight Alternative",
@@ -83,8 +83,17 @@ const BrickFinishPage = () => {
           description: "Minor damage can be professionally touched up without requiring complete refinishing. Our technicians can match the original color and texture for seamless repairs."
         }
       ]}
+      inProgressTitles={[
+        "The Springs",
+        "The Meadows",
+        "Downtown Dubai",
+        "Dubai Hills",
+        "Palm Jumeirah",
+        "Dubai Marina"
+      ]}
     />
   );
 };
 
 export default BrickFinishPage;
+
