@@ -35,11 +35,6 @@ const AboutPage = () => {
                   alt="Modern luxury bedroom interior with neutral tones and artistic finishes" 
                   className="rounded-lg shadow-lg w-full object-cover max-h-[370px] mb-5"
                 />
-                <img 
-                  src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=600" 
-                  alt="DecoPaints craftsmen at work" 
-                  className="rounded-lg shadow-lg w-full object-cover max-h-[220px]" 
-                />
                 <div className="absolute -bottom-6 -right-6 bg-deco-plum text-white p-4 rounded-lg shadow-lg">
                   <p className="font-bold">13+ Years</p>
                   <p className="text-sm">of Artistic Excellence</p>
