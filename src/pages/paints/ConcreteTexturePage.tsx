@@ -83,6 +83,14 @@ const ConcreteTexturePage = () => {
           description: "Minor damage can be professionally repaired without requiring complete refinishing. Our technicians can match existing textures and colors for seamless repairs."
         }
       ]}
+      finishedProjects={[
+        "/lovable-uploads/a2fbec00-f91c-416f-89eb-78cf2e9caaff.png",
+        "/lovable-uploads/b575e31a-99cc-4c7c-bafd-f7144792ddc9.png",
+        "/lovable-uploads/9b7f0826-ba57-4957-8917-f57eab16106d.png",
+        "/lovable-uploads/108645d9-ddd9-464a-894b-53d7415a4f97.png",
+        "/lovable-uploads/8f8ed56e-9757-4f21-9967-74540153d516.png",
+        "/lovable-uploads/0bed9588-f10a-4f11-ba76-eb3f47a2bba0.png"
+      ]}
     />
   );
 };
