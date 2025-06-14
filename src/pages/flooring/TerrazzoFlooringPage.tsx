@@ -3,6 +3,15 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Clock, Star, Layers, Paintbrush } from 'lucide-react';
 
+const inProgressProjects = [
+  "/lovable-uploads/46dee5bb-41b5-47b3-83c5-ec809c487dd9.png",
+  "/lovable-uploads/65835dc2-dcc6-459d-bba3-6005ef83056b.png",
+  "/lovable-uploads/100c83ec-d191-4ed6-b450-d3b4a2d10161.png",
+  "/lovable-uploads/56d316f2-e4b4-4e78-8b70-7c7e9aa31c0a.png",
+  "/lovable-uploads/61ac847b-8114-4815-a91e-b9fceb60a443.png",
+  "/lovable-uploads/76ae1d28-e912-4cf0-9751-4816ac539db4.png"
+];
+
 const inProgressTitles = [
   "Business Bay",
   "Dubai Marina",
@@ -92,6 +101,7 @@ const TerrazzoFlooringPage = () => {
           description: "With proper care, terrazzo will last for generations. We offer comprehensive maintenance programs to ensure your investment retains its beauty for decades."
         }
       ]}
+      inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
     />
   );
