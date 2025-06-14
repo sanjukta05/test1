@@ -36,7 +36,7 @@ export default function SpaceShowcase() {
   const spaces = [
     {
       title: "Living Spaces",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/d2b0fdec-880c-41f9-84c7-e432d73393f7.png",
       features: [
         "Elegant wall finishes for statement walls",
         "Subtle textures for refined ambiance",
@@ -54,7 +54,7 @@ export default function SpaceShowcase() {
     },
     {
       title: "Bathrooms & Spa",
-      image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/d3674917-53b5-47b9-9aaa-c3f0eb623a7b.png",
       features: [
         "Seamless waterproof surfaces",
         "Humidity resistant decorative finishes",
@@ -63,7 +63,7 @@ export default function SpaceShowcase() {
     },
     {
       title: "Commercial Spaces",
-      image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/292be165-768b-4c98-a0be-143f7c6c3ebc.png",
       features: [
         "High-durability flooring systems",
         "Brand-aligned aesthetic solutions",
