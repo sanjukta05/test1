@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import { Paintbrush } from 'lucide-react';
@@ -38,8 +38,9 @@ export interface ProductProps {
   applications: Application[];
   techSpecs: TechSpec[];
   maintenance: MaintenanceItem[];
-  finishedProjects?: string[];
-  inProgressProjects?: string[]; // <-- add this line
+  finishedProjects?: { image: string; title?: string }[] | string[]; // Support array of objects or strings
+  inProgressProjects?: string[];
+  inProgressTitles?: string[]; // Accept custom titles for in progress section
 }
 
 const finishedTitlesByImage: { [filename: string]: string } = {
@@ -73,7 +74,8 @@ const ProductLayout: React.FC<ProductProps> = ({
   techSpecs,
   maintenance,
   finishedProjects,
-  inProgressProjects // <-- add to props
+  inProgressProjects,
+  inProgressTitles
 }) => {
   // Default images for Palette of Success (if not overridden)
   const defaultFinishedProjects = [
@@ -94,14 +96,16 @@ const ProductLayout: React.FC<ProductProps> = ({
     "/lovable-uploads/6.png"
   ];
 
-  // Use custom finishedProjects or inProgressProjects if provided, otherwise fallback
-  const usedFinishedProjects = finishedProjects && finishedProjects.length > 0
-    ? finishedProjects
-    : defaultFinishedProjects;
+  // Helper: check if finishedProjects is array of objects with image & title, or string[]
+  const usedFinishedProjects =
+    finishedProjects && finishedProjects.length > 0
+      ? finishedProjects
+      : defaultFinishedProjects;
 
-  const usedInProgressProjects = inProgressProjects && inProgressProjects.length > 0
-    ? inProgressProjects
-    : defaultInProgressProjects;
+  const usedInProgressProjects =
+    inProgressProjects && inProgressProjects.length > 0
+      ? inProgressProjects
+      : defaultInProgressProjects;
 
   // Determine custom section title for Featured Applications if this is the Pearl Finish page
   const featuredApplicationsTitle = title === "Pearl Finish"
@@ -208,28 +212,33 @@ const ProductLayout: React.FC<ProductProps> = ({
               <TabsTrigger value="progress" className="font-grosa">In Progress</TabsTrigger>
             </TabsList>
             
-            {/* FINISHED PROJECTS: remove "Completed" label, update titles */}
+            {/* FINISHED PROJECTS: Custom titles per image if provided */}
             <TabsContent value="finished" className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {usedFinishedProjects.map((image, index) => {
-                  // extract filename for mapping, e.g. "/lovable-uploads/xxxx.png" → "xxxx.png"
-                  const filename = image.split('/').pop() || '';
-                  const altTitle =
-                    finishedTitlesByImage[filename] ||
-                    `Project ${index + 1}`;
+                {(Array.isArray(usedFinishedProjects) ? usedFinishedProjects : []).map((proj, index) => {
+                  let image: string, projTitle: string | undefined;
+                  if (typeof proj === "string") {
+                    image = proj;
+                    // fallback logic for title (for legacy)
+                    const filename = image.split('/').pop() || '';
+                    projTitle = finishedTitlesByImage[filename] || `Project ${index + 1}`;
+                  } else {
+                    image = proj.image;
+                    projTitle = proj.title; // always prefer supplied title
+                  }
                   return (
                     <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
                       <div className="relative w-full">
                         <AspectRatio ratio={4/3}>
                           <img 
                             src={image} 
-                            alt={altTitle} 
+                            alt={projTitle ?? `Project ${index + 1}`} 
                             className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                           />
                         </AspectRatio>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                          <h3 className="font-parafina text-lg font-bold">{altTitle}</h3>
+                          <h3 className="font-parafina text-lg font-bold">{projTitle ?? `Project ${index + 1}`}</h3>
                         </div>
                       </div>
                     </div>
@@ -238,28 +247,32 @@ const ProductLayout: React.FC<ProductProps> = ({
               </div>
             </TabsContent>
             
-            {/* IN PROGRESS: remove tags, update titles */}
+            {/* IN PROGRESS: use provided inProgressTitles prop if present */}
             <TabsContent value="progress" className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {usedInProgressProjects.map((image, index) => (
-                  <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
-                    <div className="relative w-full">
-                      <AspectRatio ratio={4/3}>
-                        <img 
-                          src={image} 
-                          alt={inProgressTitles[index] ? inProgressTitles[index] : `Project ${index + 1}`} 
-                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </AspectRatio>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 className="font-parafina text-lg font-bold">
-                          {inProgressTitles[index] ? inProgressTitles[index] : `Project ${index + 1}`}
-                        </h3>
+                {usedInProgressProjects.map((image, index) => {
+                  let title =
+                    inProgressTitles && inProgressTitles[index]
+                      ? inProgressTitles[index]
+                      : `Project ${index + 1}`;
+                  return (
+                    <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
+                      <div className="relative w-full">
+                        <AspectRatio ratio={4/3}>
+                          <img 
+                            src={image} 
+                            alt={title} 
+                            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </AspectRatio>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                          <h3 className="font-parafina text-lg font-bold">{title}</h3>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </TabsContent>
           </Tabs>
