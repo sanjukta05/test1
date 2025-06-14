@@ -17,6 +17,15 @@ import { useElfsightForm } from '../components/ElfsightFormContext';
 const Index = () => {
   useEffect(() => {
     document.title = "DecoPaints | Transforming Spaces, Elevating Lifestyles";
+    // Dynamically load Elfsight script for WhatsApp and Call
+    const scriptId = 'elfsight-platform';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = "https://static.elfsight.com/platform/platform.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
   const { openForm } = useElfsightForm();
@@ -264,10 +273,30 @@ const Index = () => {
       </main>
       <Footer />
       
-      {/* Floating Get Estimate Button */}
+      {/* --- WHATSAPP + CALL WIDGETS (STICKY BOTTOM RIGHT) --- */}
+      <div
+        className="fixed z-50 right-4 bottom-6 flex flex-col items-end space-y-3 lg:space-y-4"
+        style={{ pointerEvents: 'none' }}
+      >
+        {/* WhatsApp Chat Widget */}
+        <div
+          className="elfsight-app-75568a53-9d16-45b5-966f-65fc4c73a8e1"
+          data-elfsight-app-lazy
+          style={{ pointerEvents: 'auto' }}
+        />
+        {/* Click To Call Widget */}
+        <div
+          className="elfsight-app-f07d86dc-6bb2-445d-9b82-ffa7fed533d1"
+          data-elfsight-app-lazy
+          style={{ pointerEvents: 'auto' }}
+        />
+      </div>
+
+      {/* --- GET ESTIMATE BUTTON (BOTTOM LEFT, MOBILE ONLY) --- */}
       <button
         type="button"
-        className="fixed bottom-8 right-8 bg-deco-denim text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all z-40 group flex items-center gap-2"
+        className="fixed left-4 bottom-6 z-40 bg-deco-denim text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all group flex items-center gap-2
+          block md:hidden"
         onClick={openForm}
       >
         <Paintbrush className="h-5 w-5 group-hover:animate-pulse" />
