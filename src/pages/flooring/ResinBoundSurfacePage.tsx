@@ -49,6 +49,25 @@ const finishedProjects = [
   }
 ];
 
+// UPDATED featured application images and titles
+const resinBoundApplications = [
+  {
+    title: "Palm-Lined Walkway – Atlantis, The Palm",
+    description: "A sunlit, seamless resin bound pathway winding through lush, palm-filled gardens in front of Atlantis, The Palm—showcasing luxury and natural integration.",
+    image: "/lovable-uploads/7ac94f5a-29ed-4f80-af60-54801cdb39ef.png"
+  },
+  {
+    title: "Luxury Villa Entrance – Emirates Hills",
+    description: "A sophisticated resin bound driveway at the entrance of a lavish villa, exemplifying stately architecture and refined outdoor surfacing.",
+    image: "/lovable-uploads/bf866bdc-2dfb-4dea-bb8a-11670bf9d96a.png"
+  },
+  {
+    title: "Serpentine Garden Path",
+    description: "A beautiful, curved resin bound path blending into a manicured garden—ideal for high-end residential landscapes and tranquil retreats.",
+    image: "/lovable-uploads/0d1d7ce7-d9f6-499b-a647-27daac08e3fe.png"
+  }
+];
+
 const ResinBoundSurfacePage = () => {
   useEffect(() => {
     document.title = "Resin Bound Surface | DecoPaints";
@@ -61,7 +80,7 @@ const ResinBoundSurfacePage = () => {
       title="Resin Bound Surface"
       heroTitle="Seamless Resin Bound Surfaces"
       heroDescription="Smooth, seamless surfaces with exceptional depth and clarity, perfect for creating continuous indoor/outdoor transitions in luxury properties."
-      heroImage="/lovable-uploads/8e2f9b64-589f-4f58-ac88-868059075cc9.png"
+      heroImage="/lovable-uploads/0ffb8111-8f10-40fe-b858-41b1c937f504.png"
       benefits={[
         {
           title: "UV Resistance",
@@ -84,23 +103,8 @@ const ResinBoundSurfacePage = () => {
           icon: <Droplet className="h-8 w-8" />
         }
       ]}
-      applications={[
-        {
-          title: "Pool Decks",
-          description: "Create beautiful, safe surfaces around swimming pools that remain cool underfoot and provide appropriate slip resistance for wet areas.",
-          image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Outdoor Terraces",
-          description: "Transform exterior living spaces with elegant, durable surfaces that stand up to Dubai's climate while providing visual continuity with interior spaces.",
-          image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Luxury Bathrooms",
-          description: "Create sophisticated, seamless surfaces that are inherently waterproof and can flow continuously from floors up walls for truly distinctive spaces.",
-          image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        }
-      ]}
+      // UPDATED applications to new set
+      applications={resinBoundApplications}
       techSpecs={[
         { label: "Thickness Options", value: "4mm standard application, up to 10mm for specialized applications" },
         { label: "Substrate Preparation", value: "Sound, dry base with appropriate primer system" },
@@ -137,4 +141,3 @@ const ResinBoundSurfacePage = () => {
 };
 
 export default ResinBoundSurfacePage;
-
