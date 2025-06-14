@@ -1,13 +1,10 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { Button } from "@/components/ui/button";
 import { useElfsightForm } from '../components/ElfsightFormContext';
-
 const ELFSIGHT_APP_ID = "4ae4b665-d18d-434d-bf98-3c9f9bc376b1";
-
 const ContactPage = () => {
   useEffect(() => {
     document.title = "Contact | DecoPaints";
@@ -19,24 +16,19 @@ const ContactPage = () => {
       document.body.appendChild(script);
     }
   }, []);
-
-  const { openForm } = useElfsightForm();
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const {
+    openForm
+  } = useElfsightForm();
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader 
-        title="Contact Us"
-        description="Let's Transform Your Space Together"
-        backgroundImage="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=2000&h=600"
-      />
+      <PageHeader title="Contact Us" description="Let's Transform Your Space Together" backgroundImage="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=2000&h=600" />
       
       <main className="flex-grow">
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
+                <h2 className="mb-6 text-5xl font-normal">Get in Touch</h2>
                 <p className="text-lg mb-8 text-deco-plum/80">
                   Whether you're looking for a consultation, have a question about our services, 
                   or want to discuss a potential project, we're here to help.
@@ -89,22 +81,17 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <div className="mt-12">
-                  <Button
-                    className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded"
-                    onClick={openForm}
-                  >
+                  <Button className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded" onClick={openForm}>
                     Get Estimate
                   </Button>
                 </div>
               </div>
               
               <div>
-                <h3 className="text-xl font-bold mb-6">Request an Estimate</h3>
-                <div
-                  className={`elfsight-app-${ELFSIGHT_APP_ID}`}
-                  data-elfsight-app-lazy
-                  style={{ minHeight: 500 }}
-                ></div>
+                <h3 className="mb-6 text-center font-normal text-5xl">Request an Estimate</h3>
+                <div className={`elfsight-app-${ELFSIGHT_APP_ID}`} data-elfsight-app-lazy style={{
+                minHeight: 500
+              }}></div>
               </div>
             </div>
           </div>
@@ -112,24 +99,15 @@ const ContactPage = () => {
         
         <section className="py-16 md:py-24 bg-deco-beige">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-8">Find Us</h2>
+            <h2 className="mb-8 font-normal text-5xl">Find Us.</h2>
             <div className="rounded-lg overflow-hidden shadow-lg h-96 md:h-[500px]">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.537133511753!2d55.23233491500953!3d25.044147283965648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bc629d74eb1%3A0x7f8f5d5a7b08d1e4!2sAl%20Quoz%2C%20Dubai!5e0!3m2!1sen!2sae!4v1652180484576!5m2!1sen!2sae" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy"
-                aria-label="DecoPaints UAE location map"
-              ></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.537133511753!2d55.23233491500953!3d25.044147283965648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bc629d74eb1%3A0x7f8f5d5a7b08d1e4!2sAl%20Quoz%2C%20Dubai!5e0!3m2!1sen!2sae!4v1652180484576!5m2!1sen!2sae" width="100%" height="100%" style={{
+              border: 0
+            }} allowFullScreen loading="lazy" aria-label="DecoPaints UAE location map"></iframe>
             </div>
             {/* Add a prominent CTA at the bottom */}
             <div className="mt-12 flex flex-col items-center">
-              <Button
-                className="bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 px-10 rounded-full max-w-xs w-full"
-                onClick={openForm}
-              >
+              <Button onClick={openForm} className="bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 px-10 rounded-full max-w-xs w-full text-lg">
                 Book a Consultation
               </Button>
             </div>
@@ -138,8 +116,6 @@ const ContactPage = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ContactPage;
