@@ -5,31 +5,31 @@ const collections = [
   {
     id: 1,
     name: "Venetian Marmorino",
-    image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=1000&h=600",
+    image: "lovable-uploads/9.png",
     description: "Timeless elegance with a smooth, stone-like finish reminiscent of classical Venetian architecture."
   },
   {
     id: 2,
     name: "Gold Leaf Accents",
-    image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=1000&h=600",
+    image: "lovable-uploads/goldleaf.png",
     description: "Luxurious metallic highlights that capture and reflect light, adding opulence to any space."
   },
   {
     id: 3,
     name: "Concrete Textures",
-    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=1000&h=600",
+    image: "lovable-uploads/conwall.jpg",
     description: "Industrial-inspired finishes that bring raw, urban aesthetics into contemporary interiors."
   },
   {
     id: 4,
     name: "Pearl Finishes",
-    image: "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=80&w=1000&h=600",
+    image: "lovable-uploads/pearlfinish.png",
     description: "Subtle iridescent surfaces that change with light conditions, creating dynamic environments."
   },
   {
     id: 5,
     name: "Terrazzo Flooring",
-    image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=80&w=1000&h=600",
+    image: "lovable-uploads/terrazzo.png",
     description: "Contemporary interpretation of the classic Italian terrazzo, combining durability with artistry."
   }
 ];
