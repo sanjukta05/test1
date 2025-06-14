@@ -33,7 +33,7 @@ const MetallicEpoxyPage = () => {
       title="Metallic Epoxy Flooring"
       heroTitle="Dramatic Flowing Metallic Effects"
       heroDescription="Create stunning dimensional flooring with fluid, dynamic patterns that appear to have depth and movement beneath a glass-like finish."
-      heroImage="/public/textures/terrazzo-texture.jpg"
+      heroImage="/lovable-uploads/da6d6c5b-1007-4713-a5f1-168012d0a355.png"
       benefits={[
         {
           title: "Artistic Installations",
