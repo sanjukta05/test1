@@ -12,17 +12,21 @@ import ContactCTA from '../components/ContactCTA';
 import SpaceShowcase from '../components/SpaceShowcase';
 import DubaiSkyline from '../components/DubaiSkyline';
 import DistinctiveFinishesTabs from '../components/DistinctiveFinishesTabs';
+import { useElfsightForm } from '../components/ElfsightFormContext';
 
 const Index = () => {
   useEffect(() => {
     document.title = "DecoPaints | Transforming Spaces, Elevating Lifestyles";
   }, []);
 
+  const { openForm } = useElfsightForm();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-grow">
-        <HeroSection />
+        {/* Hero Section with CTAs */}
+        <HeroSection openEstimateForm={openForm} />
         <BrandPromise />
         
         {/* Texture Section */}
@@ -81,10 +85,14 @@ const Index = () => {
               </div>
               
               <div className="mt-16 text-center">
-                <Link to="/contact" className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all">
+                <button
+                  type="button"
+                  className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all"
+                  onClick={openForm}
+                >
                   <Paintbrush className="h-5 w-5 mr-2" />
                   Schedule Consultation
-                </Link>
+                </button>
               </div>
             </div>
           </div>
@@ -210,18 +218,19 @@ const Index = () => {
         </section>
         
         {/* Contact CTA */}
-        <ContactCTA cta="Transform Your Space" />
+        <ContactCTA cta="Transform Your Space" onCtaClick={openForm} />
       </main>
       <Footer />
       
       {/* Floating Get Estimate Button */}
-      <Link 
-        to="/contact" 
+      <button
+        type="button"
         className="fixed bottom-8 right-8 bg-deco-denim text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all z-40 group flex items-center gap-2"
+        onClick={openForm}
       >
         <Paintbrush className="h-5 w-5 group-hover:animate-pulse" />
         Get Estimate
-      </Link>
+      </button>
     </div>
   );
 };

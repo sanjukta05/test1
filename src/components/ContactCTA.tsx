@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
@@ -10,9 +9,10 @@ interface ContactCTAProps {
   location?: string;
   bgColor?: 'dark' | 'light';
   cta?: string;
+  onCtaClick?: () => void;
 }
 
-export default function ContactCTA({ className, location = "", bgColor = 'dark', cta = "Get Estimate" }: ContactCTAProps) {
+export default function ContactCTA({ className, location = "", bgColor = 'dark', cta = "Get Estimate", onCtaClick }: ContactCTAProps) {
   const isDark = bgColor === 'dark';
 
   return (
@@ -79,13 +79,14 @@ export default function ContactCTA({ className, location = "", bgColor = 'dark',
                 </div>
               </div>
               
-              <Link to="/contact">
-                <Button className={cn(
+              <Button
+                className={cn(
                   isDark ? "bg-white text-deco-plum hover:bg-white/90" : "bg-deco-denim text-white hover:bg-deco-denim/90"
-                )}>
-                  {cta}
-                </Button>
-              </Link>
+                )}
+                onClick={onCtaClick}
+              >
+                {cta}
+              </Button>
             </div>
             
             <div>

@@ -5,6 +5,7 @@ import { Paintbrush } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AspectRatio } from './ui/aspect-ratio';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { useElfsightForm } from './ElfsightFormContext';
 
 interface TechSpec {
   label: string;
@@ -112,6 +113,8 @@ const ProductLayout: React.FC<ProductProps> = ({
   // Determine custom section title for Featured Applications if this is the Pearl Finish page
   const featuredApplicationsTitle = "Featured Applications";
 
+  const { openForm } = useElfsightForm();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -152,7 +155,11 @@ const ProductLayout: React.FC<ProductProps> = ({
             </p>
             
             <Link
-              to="/contact"
+              to="#"
+              onClick={e => {
+                e.preventDefault();
+                openForm();
+              }}
               className="btn-cta inline-flex items-center gap-2"
             >
               <Paintbrush className="h-5 w-5" />
@@ -373,10 +380,14 @@ const ProductLayout: React.FC<ProductProps> = ({
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-gold inline-flex items-center justify-center gap-2">
+              <button
+                type="button"
+                className="btn-gold inline-flex items-center justify-center gap-2"
+                onClick={openForm}
+              >
                 <Paintbrush className="h-5 w-5" />
                 Schedule Consultation
-              </Link>
+              </button>
               
               <a 
                 href="https://wa.me/971503119537" 

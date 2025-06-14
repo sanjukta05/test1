@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -51,6 +50,10 @@ import DecorativeEpoxyPage from "./pages/flooring/DecorativeEpoxyPage";
 import MetallicEpoxyPage from "./pages/flooring/MetallicEpoxyPage";
 import StampedConcretePage from "./pages/flooring/StampedConcretePage";
 
+import React from "react";
+import { ElfsightFormProvider } from "./components/ElfsightFormContext";
+import ElfsightFormModal from "./components/ElfsightFormModal";
+
 const App = () => {
   // Create QueryClient inside the component body
   const [queryClient] = useState(() => new QueryClient({
@@ -63,7 +66,7 @@ const App = () => {
   }));
 
   return (
-    <QueryClientProvider client={queryClient}>
+    <ElfsightFormProvider>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -118,7 +121,9 @@ const App = () => {
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
-    </QueryClientProvider>
+      {/* Add ElfsightFormModal at root so it is globally accessible */}
+      <ElfsightFormModal />
+    </ElfsightFormProvider>
   );
 };
 

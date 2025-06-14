@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowDown, Paintbrush, Droplet, Building } from 'lucide-react';
-const HeroSection = () => {
+interface HeroSectionProps {
+  openEstimateForm?: () => void;
+}
+const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showTagline, setShowTagline] = useState(false);
   const [activeHero, setActiveHero] = useState(0);
@@ -84,11 +87,14 @@ const HeroSection = () => {
               <Building className="w-5 h-5" />
               Discover Our Finishes
             </a>
-            
-            <a href="#estimate" className={`btn-cta inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
+            <button
+              type="button"
+              className={`btn-cta inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}
+              onClick={openEstimateForm}
+            >
               <Paintbrush className="w-5 h-5" />
               Get Estimate
-            </a>
+            </button>
           </div>
         </div>
       </div>

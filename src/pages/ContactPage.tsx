@@ -1,10 +1,10 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { useElfsightForm } from '../components/ElfsightFormContext';
 
 const ELFSIGHT_APP_ID = "4ae4b665-d18d-434d-bf98-3c9f9bc376b1";
 
@@ -21,7 +21,7 @@ const ContactPage = () => {
     }
   }, []);
 
-  const [open, setOpen] = useState(false);
+  const { openForm } = useElfsightForm();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -108,33 +108,12 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <div className="mt-12">
-                  <Dialog open={open} onOpenChange={setOpen}>
-                    <DialogTrigger asChild>
-                      <Button
-                        className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded"
-                        onClick={() => setOpen(true)}
-                      >
-                        Get Estimate
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="p-0 max-w-xl">
-                      <DialogHeader>
-                        <DialogTitle>Request Your Estimate</DialogTitle>
-                        <DialogClose
-                          className="absolute top-2 right-2 z-10 rounded-full p-2 hover:bg-gray-100"
-                          onClick={() => setOpen(false)}
-                        />
-                      </DialogHeader>
-                      <div className="p-4">
-                        {/* Elfsight Form Embed */}
-                        <div
-                          className={`elfsight-app-${ELFSIGHT_APP_ID}`}
-                          data-elfsight-app-lazy
-                          style={{ minHeight: 450 }}
-                        ></div>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+                  <Button
+                    className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded"
+                    onClick={openForm}
+                  >
+                    Get Estimate
+                  </Button>
                 </div>
               </div>
               
@@ -168,4 +147,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
