@@ -62,9 +62,9 @@ const Index = () => {
         <section className="section bg-deco-beige relative overflow-hidden font-circular">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-4">Our Artisanal Process</h2>
+              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Our Artisanal Process</h2>
               <GoldAccent className="mb-6" />
-              <p className="text-lg text-deco-plum/80">
+              <p className="text-deco-plum/80 text-xl">
                 Every project is approached with meticulous attention to detail and executed with master craftsmanship.
               </p>
             </div>
@@ -104,7 +104,7 @@ const Index = () => {
               </div>
               
               <div className="mt-16 text-center">
-                <button type="button" className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all font-circular" onClick={openForm}>
+                <button type="button" onClick={openForm} className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all font-circular text-lg">
                   <Paintbrush className="h-5 w-5 mr-2" />
                   Schedule Consultation
                 </button>
@@ -117,9 +117,9 @@ const Index = () => {
         <section className="section bg-white relative font-circular">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-4">Why DecoPaints Stands Apart</h2>
+              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Why DecoPaints Stands Apart</h2>
               <GoldAccent className="mb-6" />
-              <p className="text-lg text-deco-plum/80">
+              <p className="text-deco-plum/80 text-xl">
                 Our commitment to excellence and innovation has established us as the UAE's premier decorative finishing company.
               </p>
             </div>
@@ -168,9 +168,9 @@ const Index = () => {
         <section className="section bg-white font-circular">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-4">Recent Transformations</h2>
+              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Recent Transformations</h2>
               <GoldAccent className="mb-6" />
-              <p className="text-lg text-deco-plum/80">
+              <p className="text-deco-plum/80 text-xl">
                 Explore our latest luxury projects across the UAE, showcasing the versatility and beauty of our finishes.
               </p>
             </div>

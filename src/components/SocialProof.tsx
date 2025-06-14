@@ -1,25 +1,23 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { TestimonialCard } from './ui/testimonial-card';
 import { Award, ShieldCheck, Heart } from 'lucide-react';
-
 interface SocialProofProps {
   className?: string;
   location?: string;
 }
-
-export default function SocialProof({ className, location = "" }: SocialProofProps) {
+export default function SocialProof({
+  className,
+  location = ""
+}: SocialProofProps) {
   const locationText = location ? ` in ${location}` : '';
-
-  return (
-    <section className={cn("py-16 bg-deco-beige relative", className)}>
+  return <section className={cn("py-16 bg-deco-beige relative", className)}>
       <div className="absolute inset-0 geometric-pattern opacity-5"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="font-parafina text-3xl font-bold mb-4">Why Clients Trust Us{locationText}</h2>
+          <h2 className="font-parafina mb-4 text-5xl font-normal">Why Clients Trust Us{locationText}</h2>
           <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
-          <p className="font-grosa text-deco-plum/80">
+          <p className="font-grosa text-deco-plum/80 text-xl">
             Our commitment to excellence and premium results has earned us the trust of clients across the UAE.
           </p>
         </div>
@@ -58,31 +56,15 @@ export default function SocialProof({ className, location = "" }: SocialProofPro
         </div>
         
         {/* Testimonials */}
-        <h3 className="font-parafina text-2xl font-bold mb-8 text-center">What Our Clients Say</h3>
+        <h3 className="font-parafina mb-8 text-center text-5xl font-normal">What Our Clients Say</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <TestimonialCard 
-            quote="DecoPaints transformed our villa with their exceptional Marmorino finish. Their attention to detail resulted in a truly spectacular outcome."
-            author="Mohammed A."
-            role="Villa Owner"
-            location={location || "Palm Jumeirah"}
-          />
+          <TestimonialCard quote="DecoPaints transformed our villa with their exceptional Marmorino finish. Their attention to detail resulted in a truly spectacular outcome." author="Mohammed A." role="Villa Owner" location={location || "Palm Jumeirah"} />
           
-          <TestimonialCard 
-            quote="As an interior designer, I rely on DecoPaints for their consistent quality and ability to understand the unique requirements of each project."
-            author="Sarah K."
-            role="Interior Designer"
-            location="Dubai"
-          />
+          <TestimonialCard quote="As an interior designer, I rely on DecoPaints for their consistent quality and ability to understand the unique requirements of each project." author="Sarah K." role="Interior Designer" location="Dubai" />
           
-          <TestimonialCard 
-            quote="The micro-cement flooring they installed in our office has transformed the space completely. Professional team and excellent results."
-            author="Ahmed R."
-            role="Business Owner"
-            location={location || "Business Bay"}
-          />
+          <TestimonialCard quote="The micro-cement flooring they installed in our office has transformed the space completely. Professional team and excellent results." author="Ahmed R." role="Business Owner" location={location || "Business Bay"} />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

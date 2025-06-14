@@ -1,75 +1,72 @@
-
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 
 // Finish titles for each tab
-const wallFinishes = [
-  { label: "Marmorino", img: "/lovable-uploads/mar-rb.png" },
-  { label: "Limewash", img: "/lovable-uploads/lime-rb.png" },
-  { label: "Concrete Texture", img: "/lovable-uploads/con-rb.png" },
-  { label: "Brick Finish", img: "/lovable-uploads/brick-rb.jpg" },
-  { label: "Pearl Finish", img: "/lovable-uploads/pearl-finish.png" },
-  { label: "Gold & Silver Leaf", img: "/lovable-uploads/gold-rb.jpg" }
-];
-const floorFinishes = [
-  { label: "Microcement", img: "/lovable-uploads/cement-rb.png" },
-  { label: "Terrazzo", img: "/lovable-uploads/tera-rb.png" },
-  { label: "Resinbound", img: "/lovable-uploads/rb-rb.png" },
-  { label: "Decorative Epoxy", img: "/lovable-uploads/deco-rb.png" },
-  { label: "Metallic Epoxy", img: "/lovable-uploads/meta-rb.jpg" },
-  { label: "Stamped Concrete", img: "/lovable-uploads/stamped-rb.png" }
-];
-
-const DistinctiveFinishesTabs = () => (
-  <div className="w-full max-w-5xl mx-auto font-circular">
+const wallFinishes = [{
+  label: "Marmorino",
+  img: "/lovable-uploads/mar-rb.png"
+}, {
+  label: "Limewash",
+  img: "/lovable-uploads/lime-rb.png"
+}, {
+  label: "Concrete Texture",
+  img: "/lovable-uploads/con-rb.png"
+}, {
+  label: "Brick Finish",
+  img: "/lovable-uploads/brick-rb.jpg"
+}, {
+  label: "Pearl Finish",
+  img: "/lovable-uploads/pearl-finish.png"
+}, {
+  label: "Gold & Silver Leaf",
+  img: "/lovable-uploads/gold-rb.jpg"
+}];
+const floorFinishes = [{
+  label: "Microcement",
+  img: "/lovable-uploads/cement-rb.png"
+}, {
+  label: "Terrazzo",
+  img: "/lovable-uploads/tera-rb.png"
+}, {
+  label: "Resinbound",
+  img: "/lovable-uploads/rb-rb.png"
+}, {
+  label: "Decorative Epoxy",
+  img: "/lovable-uploads/deco-rb.png"
+}, {
+  label: "Metallic Epoxy",
+  img: "/lovable-uploads/meta-rb.jpg"
+}, {
+  label: "Stamped Concrete",
+  img: "/lovable-uploads/stamped-rb.png"
+}];
+const DistinctiveFinishesTabs = () => <div className="w-full max-w-5xl mx-auto font-circular">
     {/* Removed section title as requested */}
     <Tabs defaultValue="wall" className="w-full">
       <TabsList className="max-w-xs mx-auto grid grid-cols-2 mb-8 rounded-full bg-deco-beige shadow-inner overflow-hidden">
-        <TabsTrigger
-          value="wall"
-          className="text-deco-plum data-[state=active]:bg-deco-plum data-[state=active]:text-white font-circular"
-        >
+        <TabsTrigger value="wall" className="text-deco-plum data-[state=active]:bg-deco-plum data-[state=active]:text-white font-circular text-lg">
           Wall Finish
         </TabsTrigger>
-        <TabsTrigger
-          value="floor"
-          className="text-deco-plum data-[state=active]:bg-deco-denim data-[state=active]:text-white font-circular"
-        >
+        <TabsTrigger value="floor" className="text-deco-plum data-[state=active]:bg-deco-denim font-circular text-lg text-slate-950">
           Floor Finish
         </TabsTrigger>
       </TabsList>
       <TabsContent value="wall" className="animate-fadeIn">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {wallFinishes.map((item, i) => (
-            <div key={i} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg bg-white flex flex-col items-center font-circular">
+          {wallFinishes.map((item, i) => <div key={i} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg bg-white flex flex-col items-center font-circular">
               <div className="font-distrampler font-semibold text-deco-plum mt-4 mb-2 text-center">{item.label}</div>
-              <img
-                src={item.img}
-                alt={item.label}
-                className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105 rounded-b-xl"
-                loading="lazy"
-              />
-            </div>
-          ))}
+              <img src={item.img} alt={item.label} className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105 rounded-b-xl" loading="lazy" />
+            </div>)}
         </div>
       </TabsContent>
       <TabsContent value="floor" className="animate-fadeIn">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {floorFinishes.map((item, i) => (
-            <div key={i} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg bg-white flex flex-col items-center font-circular">
+          {floorFinishes.map((item, i) => <div key={i} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg bg-white flex flex-col items-center font-circular">
               <div className="font-distrampler font-semibold text-black mt-4 mb-2 text-center">{item.label}</div>
-              <img
-                src={item.img}
-                alt={item.label}
-                className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105 rounded-b-xl"
-                loading="lazy"
-              />
-            </div>
-          ))}
+              <img src={item.img} alt={item.label} className="w-full h-52 object-cover transition-transform duration-500 hover:scale-105 rounded-b-xl" loading="lazy" />
+            </div>)}
         </div>
       </TabsContent>
     </Tabs>
-  </div>
-);
-
+  </div>;
 export default DistinctiveFinishesTabs;

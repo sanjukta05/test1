@@ -1,11 +1,9 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useElfsightForm } from './ElfsightFormContext';
-
 interface ContactCTAProps {
   className?: string;
   location?: string;
@@ -13,27 +11,24 @@ interface ContactCTAProps {
   cta?: string;
   onCtaClick?: () => void;
 }
-
-export default function ContactCTA({ className, location = "", bgColor = 'dark', cta = "Get Estimate", onCtaClick }: ContactCTAProps) {
+export default function ContactCTA({
+  className,
+  location = "",
+  bgColor = 'dark',
+  cta = "Get Estimate",
+  onCtaClick
+}: ContactCTAProps) {
   const isDark = bgColor === 'dark';
 
   // Elfsight form is shown in the right column instead of the old form
   const ELFSIGHT_APP_ID = "4ae4b665-d18d-434d-bf98-3c9f9bc376b1";
-
-  return (
-    <section className={cn(
-      "py-16 relative overflow-hidden",
-      isDark ? "bg-deco-plum text-white" : "bg-white text-deco-plum",
-      className
-    )}>
+  return <section className={cn("py-16 relative overflow-hidden", isDark ? "bg-deco-plum text-white" : "bg-white text-deco-plum", className)}>
       <div className="absolute inset-0 geometric-pattern opacity-10"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className={cn(
-                "text-3xl md:text-4xl font-bold mb-6 font-distrampler"
-              )}>
+              <h2 className="font-normal text-5xl">
                 Transform Your Space {location ? `in ${location}` : 'Today'}
               </h2>
               <p className={cn("mb-8", isDark ? "text-white/90" : "text-deco-plum/80", "font-circular")}>
@@ -57,13 +52,7 @@ export default function ContactCTA({ className, location = "", bgColor = 'dark',
                   <Phone className={cn("h-5 w-5 mr-3", isDark ? "text-deco-gold" : "text-deco-plum")} />
                   <div>
                     <h3 className="font-medium font-distrampler">Phone</h3>
-                    <a 
-                      href="tel:+971503119537" 
-                      className={cn(
-                        "transition-colors font-circular",
-                        isDark ? "text-white/80 hover:text-white" : "text-deco-plum/80 hover:text-deco-plum"
-                      )}
-                    >
+                    <a href="tel:+971503119537" className={cn("transition-colors font-circular", isDark ? "text-white/80 hover:text-white" : "text-deco-plum/80 hover:text-deco-plum")}>
                       +971 50 311 9537
                     </a>
                   </div>
@@ -73,40 +62,28 @@ export default function ContactCTA({ className, location = "", bgColor = 'dark',
                   <Mail className={cn("h-5 w-5 mr-3", isDark ? "text-deco-gold" : "text-deco-plum")} />
                   <div>
                     <h3 className="font-medium font-distrampler">Email</h3>
-                    <a 
-                      href="mailto:info@decopaints.ae" 
-                      className={cn(
-                        "transition-colors font-circular",
-                        isDark ? "text-white/80 hover:text-white" : "text-deco-plum/80 hover:text-deco-plum"
-                      )}
-                    >
+                    <a href="mailto:info@decopaints.ae" className={cn("transition-colors font-circular", isDark ? "text-white/80 hover:text-white" : "text-deco-plum/80 hover:text-deco-plum")}>
                       info@decopaints.ae
                     </a>
                   </div>
                 </div>
               </div>
               
-              <Button
-                className={cn(
-                  isDark ? "bg-white text-deco-plum hover:bg-white/90" : "bg-deco-denim text-white hover:bg-deco-denim/90"
-                )}
-                onClick={onCtaClick}
-              >
+              <Button className={cn(isDark ? "bg-white text-deco-plum hover:bg-white/90" : "bg-deco-denim text-white hover:bg-deco-denim/90")} onClick={onCtaClick}>
                 {cta}
               </Button>
             </div>
             {/* Embed Elfsight Form */}
             <div>
-              <div className={cn(
-                "rounded-lg p-6 shadow-lg flex flex-col items-center justify-center min-h-[400px]",
-                isDark ? "bg-white" : "bg-deco-beige"
-              )}>
-                <div className={`elfsight-app-${ELFSIGHT_APP_ID} w-full`} data-elfsight-app-lazy style={{ minWidth: "100%", minHeight: 450 }}></div>
+              <div className={cn("rounded-lg p-6 shadow-lg flex flex-col items-center justify-center min-h-[400px]", isDark ? "bg-white" : "bg-deco-beige")}>
+                <div className={`elfsight-app-${ELFSIGHT_APP_ID} w-full`} data-elfsight-app-lazy style={{
+                minWidth: "100%",
+                minHeight: 450
+              }}></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
