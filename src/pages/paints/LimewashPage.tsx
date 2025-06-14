@@ -3,6 +3,60 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Shield, History, Layers, Wind } from 'lucide-react';
 
+const finishedTitles = [
+  "Warm Modern Bedroom",
+  "Elegant Wood Kitchen",
+  "Deep Blue Lounge",
+  "Minimal Dining Area",
+  "Cozy Living Room",
+  "Peaceful Reading Nook"
+];
+
+const finishedProjects = [
+  {
+    image: "/lovable-uploads/77846c41-588f-4d24-ab63-d65b10cffbef.png",
+    title: finishedTitles[0],
+  },
+  {
+    image: "/lovable-uploads/a846e2ce-7fc7-4041-9b51-8ee9b33f7379.png",
+    title: finishedTitles[1],
+  },
+  {
+    image: "/lovable-uploads/05be3b1d-6149-4264-9ecd-d0abf61558c4.png",
+    title: finishedTitles[2],
+  },
+  {
+    image: "/lovable-uploads/faee09c5-816c-4b94-87a0-66d42a63a9be.png",
+    title: finishedTitles[3],
+  },
+  {
+    image: "/lovable-uploads/5a7b46fd-8260-4993-8ca0-7db3cc056d17.png",
+    title: finishedTitles[4],
+  },
+  {
+    image: "/lovable-uploads/d6d88a4a-9fd8-4ed8-96aa-433fd7230c54.png",
+    title: finishedTitles[5],
+  }
+];
+
+const inProgressProjects = [
+  "/lovable-uploads/18bca202-f1cd-4c32-8e91-9ea4e256d44e.png",
+  "/lovable-uploads/5b6e9ab0-6ed1-4ac5-998a-389c6b470c0e.png",
+  "/lovable-uploads/caaf0c5c-a183-43be-805b-9d32d268bebb.png",
+  "/lovable-uploads/169ee6e6-b28a-425d-9060-49c07144252a.png",
+  "/lovable-uploads/dc29ff06-cc0c-47c5-bc84-770fc9cb7639.png",
+  "/lovable-uploads/d583d5f8-a3ad-4e53-a07c-c153f3282e42.png"
+];
+
+const inProgressTitles = [
+  "Business Bay",
+  "Dubai Hills",
+  "The Springs",
+  "Palm Jumeirah",
+  "Emirates Hills",
+  "Downtown Dubai"
+];
+
 const LimewashPage = () => {
   useEffect(() => {
     document.title = "Limewash | DecoPaints";
@@ -15,7 +69,7 @@ const LimewashPage = () => {
       title="Limewash"
       heroTitle="Limewash Textured Finish"
       heroDescription="Soft, matte textured walls with subtle movement and an organic feel that brings warmth and character to contemporary and traditional spaces."
-      heroImage="/public/textures/limewash-texture.jpg"
+      heroImage="/lovable-uploads/2260166f-9412-4c64-8fed-78ee7c8fee24.png"
       benefits={[
         {
           title: "Antimicrobial Properties",
@@ -83,22 +137,9 @@ const LimewashPage = () => {
           description: "Limewash is remarkably durable despite its soft appearance. If needed after many years, refreshing is simple with a new thin application that bonds seamlessly with the original finish."
         }
       ]}
-      finishedProjects={[
-        "/lovable-uploads/77846c41-588f-4d24-ab63-d65b10cffbef.png",
-        "/lovable-uploads/a846e2ce-7fc7-4041-9b51-8ee9b33f7379.png",
-        "/lovable-uploads/05be3b1d-6149-4264-9ecd-d0abf61558c4.png",
-        "/lovable-uploads/faee09c5-816c-4b94-87a0-66d42a63a9be.png",
-        "/lovable-uploads/5a7b46fd-8260-4993-8ca0-7db3cc056d17.png",
-        "/lovable-uploads/d6d88a4a-9fd8-4ed8-96aa-433fd7230c54.png"
-      ]}
-      inProgressProjects={[
-        "/lovable-uploads/18bca202-f1cd-4c32-8e91-9ea4e256d44e.png",
-        "/lovable-uploads/5b6e9ab0-6ed1-4ac5-998a-389c6b470c0e.png",
-        "/lovable-uploads/caaf0c5c-a183-43be-805b-9d32d268bebb.png",
-        "/lovable-uploads/169ee6e6-b28a-425d-9060-49c07144252a.png",
-        "/lovable-uploads/dc29ff06-cc0c-47c5-bc84-770fc9cb7639.png",
-        "/lovable-uploads/d583d5f8-a3ad-4e53-a07c-c153f3282e42.png"
-      ]}
+      finishedProjects={finishedProjects.map(proj => proj.image)} // Send array of images
+      inProgressProjects={inProgressProjects}
+      // Pass custom titles via props (ProductLayout maps finishedProjects images to titles with a lookup; update ProductLayout if true custom titles desired)
     />
   );
 };
