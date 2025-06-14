@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Sun, Droplet, Layers, Paintbrush } from 'lucide-react';
@@ -32,7 +33,7 @@ const ResinBoundSurfacePage = () => {
       title="Resin Bound Surface"
       heroTitle="Seamless Resin Bound Surfaces"
       heroDescription="Smooth, seamless surfaces with exceptional depth and clarity, perfect for creating continuous indoor/outdoor transitions in luxury properties."
-      heroImage="/public/textures/concrete-texture.jpg"
+      heroImage="/lovable-uploads/8e2f9b64-589f-4f58-ac88-868059075cc9.png"
       benefits={[
         {
           title: "UV Resistance",
