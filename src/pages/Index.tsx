@@ -169,11 +169,11 @@ const Index = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Living Room Example */}
+              {/* Luxury Living Room */}
               <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                   <img 
-                    src="/lovable-uploads/d2b0fdec-880c-41f9-84c7-e432d73393f7.png"
+                    src="/lovable-uploads/b5c2a002-66ff-44ac-a016-767aef2a4169.png"
                     alt="Luxury Living Room"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -194,11 +194,11 @@ const Index = () => {
                   </button>
                 </div>
               </div>
-              {/* Kitchen Example */}
+              {/* Modern Kitchen */}
               <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                   <img 
-                    src="/lovable-uploads/2046ad05-0e3a-487a-af78-a4865db63b4e.png"
+                    src="/lovable-uploads/1c5cc876-67e7-46b5-bf7e-33955c2f1fed.png"
                     alt="Modern Kitchen"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -219,12 +219,12 @@ const Index = () => {
                   </button>
                 </div>
               </div>
-              {/* Bathroom Example */}
+              {/* Spa-Inspired Bathroom */}
               <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                   <img 
-                    src="/lovable-uploads/d3674917-53b5-47b9-9aaa-c3f0eb623a7b.png"
-                    alt="Spa Bathroom"
+                    src="/lovable-uploads/a595e994-b78b-4726-afbb-5007408bbd6c.png"
+                    alt="Spa-Inspired Bathroom"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
