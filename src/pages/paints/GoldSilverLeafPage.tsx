@@ -40,19 +40,19 @@ const GoldSilverLeafPage = () => {
       ]}
       applications={[
         {
-          title: "Ceiling Treatments",
-          description: "Transform ceilings into breathtaking features that draw the eye upward and create a sense of grandeur and expansiveness in the space.",
-          image: "https://images.unsplash.com/photo-1561893836-adad6e53bc72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Majlis Lounge",
+          description: "Elevate social gatherings and hospitality with statement feature walls and ceilings in luxury majlis and living areas.",
+          image: "/lovable-uploads/6f450b70-f192-427c-b3c9-09f1dbf4f796.png"
         },
         {
-          title: "Luxury Nightclubs",
-          description: "Create dramatic, unforgettable environments where the interplay of light on metallic surfaces enhances the energy and atmosphere of entertainment spaces.",
-          image: "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Luxury Feature Wall",
+          description: "Accentuate your interiors with bespoke gold and silver leaf feature walls and artistic designs, expertly applied for dramatic impact.",
+          image: "/lovable-uploads/a88c2925-5bf0-4625-953c-48cbc84a21cc.png"
         },
         {
-          title: "VIP Residential Areas",
-          description: "Designate special areas within luxury residences with the unmistakable opulence of gold or silver leaf, creating spaces that feel exclusive and extraordinary.",
-          image: "https://images.unsplash.com/photo-1560448204-61dc36dc98c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Suite Bedroom Art Panel",
+          description: "Bring opulence into private retreats with custom hand-applied metallic wall art panels for a refined and exclusive ambiance.",
+          image: "/lovable-uploads/59ff62f7-695b-498c-9a5a-3b6eff322330.png"
         }
       ]}
       techSpecs={[
@@ -88,3 +88,4 @@ const GoldSilverLeafPage = () => {
 };
 
 export default GoldSilverLeafPage;
+
