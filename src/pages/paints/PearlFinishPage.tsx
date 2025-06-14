@@ -74,12 +74,12 @@ const PearlFinishPage = () => {
         { image: "/lovable-uploads/68c2bffa-1300-46ac-8063-dd99717262f9.png", title: "Bathroom" },
       ]}
       inProgressProjects={[
-        "/lovable-uploads/1.png",
-        "/lovable-uploads/2.png",
-        "/lovable-uploads/3.png",
-        "/lovable-uploads/4.png",
-        "/lovable-uploads/5.png",
-        "/lovable-uploads/6.png"
+        "/lovable-uploads/72c59d6b-39ca-4d9a-a203-d7f13c1615f4.png",
+        "/lovable-uploads/21bdf105-895d-4e81-bec3-bc6936561dd2.png",
+        "/lovable-uploads/92f6c018-00b5-4f44-834c-b8a3dd82ad15.png",
+        "/lovable-uploads/6e7bdf9e-1fd0-4d23-b88a-200e03ef4259.png",
+        "/lovable-uploads/badd644a-e870-4c56-88ef-19b5a5434a4d.png",
+        "/lovable-uploads/7ff4c723-cbd3-4d6e-9d40-6b149e971396.png",
       ]}
       inProgressTitles={[
         "Business Bay",
@@ -107,9 +107,9 @@ const PearlFinishPage = () => {
           description: "Keep a small amount of the original finish for any future touch-ups. Our specially trained artisans can also perform touch-ups that blend seamlessly with the existing finish."
         }
       ]}
-      // ensuring the section title uses the default "Featured Applications"
     />
   );
 };
 
 export default PearlFinishPage;
+
