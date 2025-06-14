@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Shield, History, Layers, Wind } from 'lucide-react';
@@ -82,7 +83,6 @@ const LimewashPage = () => {
           description: "Limewash is remarkably durable despite its soft appearance. If needed after many years, refreshing is simple with a new thin application that bonds seamlessly with the original finish."
         }
       ]}
-      // Pass 6 finished images for Limewash (these override finished project images!)
       finishedProjects={[
         "/lovable-uploads/77846c41-588f-4d24-ab63-d65b10cffbef.png",
         "/lovable-uploads/a846e2ce-7fc7-4041-9b51-8ee9b33f7379.png",
@@ -91,8 +91,17 @@ const LimewashPage = () => {
         "/lovable-uploads/5a7b46fd-8260-4993-8ca0-7db3cc056d17.png",
         "/lovable-uploads/d6d88a4a-9fd8-4ed8-96aa-433fd7230c54.png"
       ]}
+      inProgressProjects={[
+        "/lovable-uploads/limewash-inprogress-1.png",
+        "/lovable-uploads/limewash-inprogress-2.png",
+        "/lovable-uploads/limewash-inprogress-3.png",
+        "/lovable-uploads/limewash-inprogress-4.png",
+        "/lovable-uploads/limewash-inprogress-5.png",
+        "/lovable-uploads/limewash-inprogress-6.png"
+      ]}
     />
   );
 };
 
 export default LimewashPage;
+

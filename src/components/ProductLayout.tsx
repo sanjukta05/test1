@@ -38,7 +38,8 @@ export interface ProductProps {
   applications: Application[];
   techSpecs: TechSpec[];
   maintenance: MaintenanceItem[];
-  finishedProjects?: string[]; // <-- add this line
+  finishedProjects?: string[];
+  inProgressProjects?: string[]; // <-- add this line
 }
 
 const ProductLayout: React.FC<ProductProps> = ({
@@ -51,7 +52,8 @@ const ProductLayout: React.FC<ProductProps> = ({
   applications,
   techSpecs,
   maintenance,
-  finishedProjects // <-- add to props
+  finishedProjects,
+  inProgressProjects // <-- add to props
 }) => {
   // Default images for Palette of Success (if not overridden)
   const defaultFinishedProjects = [
@@ -63,7 +65,7 @@ const ProductLayout: React.FC<ProductProps> = ({
     "/lovable-uploads/626c9756-9fc9-437a-8645-6508c66ee745.png"
   ];
 
-  const inProgressProjects = [
+  const defaultInProgressProjects = [
     "/lovable-uploads/1.png",
     "/lovable-uploads/2.png",
     "/lovable-uploads/3.png",
@@ -72,10 +74,14 @@ const ProductLayout: React.FC<ProductProps> = ({
     "/lovable-uploads/6.png"
   ];
 
-  // Use custom finishedProjects if provided, otherwise fallback
+  // Use custom finishedProjects or inProgressProjects if provided, otherwise fallback
   const usedFinishedProjects = finishedProjects && finishedProjects.length > 0
     ? finishedProjects
     : defaultFinishedProjects;
+
+  const usedInProgressProjects = inProgressProjects && inProgressProjects.length > 0
+    ? inProgressProjects
+    : defaultInProgressProjects;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -261,7 +267,7 @@ const ProductLayout: React.FC<ProductProps> = ({
             
             <TabsContent value="progress" className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {inProgressProjects.map((image, index) => (
+                {usedInProgressProjects.map((image, index) => (
                   <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
                     <div className="relative w-full">
                       <AspectRatio ratio={4/3}>
