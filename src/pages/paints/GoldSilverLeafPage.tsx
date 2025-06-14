@@ -15,7 +15,6 @@ const GoldSilverLeafPage = () => {
       title="Gold & Silver Leaf"
       heroTitle="Ultimate Luxury Metallic Surfaces"
       heroDescription="Exquisite hand-applied metallic finishes that transform ordinary surfaces into extraordinary statements of opulence and refined taste."
-      // Updated heroImage to be the one removed from finishedProjects
       heroImage="/lovable-uploads/0576a66c-32b2-440b-9b9c-71791a02d04c.png"
       benefits={[
         {
@@ -56,15 +55,31 @@ const GoldSilverLeafPage = () => {
           image: "/lovable-uploads/59ff62f7-695b-498c-9a5a-3b6eff322330.png"
         }
       ]}
-      // Remove the 5th image from finishedProjects
       finishedProjects={[
-        "/lovable-uploads/3158a955-677d-4971-b79f-e25615328ffb.png",
-        "/lovable-uploads/e0b8b982-6daf-4551-8e3e-4b5af100504c.png",
-        "/lovable-uploads/4b4dc7fd-61a5-4944-b903-515d094e493b.png",
-        "/lovable-uploads/e1a12c37-f6e3-4f04-9857-ce9215800419.png",
-        // skip "/lovable-uploads/0576a66c-32b2-440b-9b9c-71791a02d04c.png"
-        "/lovable-uploads/391273d1-ce6e-4f5d-b4d4-d4aefb1d6812.png",
-        "/lovable-uploads/a8350f85-1af1-4e99-94f6-a25faf367da5.png"
+        {
+          image: "/lovable-uploads/3158a955-677d-4971-b79f-e25615328ffb.png",
+          title: "Featured Wall"
+        },
+        {
+          image: "/lovable-uploads/e0b8b982-6daf-4551-8e3e-4b5af100504c.png",
+          title: "Living Area"
+        },
+        {
+          image: "/lovable-uploads/4b4dc7fd-61a5-4944-b903-515d094e493b.png",
+          title: "Bathroom"
+        },
+        {
+          image: "/lovable-uploads/e1a12c37-f6e3-4f04-9857-ce9215800419.png",
+          title: "Luxury Living Room"
+        },
+        {
+          image: "/lovable-uploads/391273d1-ce6e-4f5d-b4d4-d4aefb1d6812.png",
+          title: "Bedroom"
+        },
+        {
+          image: "/lovable-uploads/a8350f85-1af1-4e99-94f6-a25faf367da5.png",
+          title: "Powder Room"
+        }
       ]}
       inProgressProjects={[
         "/lovable-uploads/bf849df1-f600-4ea1-a83f-edcfadc3b808.png",
@@ -73,6 +88,14 @@ const GoldSilverLeafPage = () => {
         "/lovable-uploads/1f405b5b-d8c8-4a7d-a22e-848727fc635d.png",
         "/lovable-uploads/098e4ced-7419-40e9-a639-c736ee5dc2e2.png",
         "/lovable-uploads/0c9caccd-3198-4043-9618-351e4864ca3d.png"
+      ]}
+      inProgressTitles={[
+        "Downtown Dubai",
+        "The Springs",
+        "The Meadows",
+        "Emirates Hills",
+        "Palm Jumeirah",
+        "Dubai Hills"
       ]}
       techSpecs={[
         { label: "Material Options", value: "Genuine gold (23K, 22K), white gold, silver, imitation metals" },
