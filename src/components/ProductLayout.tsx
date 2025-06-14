@@ -108,9 +108,7 @@ const ProductLayout: React.FC<ProductProps> = ({
       : defaultInProgressProjects;
 
   // Determine custom section title for Featured Applications if this is the Pearl Finish page
-  const featuredApplicationsTitle = title === "Pearl Finish"
-    ? "Pearl Finish Spaces: Luxury Dressing, Dining & Reception"
-    : "Featured Applications";
+  const featuredApplicationsTitle = "Featured Applications";
 
   return (
     <div className="min-h-screen flex flex-col">
