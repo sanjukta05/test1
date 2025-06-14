@@ -42,17 +42,17 @@ const PearlFinishPage = () => {
         {
           title: "Luxury Dressing Rooms",
           description: "The light-enhancing qualities create the perfect environment for dressing areas, providing accurate color rendering and a flattering glow.",
-          image: "https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          image: "/lovable-uploads/b2198335-5b4b-4126-8b47-88900589b988.png"
         },
         {
           title: "Formal Dining Areas",
           description: "Adds sophistication and warmth to dining spaces, creating an atmosphere of elegant refinement that enhances the dining experience.",
-          image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          image: "/lovable-uploads/77629d79-d7e9-4530-9dd4-bd24aee82b28.png"
         },
         {
           title: "Reception Rooms",
           description: "Creates an atmosphere of refined luxury in spaces designed to receive and impress guests, with walls that subtly change appearance as light conditions shift throughout the day.",
-          image: "https://images.unsplash.com/photo-1615529162924-f8605388461d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          image: "/lovable-uploads/952428ba-942d-4a78-af90-82ea97a08880.png"
         }
       ]}
       techSpecs={[
