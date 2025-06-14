@@ -21,14 +21,14 @@ const ContactPage = () => {
   } = useElfsightForm();
   return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader title="Contact Us" description="Let's Transform Your Space Together" backgroundImage="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=2000&h=600" />
+      <PageHeader title="Contact Us." description="Let's Transform Your Space Together." backgroundImage="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=2000&h=600" />
       
       <main className="flex-grow">
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h2 className="mb-6 text-5xl font-normal">Get in Touch</h2>
+                <h2 className="mb-6 text-5xl font-normal">Get in Touch.</h2>
                 <p className="text-lg mb-8 text-deco-plum/80">
                   Whether you're looking for a consultation, have a question about our services, 
                   or want to discuss a potential project, we're here to help.
@@ -42,7 +42,7 @@ const ContactPage = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold mb-1">Call Us</h3>
+                      <h3 className="font-bold mb-1">Call Us.</h3>
                       <a href="tel:+971503119537" className="text-deco-denim hover:text-deco-plum transition-colors">
                         +971 50 311 9537
                       </a>
@@ -56,7 +56,7 @@ const ContactPage = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold mb-1">Email Us</h3>
+                      <h3 className="font-bold mb-1">Email Us.</h3>
                       <a href="mailto:info@decopaints.ae" className="text-deco-denim hover:text-deco-plum transition-colors">
                         info@decopaints.ae
                       </a>
@@ -71,7 +71,7 @@ const ContactPage = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold mb-1">Visit Us</h3>
+                      <h3 className="font-bold mb-1">Visit Us.</h3>
                       <address className="not-italic text-deco-plum/80">
                         DecoPaints UAE<br />
                         Al Marabea' St, Al Quoz<br />
@@ -82,13 +82,13 @@ const ContactPage = () => {
                 </div>
                 <div className="mt-12">
                   <Button className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded" onClick={openForm}>
-                    Get Estimate
+                    Get Estimate.
                   </Button>
                 </div>
               </div>
               
               <div>
-                <h3 className="mb-6 text-center font-normal text-5xl">Request an Estimate</h3>
+                <h3 className="mb-6 text-center font-normal text-5xl">Request an Estimate.</h3>
                 <div className={`elfsight-app-${ELFSIGHT_APP_ID}`} data-elfsight-app-lazy style={{
                 minHeight: 500
               }}></div>
@@ -108,7 +108,7 @@ const ContactPage = () => {
             {/* Add a prominent CTA at the bottom */}
             <div className="mt-12 flex flex-col items-center">
               <Button onClick={openForm} className="bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 px-10 rounded-full max-w-xs w-full text-lg">
-                Book a Consultation
+                Book a Consultation.
               </Button>
             </div>
           </div>

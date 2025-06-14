@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
@@ -16,7 +15,7 @@ export default function ContactCTA({
   className,
   location = "",
   bgColor = 'dark',
-  cta = "Get Estimate",
+  cta = "Get Estimate.",
   onCtaClick
 }: ContactCTAProps) {
   const isDark = bgColor === 'dark';
@@ -33,7 +32,7 @@ export default function ContactCTA({
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-normal text-5xl">
-                Transform Your Space {location ? `in ${location}` : 'Today'}
+                Transform Your Space{location ? ` in ${location}` : " Today"}.
               </h2>
               <p className={cn("mb-8", isDark ? "text-white/90" : "text-deco-plum/80", "font-circular")}>
                 Contact our expert team to discuss your project requirements and 
@@ -45,7 +44,7 @@ export default function ContactCTA({
                 <div className="flex items-start">
                   <MapPin className={cn("h-5 w-5 mr-3", isDark ? "text-deco-gold" : "text-deco-plum")} />
                   <div>
-                    <h3 className="font-medium font-distrampler">Service Area</h3>
+                    <h3 className="font-medium font-distrampler">Service Area.</h3>
                     <p className={isDark ? "text-white/80 font-circular" : "text-deco-plum/80 font-circular"}>
                       {location || "UAE"} and surrounding areas
                     </p>
@@ -55,7 +54,7 @@ export default function ContactCTA({
                 <div className="flex items-start">
                   <Phone className={cn("h-5 w-5 mr-3", isDark ? "text-deco-gold" : "text-deco-plum")} />
                   <div>
-                    <h3 className="font-medium font-distrampler">Phone</h3>
+                    <h3 className="font-medium font-distrampler">Phone.</h3>
                     <a href="tel:+971503119537" className={cn("transition-colors font-circular", isDark ? "text-white/80 hover:text-white" : "text-deco-plum/80 hover:text-deco-plum")}>
                       +971 50 311 9537
                     </a>
@@ -65,7 +64,7 @@ export default function ContactCTA({
                 <div className="flex items-start">
                   <Mail className={cn("h-5 w-5 mr-3", isDark ? "text-deco-gold" : "text-deco-plum")} />
                   <div>
-                    <h3 className="font-medium font-distrampler">Email</h3>
+                    <h3 className="font-medium font-distrampler">Email.</h3>
                     <a href="mailto:info@decopaints.ae" className={cn("transition-colors font-circular", isDark ? "text-white/80 hover:text-white" : "text-deco-plum/80 hover:text-deco-plum")}>
                       info@decopaints.ae
                     </a>
@@ -74,7 +73,7 @@ export default function ContactCTA({
               </div>
               
               <Button className={cn(isDark ? "bg-white text-deco-plum hover:bg-white/90" : "bg-deco-denim text-white hover:bg-deco-denim/90")} onClick={handleCtaClick}>
-                {cta}
+                {cta.endsWith('.') ? cta : cta + '.'}
               </Button>
             </div>
             {/* Embed Elfsight Form */}

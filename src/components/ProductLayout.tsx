@@ -111,7 +111,7 @@ const ProductLayout: React.FC<ProductProps> = ({
             
             {/* Main Heading */}
             <h1 className="font-distrampler text-5xl text-white mb-4 font-normal lg:text-6xl">
-              {heroTitle}
+              {heroTitle.endsWith('.') ? heroTitle : heroTitle + '.'}
             </h1>
             
             <div className="h-1 w-20 bg-deco-gold mb-6"></div>
@@ -126,7 +126,7 @@ const ProductLayout: React.FC<ProductProps> = ({
             openForm();
           }} className="btn-cta inline-flex items-center gap-2">
               <Paintbrush className="h-5 w-5" />
-              Get Expert Consultation
+              Get Expert Consultation.
             </Link>
           </div>
         </div>
@@ -144,7 +144,7 @@ const ProductLayout: React.FC<ProductProps> = ({
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="font-distrampler font-normal text-5xl mb-4">
-              Signature Benefits
+              Signature Benefits.
             </h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-circular text-xl text-gray-700">
@@ -171,7 +171,7 @@ const ProductLayout: React.FC<ProductProps> = ({
         <div className="absolute inset-0 geometric-pattern opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-distrampler font-normal text-5xl mb-4">Palette of Success</h2>
+            <h2 className="font-distrampler font-normal text-5xl mb-4">Palette of Success.</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-circular text-xl text-gray-700">
               Witness the transformation power of our {title} finish through real projects
@@ -240,7 +240,7 @@ const ProductLayout: React.FC<ProductProps> = ({
       <section className="py-16 bg-white relative">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-distrampler font-normal text-5xl mb-4">Maintenance Guide</h2>
+            <h2 className="font-distrampler font-normal text-5xl mb-4">Maintenance Guide.</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-circular text-xl text-gray-700">
               Protect your investment and ensure long-lasting beauty
@@ -263,7 +263,7 @@ const ProductLayout: React.FC<ProductProps> = ({
         <div className="absolute inset-0 geometric-pattern opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-distrampler font-normal text-5xl mb-4">{featuredApplicationsTitle}</h2>
+            <h2 className="font-distrampler font-normal text-5xl mb-4">{featuredApplicationsTitle}.</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-circular text-xl text-gray-700">
               Explore spaces where our {title} finish creates exceptional environments
@@ -293,7 +293,7 @@ const ProductLayout: React.FC<ProductProps> = ({
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-distrampler text-5xl font-normal mb-4">Technical Specifications</h2>
+            <h2 className="font-distrampler text-5xl font-normal mb-4">Technical Specifications.</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-circular text-xl text-gray-700">
               Essential information for professional application and performance
@@ -318,7 +318,7 @@ const ProductLayout: React.FC<ProductProps> = ({
         <div className="absolute inset-0 geometric-pattern opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-distrampler font-normal text-5xl mb-4">Ready to Transform Your Space?</h2>
+            <h2 className="font-distrampler font-normal text-5xl mb-4">Ready to Transform Your Space?.</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-circular text-xl text-white/90 mb-8">
               Our expert team is ready to bring the beauty of {title} to your project. 
@@ -328,7 +328,7 @@ const ProductLayout: React.FC<ProductProps> = ({
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button type="button" onClick={openForm} className="btn-gold inline-flex items-center justify-center gap-2 text-lg">
                 <Paintbrush className="h-5 w-5" />
-                Schedule Consultation
+                Schedule Consultation.
               </button>
             </div>
           </div>

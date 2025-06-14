@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
@@ -38,7 +39,7 @@ const Index = () => {
         <section id="textures" className="section bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Distinctive Finishes</h2>
+              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Distinctive Finishes.</h2>
               <GoldAccent className="mb-6" />
               <p className="text-lg text-deco-plum/80">
                 Discover our exquisite range of decorative surfaces, each with a unique character and unparalleled elegance.
@@ -59,7 +60,7 @@ const Index = () => {
         <section className="section bg-deco-beige relative overflow-hidden font-circular">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Our Artisanal Process</h2>
+              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Our Artisanal Process.</h2>
               <GoldAccent className="mb-6" />
               <p className="text-deco-plum/80 text-xl">
                 Every project is approached with meticulous attention to detail and executed with master craftsmanship.
@@ -102,7 +103,7 @@ const Index = () => {
               <div className="mt-16 text-center">
                 <button type="button" onClick={openForm} className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all font-circular text-lg">
                   <Paintbrush className="h-5 w-5 mr-2" />
-                  Schedule Consultation
+                  Schedule Consultation.
                 </button>
               </div>
             </div>
@@ -113,13 +114,12 @@ const Index = () => {
         <section className="section bg-white relative font-circular">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Why DecoPaints Stands Apart</h2>
+              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Why DecoPaints Stands Apart.</h2>
               <GoldAccent className="mb-6" />
               <p className="text-deco-plum/80 text-xl">
                 Our commitment to excellence and innovation has established us as the UAE's premier decorative finishing company.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[{
               icon: <Star className="h-10 w-10 text-deco-gold" />,
@@ -164,7 +164,7 @@ const Index = () => {
         <section className="section bg-white font-circular">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Recent Transformations</h2>
+              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Recent Transformations.</h2>
               <GoldAccent className="mb-6" />
               <p className="text-deco-plum/80 text-xl">
                 Explore our latest luxury projects across the UAE, showcasing the versatility and beauty of our finishes.
@@ -239,14 +239,14 @@ const Index = () => {
                 behavior: 'smooth'
               });
             }} className="btn-outline inline-flex items-center font-circular">
-                View All Projects
+                View All Projects.
               </button>
             </div>
           </div>
         </section>
         
         {/* Contact CTA */}
-        <ContactCTA cta="Transform Your Space" onCtaClick={openForm} />
+        <ContactCTA cta="Transform Your Space." onCtaClick={openForm} />
       </main>
       <Footer />
       
@@ -266,7 +266,7 @@ const Index = () => {
       <button type="button" className="fixed left-4 bottom-6 z-40 bg-deco-denim text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all group flex items-center gap-2
           block md:hidden" onClick={openForm}>
         <Paintbrush className="h-5 w-5 group-hover:animate-pulse" />
-        Get Estimate
+        Get Estimate.
       </button>
     </div>;
 };
