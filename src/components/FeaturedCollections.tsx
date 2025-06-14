@@ -1,36 +1,37 @@
 
 import React, { useState, useRef } from 'react';
 
+// Use provided (uploaded/placeholder) images
 const collections = [
   {
     id: 1,
-    name: "Venetian Marmorino",
-    image: "lovable-uploads/9.png",
-    description: "Timeless elegance with a smooth, stone-like finish reminiscent of classical Venetian architecture."
+    name: "Living Room Elegance",
+    image: "/lovable-uploads/d2b0fdec-880c-41f9-84c7-e432d73393f7.png", // Living Room uploaded image
+    description: "Elegant finishes and sophisticated design to create a warm and distinguished living room atmosphere."
   },
   {
     id: 2,
-    name: "Gold Leaf Accents",
-    image: "lovable-uploads/goldleaf.png",
-    description: "Luxurious metallic highlights that capture and reflect light, adding opulence to any space."
+    name: "Luxury Kitchen",
+    image: "/lovable-uploads/2046ad05-0e3a-487a-af78-a4865db63b4e.png", // Kitchen uploaded image
+    description: "Functional artistry with easy-to-clean, durable, and luxurious finishes for your kitchen space."
   },
   {
     id: 3,
-    name: "Concrete Textures",
-    image: "lovable-uploads/conwall.jpg",
-    description: "Industrial-inspired finishes that bring raw, urban aesthetics into contemporary interiors."
+    name: "Spa-Inspired Bathroom",
+    image: "/lovable-uploads/d3674917-53b5-47b9-9aaa-c3f0eb623a7b.png", // Bathroom uploaded image
+    description: "Calm, seamless surfaces with beautiful waterproof finishes to evoke a spa ambiance in your bathroom."
   },
   {
     id: 4,
-    name: "Pearl Finishes",
-    image: "lovable-uploads/pearlfinish.png",
-    description: "Subtle iridescent surfaces that change with light conditions, creating dynamic environments."
+    name: "Commercial Chic",
+    image: "/lovable-uploads/292be165-768b-4c98-a0be-143f7c6c3ebc.png", // Commercial uploaded image
+    description: "Finish solutions crafted for modern offices, retail, and hospitality —demand low-maintenance and visual impact."
   },
   {
     id: 5,
-    name: "Terrazzo Flooring",
-    image: "lovable-uploads/terrazzo.png",
-    description: "Contemporary interpretation of the classic Italian terrazzo, combining durability with artistry."
+    name: "Contemporary Concrete",
+    image: "lovable-uploads/conwall.jpg", // fallback image with industrial vibe
+    description: "Industrial-inspired concrete textures that bring raw, urban aesthetics into contemporary interiors."
   }
 ];
 
@@ -174,3 +175,4 @@ const FeaturedCollections = () => {
 };
 
 export default FeaturedCollections;
+
