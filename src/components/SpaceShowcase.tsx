@@ -45,7 +45,7 @@ export default function SpaceShowcase() {
     },
     {
       title: "Kitchen & Dining",
-      image: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/lovable-uploads/2046ad05-0e3a-487a-af78-a4865db63b4e.png",
       features: [
         "Water-resistant decorative coatings",
         "Easy-clean surface technologies",
