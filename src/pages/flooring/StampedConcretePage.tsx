@@ -33,7 +33,7 @@ const StampedConcretePage = () => {
       title="Stamped Concrete"
       heroTitle="Textured Decorative Concrete"
       heroDescription="Create beautiful outdoor surfaces that replicate natural materials with superior durability and design versatility for Dubai's climate."
-      heroImage="/public/textures/concrete-texture.jpg"
+      heroImage="/lovable-uploads/f08631ed-d661-4cb8-9fcc-58887b94ee1d.png"
       benefits={[
         {
           title: "Natural Material Replication",
