@@ -21,6 +21,34 @@ const inProgressTitles = [
   "Emirates Hills"
 ];
 
+// NEW: Finished projects for this page, with descriptive titles
+const finishedProjects = [
+  {
+    image: "/lovable-uploads/2547cb1e-efa3-4182-970f-ac12c5596b40.png",
+    title: "Modern Patio with Water Feature"
+  },
+  {
+    image: "/lovable-uploads/f38310ef-7427-498c-a0f1-d7e82d05c86b.png",
+    title: "Geometric Stamped Walkway Entry"
+  },
+  {
+    image: "/lovable-uploads/83d7d54e-1a52-4178-bec5-022d88c3d7e4.png",
+    title: "Evening Garden Stamped Concrete Path"
+  },
+  {
+    image: "/lovable-uploads/e91ff95f-be66-4817-a4be-937fbc5c9757.png",
+    title: "Curved Waterfall with Textured Concrete"
+  },
+  {
+    image: "/lovable-uploads/d66f408f-d0fe-4031-9be6-8d0f7982a5e2.png",
+    title: "Luxury Indoor Pool Surround"
+  },
+  {
+    image: "/lovable-uploads/8fd96d8c-d881-4eb7-9a28-9a2adde0b6d0.png",
+    title: "Poolside Oasis with Textured Concrete"
+  }
+];
+
 const StampedConcretePage = () => {
   useEffect(() => {
     document.title = "Stamped Concrete | DecoPaints";
@@ -101,6 +129,7 @@ const StampedConcretePage = () => {
           description: "Due to Dubai's intense UV exposure, we recommend resealing exterior stamped concrete every 1-2 years to maintain color integrity and surface protection."
         }
       ]}
+      finishedProjects={finishedProjects}
       inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
     />
@@ -108,3 +137,4 @@ const StampedConcretePage = () => {
 };
 
 export default StampedConcretePage;
+
