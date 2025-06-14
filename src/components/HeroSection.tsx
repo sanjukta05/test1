@@ -1,32 +1,29 @@
-
 import React, { useState, useEffect } from 'react';
 import { ArrowDown, Paintbrush, Droplet, Building } from 'lucide-react';
 interface HeroSectionProps {
   openEstimateForm?: () => void;
 }
-const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({
+  openEstimateForm
+}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showTagline, setShowTagline] = useState(false);
   const [activeHero, setActiveHero] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   // Updated hero slides to use user-uploaded images
-  const heroSlides = [
-    {
-      image: '/lovable-uploads/394a4a9c-b389-49d9-b662-9ecfcb213a23.png',
-      heading: 'Elevate Every Surface',
-      subheading: 'Transforming Spaces, Elevating Lifestyles'
-    },
-    {
-      image: '/lovable-uploads/67b298fb-1e2b-4587-bed1-fde91b74b433.png',
-      heading: 'Artisan Craftsmanship',
-      subheading: 'Techniques Perfected by Master Craftsmen'
-    },
-    {
-      image: '/lovable-uploads/25ef366b-9ad1-444b-9469-2fb1ec3065e4.png',
-      heading: 'Luxury in Every Detail',
-      subheading: 'Premium Materials, Extraordinary Results'
-    }
-  ];
+  const heroSlides = [{
+    image: '/lovable-uploads/394a4a9c-b389-49d9-b662-9ecfcb213a23.png',
+    heading: 'Elevate Every Surface',
+    subheading: 'Transforming Spaces, Elevating Lifestyles'
+  }, {
+    image: '/lovable-uploads/67b298fb-1e2b-4587-bed1-fde91b74b433.png',
+    heading: 'Artisan Craftsmanship',
+    subheading: 'Techniques Perfected by Master Craftsmen'
+  }, {
+    image: '/lovable-uploads/25ef366b-9ad1-444b-9469-2fb1ec3065e4.png',
+    heading: 'Luxury in Every Detail',
+    subheading: 'Premium Materials, Extraordinary Results'
+  }];
   useEffect(() => {
     setIsLoaded(true);
 
@@ -75,12 +72,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
       {/* Content */}
       <div className="container mx-auto px-4 py-20 md:py-24 lg:py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className={`font-parafina text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
+          <h1 className="text-zinc-50 text-8xl font-normal">
             {heroSlides[activeHero].heading}
           </h1>
           
           <div className={`overflow-hidden h-12 mb-8 transition-all duration-1000 ${showTagline ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="font-grosa text-xl md:text-2xl text-white/90 animate-fade-in">
+            <p className="font-grosa text-xl text-white/90 animate-fade-in md:text-2xl">
               {heroSlides[activeHero].subheading}
             </p>
           </div>
@@ -90,11 +87,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
               <Building className="w-5 h-5" />
               Discover Our Finishes
             </a>
-            <button
-              type="button"
-              className={`btn-cta inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}
-              onClick={openEstimateForm}
-            >
+            <button type="button" className={`btn-cta inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`} onClick={openEstimateForm}>
               <Paintbrush className="w-5 h-5" />
               Get Estimate
             </button>
@@ -109,4 +102,3 @@ const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
     </section>;
 };
 export default HeroSection;
-

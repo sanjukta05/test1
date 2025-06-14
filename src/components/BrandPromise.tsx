@@ -21,7 +21,7 @@ const BrandPromise = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="text-3xl font-parafina font-bold mb-4 md:text-4xl">Brand Promise</h2>
+          <h2 className="text-3xl font-parafina mb-4 font-normal md:text-5xl">Brand Promise.</h2>
           <p className="text-lg font-grosa text-deco-plum/80">
             Our commitment to excellence is reflected in every project we undertake.
           </p>
