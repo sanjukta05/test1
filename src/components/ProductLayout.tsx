@@ -109,7 +109,7 @@ const ProductLayout: React.FC<ProductProps> = ({
               <span className="text-white">{title}</span>
             </div>
             
-            <h1 className="font-distrampler text-5xl md:text-5xl lg:text-5xl text-white mb-4 font-normal">
+            <h1 className="font-distrampler text-5xl md:text-5xl text-white mb-4 font-normal lg:text-6xl">
               {heroTitle}
             </h1>
             
