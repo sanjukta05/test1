@@ -1,30 +1,22 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 const SustainabilityPage = () => {
   useEffect(() => {
     document.title = "Sustainability | DecoPaints";
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader 
-        title="Our Sustainability Commitment"
-        description="Responsible Practices for a Better Tomorrow"
-        backgroundImage="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=2000&h=600"
-      />
+      <PageHeader title="Our Sustainability Commitment" description="Responsible Practices for a Better Tomorrow" backgroundImage="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=2000&h=600" />
       
       <main className="flex-grow">
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Approach to Sustainability</h2>
-              <p className="text-lg text-deco-plum/80">
+              <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Approach to Sustainability</h2>
+              <p className="text-deco-plum/80 text-xl">
                 At DecoPaints, sustainability isn't just a trend—it's a core value that guides our operations, 
                 product development, and business relationships. We believe that premium finishes can and should 
                 be environmentally responsible, creating spaces that are both beautiful and healthy.
@@ -33,11 +25,7 @@ const SustainabilityPage = () => {
             
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20">
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000&h=600" 
-                  alt="Eco-friendly manufacturing process"
-                  className="rounded-lg shadow-lg mb-6"
-                />
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000&h=600" alt="Eco-friendly manufacturing process" className="rounded-lg shadow-lg mb-6" />
                 <h3 className="text-2xl font-bold mb-4">Environmental Responsibility</h3>
                 <p className="text-deco-plum/80 mb-4">
                   We carefully select raw materials that minimize environmental impact while maintaining the highest quality standards. 
@@ -51,11 +39,7 @@ const SustainabilityPage = () => {
               </div>
               
               <div>
-                <img 
-                  src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&q=80&w=1000&h=600" 
-                  alt="Natural raw materials"
-                  className="rounded-lg shadow-lg mb-6"
-                />
+                <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&q=80&w=1000&h=600" alt="Natural raw materials" className="rounded-lg shadow-lg mb-6" />
                 <h3 className="text-2xl font-bold mb-4">Indoor Air Quality</h3>
                 <p className="text-deco-plum/80 mb-4">
                   We understand that the finishes in your home directly impact the air you breathe. That's why we've developed our 
@@ -73,18 +57,18 @@ const SustainabilityPage = () => {
         <section className="py-16 md:py-24 bg-deco-beige">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Sustainability Initiatives</h2>
-              <p className="text-lg text-deco-plum/80">
+              <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Sustainability Initiatives</h2>
+              <p className="text-deco-plum/80 text-xl">
                 We're committed to continuous improvement in our environmental practices through these key initiatives.
               </p>
             </div>
             
             <Tabs defaultValue="materials" className="max-w-6xl mx-auto">
               <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
-                <TabsTrigger value="materials">Sustainable Materials</TabsTrigger>
-                <TabsTrigger value="packaging">Packaging Reduction</TabsTrigger>
-                <TabsTrigger value="emissions">Carbon Neutrality</TabsTrigger>
-                <TabsTrigger value="community">Community Impact</TabsTrigger>
+                <TabsTrigger value="materials" className="text-lg">Sustainable Materials</TabsTrigger>
+                <TabsTrigger value="packaging" className="text-lg">Packaging Reduction</TabsTrigger>
+                <TabsTrigger value="emissions" className="text-lg">Carbon Neutrality</TabsTrigger>
+                <TabsTrigger value="community" className="text-lg">Community Impact</TabsTrigger>
               </TabsList>
               
               <TabsContent value="materials" className="mt-6">
@@ -102,11 +86,7 @@ const SustainabilityPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1605453338589-320e13a91fde?auto=format&fit=crop&q=80&w=1000&h=600" 
-                      alt="Raw material sourcing"
-                      className="rounded-lg shadow-md h-full w-full object-cover"
-                    />
+                    <img src="https://images.unsplash.com/photo-1605453338589-320e13a91fde?auto=format&fit=crop&q=80&w=1000&h=600" alt="Raw material sourcing" className="rounded-lg shadow-md h-full w-full object-cover" />
                   </div>
                 </div>
               </TabsContent>
@@ -114,11 +94,7 @@ const SustainabilityPage = () => {
               <TabsContent value="packaging" className="mt-6">
                 <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
                   <div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1595278069441-2cf29f8005a4?auto=format&fit=crop&q=80&w=1000&h=600" 
-                      alt="Sustainable packaging"
-                      className="rounded-lg shadow-md h-full w-full object-cover"
-                    />
+                    <img src="https://images.unsplash.com/photo-1595278069441-2cf29f8005a4?auto=format&fit=crop&q=80&w=1000&h=600" alt="Sustainable packaging" className="rounded-lg shadow-md h-full w-full object-cover" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-4">Packaging Innovation</h3>
@@ -151,11 +127,7 @@ const SustainabilityPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1588062104813-3b9f165ae16b?auto=format&fit=crop&q=80&w=1000&h=600" 
-                      alt="Solar panels on facility"
-                      className="rounded-lg shadow-md h-full w-full object-cover"
-                    />
+                    <img src="https://images.unsplash.com/photo-1588062104813-3b9f165ae16b?auto=format&fit=crop&q=80&w=1000&h=600" alt="Solar panels on facility" className="rounded-lg shadow-md h-full w-full object-cover" />
                   </div>
                 </div>
               </TabsContent>
@@ -163,14 +135,10 @@ const SustainabilityPage = () => {
               <TabsContent value="community" className="mt-6">
                 <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
                   <div>
-                    <img 
-                      src="https://images.unsplash.com/photo-1560252829-804f1aedf1be?auto=format&fit=crop&q=80&w=1000&h=600" 
-                      alt="Community project"
-                      className="rounded-lg shadow-md h-full w-full object-cover"
-                    />
+                    <img src="https://images.unsplash.com/photo-1560252829-804f1aedf1be?auto=format&fit=crop&q=80&w=1000&h=600" alt="Community project" className="rounded-lg shadow-md h-full w-full object-cover" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-4">Supporting Local Communities</h3>
+                    <h3 className="mb-4 text-5xl font-normal">Supporting Local Communities</h3>
                     <p className="text-deco-plum/80 mb-4">
                       We believe in giving back to the communities where we operate and helping create more sustainable urban environments.
                     </p>
@@ -191,8 +159,8 @@ const SustainabilityPage = () => {
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Certifications</h2>
-              <p className="text-lg text-deco-plum/80">
+              <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Certifications</h2>
+              <p className="text-deco-plum/80 text-xl">
                 We're proud to meet and exceed industry standards for sustainability and product safety.
               </p>
             </div>
@@ -244,8 +212,8 @@ const SustainabilityPage = () => {
         <section className="py-16 md:py-24 bg-deco-plum text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Sustainability Goals</h2>
-              <p className="text-lg text-white/90 mb-12">
+              <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Sustainability Goals</h2>
+              <p className="text-white/90 mb-12 text-xl">
                 We've set ambitious targets for the future as we continue our sustainability journey.
               </p>
             </div>
@@ -325,10 +293,7 @@ const SustainabilityPage = () => {
             </div>
             
             <div className="max-w-3xl mx-auto text-center mt-16">
-              <a 
-                href="/contact" 
-                className="bg-deco-denim hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-full transition-colors inline-block"
-              >
+              <a href="/contact" className="bg-deco-denim hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-full transition-colors inline-block">
                 Learn More About Our Initiatives
               </a>
             </div>
@@ -337,8 +302,6 @@ const SustainabilityPage = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default SustainabilityPage;

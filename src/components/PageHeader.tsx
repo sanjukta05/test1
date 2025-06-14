@@ -33,7 +33,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
           {/* Gold Accent Line */}
           <GoldAccent className={`mb-6 ${centered ? 'mx-auto' : 'ml-0'}`} />
           
-          {description && <p className="font-circular text-xl md:text-2xl text-white/90">{description}</p>}
+          {description && <p className="font-circular text-xl text-white/90 md:text-xl">{description}</p>}
         </div>
       </div>
       
