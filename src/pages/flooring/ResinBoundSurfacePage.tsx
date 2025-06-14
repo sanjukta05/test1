@@ -21,6 +21,34 @@ const inProgressTitles = [
   "Emirates Hills"
 ];
 
+// NEW: Finished projects with images & titles
+const finishedProjects = [
+  {
+    image: "/lovable-uploads/d518970f-b692-4147-8b1d-3806e336a47c.png",
+    title: "Black & White Striped Driveway"
+  },
+  {
+    image: "/lovable-uploads/e0fc2780-2058-49b0-8033-45bcaffb0289.png",
+    title: "Pool Lounge with Seamless Resin Flooring"
+  },
+  {
+    image: "/lovable-uploads/2c4e50a1-d541-4e5f-acb0-dd0127c48877.png",
+    title: "Modern Villa Entrance with Grey Resin Bound"
+  },
+  {
+    image: "/lovable-uploads/ba27fd41-1cc2-465c-88a9-35e7b90ac2da.png",
+    title: "Natural Stone Pool Retreat"
+  },
+  {
+    image: "/lovable-uploads/063e919a-fdef-4e15-800d-8c1fa98a717c.png",
+    title: "Red Carport Resin Driveway"
+  },
+  {
+    image: "/lovable-uploads/0cb4482e-d607-4344-9444-37573530f64c.png",
+    title: "Elegant Home with Cream Resin Bound Entrance"
+  }
+];
+
 const ResinBoundSurfacePage = () => {
   useEffect(() => {
     document.title = "Resin Bound Surface | DecoPaints";
@@ -101,6 +129,7 @@ const ResinBoundSurfacePage = () => {
           description: "Depending on traffic and sun exposure, a maintenance coat may be recommended every 3-5 years to maintain optimal appearance and protection."
         }
       ]}
+      finishedProjects={finishedProjects}
       inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
     />
@@ -108,3 +137,4 @@ const ResinBoundSurfacePage = () => {
 };
 
 export default ResinBoundSurfacePage;
+
