@@ -63,12 +63,12 @@ const ProductLayout: React.FC<ProductProps> = ({
   ];
 
   const inProgressProjects = [
-    "/lovable-uploads/626c9756-9fc9-437a-8645-6508c66ee745.png",
-    "/lovable-uploads/18e8db04-b183-434d-b432-ad3f7d6db1e7.png",
-    "/lovable-uploads/1b906a20-cd68-4717-ae2d-8249647bf3c4.png",
-    "/lovable-uploads/ae740c6e-aad1-4c76-9366-bf2580f152d6.png",
-    "/lovable-uploads/2811763e-e15f-4057-b440-09a2485592e8.png",
-    "/lovable-uploads/5ec99e9a-e4a6-4dfa-aede-f1b461595568.png"
+    "/lovable-uploads/1.png",
+    "/lovable-uploads/2.png",
+    "/lovable-uploads/3.png",
+    "/lovable-uploads/4.png",
+    "/lovable-uploads/5.png",
+    "/lovable-uploads/6.png"
   ];
 
   return (
