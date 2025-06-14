@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Sun, Paintbrush, Layers, Home } from 'lucide-react';
@@ -49,6 +48,42 @@ const finishedProjects = [
   }
 ];
 
+const applications = [
+  {
+    title: "Tranquil Garden Water Feature",
+    description:
+      "A luxurious stamped concrete patio and walkway integrated with contemporary vertical water walls, lush landscape and accent lighting. Ideal for modern villas seeking a balance of elegance, nature, and relaxation.",
+    image: "/lovable-uploads/db0868f9-a95b-480b-914a-4d07b41e882f.png",
+  },
+  {
+    title: "Elegant Poolside Fire Lounge",
+    description:
+      "A sophisticated stamped concrete entertainment area with geometric patterning, fire pit, and pool surround for resort-style indoor-outdoor living.",
+    image: "/lovable-uploads/e8859702-fb53-40db-9159-5f67f0fad5f6.png",
+  },
+  {
+    title: "Desert Oasis Courtyard Retreat",
+    description:
+      "Bright, textured stamped concrete surfaces wrap seamlessly around a modern freeform pool, sunken seating area, and Mediterranean-inspired architecture.",
+    image: "/lovable-uploads/6fcc01fe-b425-45a9-b8ed-4619a6ac0cf1.png",
+  },
+  {
+    title: "Luxury Driveways",
+    description: "Create grand entrances with durable, decorative surfaces that withstand vehicle traffic while providing sophisticated curb appeal for luxury properties.",
+    image: "https://images.unsplash.com/photo-1610569244414-5e77776e3191?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+  },
+  {
+    title: "Outdoor Entertainment Areas",
+    description: "Design cohesive entertaining spaces with beautiful, low-maintenance surfaces that connect multiple outdoor living zones while withstanding poolside conditions.",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+  },
+  {
+    title: "Commercial Plazas",
+    description: "Create inviting public spaces with decorative hardscaping that provides the perfect balance of aesthetics and practicality for high-traffic commercial environments.",
+    image: "https://images.unsplash.com/photo-1604715984281-cf7fa4586c17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+  }
+];
+
 const StampedConcretePage = () => {
   useEffect(() => {
     document.title = "Stamped Concrete | DecoPaints";
@@ -84,23 +119,7 @@ const StampedConcretePage = () => {
           icon: <Paintbrush className="h-8 w-8" />
         }
       ]}
-      applications={[
-        {
-          title: "Luxury Driveways",
-          description: "Create grand entrances with durable, decorative surfaces that withstand vehicle traffic while providing sophisticated curb appeal for luxury properties.",
-          image: "https://images.unsplash.com/photo-1610569244414-5e77776e3191?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Outdoor Entertainment Areas",
-          description: "Design cohesive entertaining spaces with beautiful, low-maintenance surfaces that connect multiple outdoor living zones while withstanding poolside conditions.",
-          image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Commercial Plazas",
-          description: "Create inviting public spaces with decorative hardscaping that provides the perfect balance of aesthetics and practicality for high-traffic commercial environments.",
-          image: "https://images.unsplash.com/photo-1604715984281-cf7fa4586c17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        }
-      ]}
+      applications={applications}
       techSpecs={[
         { label: "Pattern Options", value: "Over 30 texturing skins including stone, tile, wood, and custom designs" },
         { label: "Coloring Methods", value: "Integral color, color hardener, release agents, stains" },
@@ -137,4 +156,3 @@ const StampedConcretePage = () => {
 };
 
 export default StampedConcretePage;
-
