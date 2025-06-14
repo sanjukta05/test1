@@ -55,7 +55,16 @@ const PearlFinishPage = () => {
           image: "/lovable-uploads/952428ba-942d-4a78-af90-82ea97a08880.png"
         }
       ]}
-      // New finished project images from user uploads
+      techSpecs={[
+        { label: "Light Reflectivity", value: "30-60% increased light reflection (finish dependent)" },
+        { label: "Base Requirements", value: "Ultra-smooth base preparation essential" },
+        { label: "Application Techniques", value: "Proprietary multi-layer application with specialized tools" },
+        { label: "Curing Time", value: "24 hours between coats, 7 days for full cure" },
+        { label: "Pearl Content", value: "Natural and synthetic pearl essence" },
+        { label: "Finish Options", value: "Subtle sheen to high luster" },
+        { label: "VOC Content", value: "Low VOC (<25g/L)" },
+        { label: "Durability Rating", value: "Premium residential/light commercial" }
+      ]}
       finishedProjects={[
         "/lovable-uploads/6fb4e594-07d2-475a-8064-acedaf9e13ec.png",
         "/lovable-uploads/d8c5c2cc-c2a0-4e4a-b4c5-22875adaa8b8.png",
