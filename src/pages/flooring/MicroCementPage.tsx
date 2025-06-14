@@ -12,15 +12,6 @@ const inProgressProjects = [
 ];
 
 const inProgressTitles = [
-  "Applying Two-Tone Microcement",
-  "Finishing with a Roller",
-  "Prepping Outdoor Floor",
-  "Waterproofing a Villa Roof",
-  "Leveling Indoor Floor",
-  "Protective Coating Application"
-];
-
-const inProgressTitlesOld = [
   "Business Bay",
   "Dubai Marina",
   "The Springs",

@@ -12,12 +12,12 @@ const inProgressProjects = [
 ];
 
 const inProgressTitles = [
-  "Applying Two-Tone Microcement",
-  "Finishing with a Roller",
-  "Prepping Outdoor Floor",
-  "Waterproofing a Villa Roof",
-  "Leveling Indoor Floor",
-  "Protective Coating Application"
+  "Business Bay",
+  "Dubai Marina",
+  "The Springs",
+  "The Meadows",
+  "Palm Jumeirah",
+  "Emirates Hills"
 ];
 
 const DecorativeEpoxyPage = () => {
