@@ -164,65 +164,6 @@ const ProductLayout: React.FC<ProductProps> = ({
           </div>
         </div>
       </section>
-      
-      {/* Featured Applications */}
-      <section className="py-16 bg-deco-beige relative">
-        <div className="absolute inset-0 geometric-pattern opacity-5"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-parafina text-3xl font-bold mb-4">Featured Applications</h2>
-            <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
-            <p className="font-grosa text-gray-700">
-              Explore spaces where our {title} finish creates exceptional environments
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {applications.map((app, i) => (
-              <div key={i} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="relative w-full">
-                  <AspectRatio ratio={16/9}>
-                    <img 
-                      src={app.image} 
-                      alt={app.title} 
-                      className="object-cover w-full h-full"
-                    />
-                  </AspectRatio>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <h3 className="absolute bottom-4 left-4 text-white font-parafina text-xl font-bold">{app.title}</h3>
-                </div>
-                <div className="p-6">
-                  <p className="font-grosa text-gray-700">{app.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Technical Specifications */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-parafina text-3xl font-bold mb-4">Technical Specifications</h2>
-            <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
-            <p className="font-grosa text-gray-700">
-              Essential information for professional application and performance
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg border max-w-3xl mx-auto overflow-hidden">
-            <div className="grid grid-cols-1 divide-y divide-gray-200">
-              {techSpecs.map((spec, i) => (
-                <div key={i} className="flex py-4 px-6">
-                  <div className="w-1/3 font-grosa font-medium">{spec.label}</div>
-                  <div className="w-2/3 font-grosa text-gray-700">{spec.value}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Palette of Success */}
       <section className="py-16 bg-deco-beige relative">
@@ -312,6 +253,65 @@ const ProductLayout: React.FC<ProductProps> = ({
                 <p className="font-grosa text-gray-700">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Featured Applications */}
+      <section className="py-16 bg-deco-beige relative">
+        <div className="absolute inset-0 geometric-pattern opacity-5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-parafina text-3xl font-bold mb-4">Featured Applications</h2>
+            <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
+            <p className="font-grosa text-gray-700">
+              Explore spaces where our {title} finish creates exceptional environments
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {applications.map((app, i) => (
+              <div key={i} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="relative w-full">
+                  <AspectRatio ratio={16/9}>
+                    <img 
+                      src={app.image} 
+                      alt={app.title} 
+                      className="object-cover w-full h-full"
+                    />
+                  </AspectRatio>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <h3 className="absolute bottom-4 left-4 text-white font-parafina text-xl font-bold">{app.title}</h3>
+                </div>
+                <div className="p-6">
+                  <p className="font-grosa text-gray-700">{app.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Technical Specifications */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-parafina text-3xl font-bold mb-4">Technical Specifications</h2>
+            <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
+            <p className="font-grosa text-gray-700">
+              Essential information for professional application and performance
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-lg border max-w-3xl mx-auto overflow-hidden">
+            <div className="grid grid-cols-1 divide-y divide-gray-200">
+              {techSpecs.map((spec, i) => (
+                <div key={i} className="flex py-4 px-6">
+                  <div className="w-1/3 font-grosa font-medium">{spec.label}</div>
+                  <div className="w-2/3 font-grosa text-gray-700">{spec.value}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
