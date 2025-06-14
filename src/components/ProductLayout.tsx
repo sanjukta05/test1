@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
@@ -39,6 +38,7 @@ export interface ProductProps {
   applications: Application[];
   techSpecs: TechSpec[];
   maintenance: MaintenanceItem[];
+  finishedProjects?: string[]; // <-- add this line
 }
 
 const ProductLayout: React.FC<ProductProps> = ({
@@ -50,10 +50,11 @@ const ProductLayout: React.FC<ProductProps> = ({
   benefits,
   applications,
   techSpecs,
-  maintenance
+  maintenance,
+  finishedProjects // <-- add to props
 }) => {
-  // Project images for the Palette of Success section
-  const finishedProjects = [
+  // Default images for Palette of Success (if not overridden)
+  const defaultFinishedProjects = [
     "/lovable-uploads/5ec99e9a-e4a6-4dfa-aede-f1b461595568.png",
     "/lovable-uploads/2811763e-e15f-4057-b440-09a2485592e8.png", 
     "/lovable-uploads/ae740c6e-aad1-4c76-9366-bf2580f152d6.png",
@@ -70,6 +71,11 @@ const ProductLayout: React.FC<ProductProps> = ({
     "/lovable-uploads/5.png",
     "/lovable-uploads/6.png"
   ];
+
+  // Use custom finishedProjects if provided, otherwise fallback
+  const usedFinishedProjects = finishedProjects && finishedProjects.length > 0
+    ? finishedProjects
+    : defaultFinishedProjects;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -232,7 +238,7 @@ const ProductLayout: React.FC<ProductProps> = ({
             
             <TabsContent value="finished" className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {finishedProjects.map((image, index) => (
+                {usedFinishedProjects.map((image, index) => (
                   <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
                     <div className="relative w-full">
                       <AspectRatio ratio={4/3}>
