@@ -9,6 +9,16 @@ const StencilPaintingPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Use the newly uploaded images for in-progress projects (sequence can match the visual order).
+  const inProgressImages = [
+    "/lovable-uploads/d60822d5-b85a-4c85-8ae3-d6218a4e820b.png",
+    "/lovable-uploads/b83ec8e7-f5d4-4180-84f4-5c781886648c.png",
+    "/lovable-uploads/e3461fb9-9d38-4b70-958e-03bb47c412b6.png",
+    "/lovable-uploads/f34a443a-0b16-46fa-ba44-7bcd11a039ae.png",
+    "/lovable-uploads/b7f86ae3-e813-475d-8a0f-62a3c7acbf5c.png",
+    "/lovable-uploads/6ed14fd4-15ba-4b1e-965f-41576a21f9ce.png",
+  ];
+
   return (
     <ProductLayout
       type="paints"
@@ -83,6 +93,7 @@ const StencilPaintingPage = () => {
           description: "For areas that have experienced fading due to sun exposure or other environmental factors, our artisans can selectively refresh colors without requiring complete reapplication."
         }
       ]}
+      inProgressProjects={inProgressImages}
     />
   );
 };

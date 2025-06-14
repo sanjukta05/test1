@@ -9,6 +9,24 @@ const BrickFinishPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Uploaded in-progress images in intended order for sequence/titles:
+  const inProgressImages = [
+    "/lovable-uploads/d60822d5-b85a-4c85-8ae3-d6218a4e820b.png",
+    "/lovable-uploads/b83ec8e7-f5d4-4180-84f4-5c781886648c.png",
+    "/lovable-uploads/e3461fb9-9d38-4b70-958e-03bb47c412b6.png",
+    "/lovable-uploads/f34a443a-0b16-46fa-ba44-7bcd11a039ae.png",
+    "/lovable-uploads/b7f86ae3-e813-475d-8a0f-62a3c7acbf5c.png",
+    "/lovable-uploads/6ed14fd4-15ba-4b1e-965f-41576a21f9ce.png",
+  ];
+  const inProgressTitles = [
+    "The Springs",
+    "The Meadows",
+    "Downtown Dubai",
+    "Dubai Hills",
+    "Palm Jumeirah",
+    "Dubai Marina"
+  ];
+
   return (
     <ProductLayout
       type="paints"
@@ -91,14 +109,8 @@ const BrickFinishPage = () => {
         { image: "/lovable-uploads/6f4bbde8-3a7c-4d1a-b5d6-da01e4b6bae6.png", title: "Featured Wall" },
         { image: "/lovable-uploads/c728d883-c979-430b-a82d-298168ede9ad.png", title: "Bedroom" },
       ]}
-      inProgressTitles={[
-        "The Springs",
-        "The Meadows",
-        "Downtown Dubai",
-        "Dubai Hills",
-        "Palm Jumeirah",
-        "Dubai Marina"
-      ]}
+      inProgressProjects={inProgressImages}
+      inProgressTitles={inProgressTitles}
     />
   );
 };
