@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import { Paintbrush } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AspectRatio } from './ui/aspect-ratio';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 
 interface TechSpec {
   label: string;
@@ -51,6 +52,25 @@ const ProductLayout: React.FC<ProductProps> = ({
   techSpecs,
   maintenance
 }) => {
+  // Project images for the Palette of Success section
+  const finishedProjects = [
+    "/lovable-uploads/5ec99e9a-e4a6-4dfa-aede-f1b461595568.png",
+    "/lovable-uploads/2811763e-e15f-4057-b440-09a2485592e8.png", 
+    "/lovable-uploads/ae740c6e-aad1-4c76-9366-bf2580f152d6.png",
+    "/lovable-uploads/1b906a20-cd68-4717-ae2d-8249647bf3c4.png",
+    "/lovable-uploads/18e8db04-b183-434d-b432-ad3f7d6db1e7.png",
+    "/lovable-uploads/626c9756-9fc9-437a-8645-6508c66ee745.png"
+  ];
+
+  const inProgressProjects = [
+    "/lovable-uploads/626c9756-9fc9-437a-8645-6508c66ee745.png",
+    "/lovable-uploads/18e8db04-b183-434d-b432-ad3f7d6db1e7.png",
+    "/lovable-uploads/1b906a20-cd68-4717-ae2d-8249647bf3c4.png",
+    "/lovable-uploads/ae740c6e-aad1-4c76-9366-bf2580f152d6.png",
+    "/lovable-uploads/2811763e-e15f-4057-b440-09a2485592e8.png",
+    "/lovable-uploads/5ec99e9a-e4a6-4dfa-aede-f1b461595568.png"
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
@@ -191,10 +211,79 @@ const ProductLayout: React.FC<ProductProps> = ({
           </div>
         </div>
       </section>
-      
-      {/* Maintenance Guide */}
+
+      {/* Palette of Success */}
       <section className="py-16 bg-deco-beige relative">
         <div className="absolute inset-0 geometric-pattern opacity-5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-parafina text-3xl font-bold mb-4">Palette of Success</h2>
+            <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
+            <p className="font-grosa text-gray-700">
+              Witness the transformation power of our {title} finish through real projects
+            </p>
+          </div>
+
+          <Tabs defaultValue="finished" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8">
+              <TabsTrigger value="finished" className="font-grosa">Finished Projects</TabsTrigger>
+              <TabsTrigger value="progress" className="font-grosa">In Progress</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="finished" className="mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {finishedProjects.map((image, index) => (
+                  <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
+                    <div className="relative w-full">
+                      <AspectRatio ratio={4/3}>
+                        <img 
+                          src={image} 
+                          alt={`Finished project ${index + 1}`} 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </AspectRatio>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <h3 className="font-parafina text-lg font-bold">Project {index + 1}</h3>
+                        <p className="font-grosa text-sm">Completed</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="progress" className="mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {inProgressProjects.map((image, index) => (
+                  <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
+                    <div className="relative w-full">
+                      <AspectRatio ratio={4/3}>
+                        <img 
+                          src={image} 
+                          alt={`In progress project ${index + 1}`} 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </AspectRatio>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <h3 className="font-parafina text-lg font-bold">Project {index + 1}</h3>
+                        <p className="font-grosa text-sm">In Progress</p>
+                      </div>
+                      <div className="absolute top-4 right-4 bg-deco-gold text-white px-2 py-1 rounded-full text-xs font-grosa">
+                        In Progress
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
+      
+      {/* Maintenance Guide */}
+      <section className="py-16 bg-white relative">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="font-parafina text-3xl font-bold mb-4">Maintenance Guide</h2>
@@ -206,7 +295,7 @@ const ProductLayout: React.FC<ProductProps> = ({
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {maintenance.map((item, i) => (
-              <div key={i} className="bg-white p-6 rounded-lg">
+              <div key={i} className="bg-deco-beige p-6 rounded-lg">
                 <h3 className="font-parafina text-xl font-bold text-deco-plum mb-3">{item.title}</h3>
                 <p className="font-grosa text-gray-700">{item.description}</p>
               </div>
