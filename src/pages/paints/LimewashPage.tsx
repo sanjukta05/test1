@@ -92,16 +92,15 @@ const LimewashPage = () => {
         "/lovable-uploads/d6d88a4a-9fd8-4ed8-96aa-433fd7230c54.png"
       ]}
       inProgressProjects={[
-        "/lovable-uploads/limewash-inprogress-1.png",
-        "/lovable-uploads/limewash-inprogress-2.png",
-        "/lovable-uploads/limewash-inprogress-3.png",
-        "/lovable-uploads/limewash-inprogress-4.png",
-        "/lovable-uploads/limewash-inprogress-5.png",
-        "/lovable-uploads/limewash-inprogress-6.png"
+        "/lovable-uploads/18bca202-f1cd-4c32-8e91-9ea4e256d44e.png",
+        "/lovable-uploads/5b6e9ab0-6ed1-4ac5-998a-389c6b470c0e.png",
+        "/lovable-uploads/caaf0c5c-a183-43be-805b-9d32d268bebb.png",
+        "/lovable-uploads/169ee6e6-b28a-425d-9060-49c07144252a.png",
+        "/lovable-uploads/dc29ff06-cc0c-47c5-bc84-770fc9cb7639.png",
+        "/lovable-uploads/d583d5f8-a3ad-4e53-a07c-c153f3282e42.png"
       ]}
     />
   );
 };
 
 export default LimewashPage;
-
