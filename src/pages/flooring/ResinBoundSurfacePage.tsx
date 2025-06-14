@@ -2,6 +2,24 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Sun, Droplet, Layers, Paintbrush } from 'lucide-react';
 
+const inProgressProjects = [
+  "/lovable-uploads/49dc218a-718d-4e39-82d9-0f07641515c0.png",
+  "/lovable-uploads/38e9d705-cef5-48dc-b152-a95eb6be2e5f.png",
+  "/lovable-uploads/b1ac2bdf-2fe4-4725-a8fa-758fe89f943b.png",
+  "/lovable-uploads/842364ee-16c7-48c3-ab91-96d46f801324.png",
+  "/lovable-uploads/47724a80-587c-4269-b77d-7fbd0ef02fe7.png",
+  "/lovable-uploads/049c4502-bba1-4d59-ad87-df6167ff50eb.png"
+];
+
+const inProgressTitles = [
+  "Applying Two-Tone Microcement",
+  "Finishing with a Roller",
+  "Prepping Outdoor Floor",
+  "Waterproofing a Villa Roof",
+  "Leveling Indoor Floor",
+  "Protective Coating Application"
+];
+
 const inProgressTitles = [
   "Business Bay",
   "Dubai Marina",
@@ -91,6 +109,7 @@ const ResinBoundSurfacePage = () => {
           description: "Depending on traffic and sun exposure, a maintenance coat may be recommended every 3-5 years to maintain optimal appearance and protection."
         }
       ]}
+      inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
     />
   );

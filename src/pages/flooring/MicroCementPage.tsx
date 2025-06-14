@@ -1,9 +1,26 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Droplet, Star, Home, Layers } from 'lucide-react';
 
+const inProgressProjects = [
+  "/lovable-uploads/49dc218a-718d-4e39-82d9-0f07641515c0.png", // Applying two-tone microcement
+  "/lovable-uploads/38e9d705-cef5-48dc-b152-a95eb6be2e5f.png", // Roller application microcement
+  "/lovable-uploads/b1ac2bdf-2fe4-4725-a8fa-758fe89f943b.png", // Outdoor floor prepping
+  "/lovable-uploads/842364ee-16c7-48c3-ab91-96d46f801324.png", // Waterproofing/surface prep
+  "/lovable-uploads/47724a80-587c-4269-b77d-7fbd0ef02fe7.png", // Leveling/screeding floor
+  "/lovable-uploads/049c4502-bba1-4d59-ad87-df6167ff50eb.png"  // Protective coating application
+];
+
 const inProgressTitles = [
+  "Applying Two-Tone Microcement",
+  "Finishing with a Roller",
+  "Prepping Outdoor Floor",
+  "Waterproofing a Villa Roof",
+  "Leveling Indoor Floor",
+  "Protective Coating Application"
+];
+
+const inProgressTitlesOld = [
   "Business Bay",
   "Dubai Marina",
   "The Springs",
@@ -121,6 +138,7 @@ const MicroCementPage = () => {
           description: "In the rare event of damage, localized repairs can be performed by our skilled technicians without requiring replacement of entire floor sections."
         }
       ]}
+      inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
       finishedProjects={finishedProjects}
     />
