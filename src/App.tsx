@@ -53,7 +53,14 @@ import StampedConcretePage from "./pages/flooring/StampedConcretePage";
 
 const App = () => {
   // Create QueryClient inside the component body
-  const [queryClient] = useState(() => new QueryClient());
+  const [queryClient] = useState(() => new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 1000 * 60 * 5, // 5 minutes
+        retry: 1,
+      },
+    },
+  }));
 
   return (
     <QueryClientProvider client={queryClient}>
