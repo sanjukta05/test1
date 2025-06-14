@@ -81,7 +81,7 @@ const DecorativeEpoxyPage = () => {
       title="Decorative Epoxy Flooring"
       heroTitle="High-Gloss Sophisticated Flooring"
       heroDescription="Stunning high-performance surfaces with exceptional depth and brilliance that combine unmatched durability with sophisticated visual appeal."
-      heroImage="/lovable-uploads/0d741160-8b9e-42e2-9edf-5fb57249546f.png"
+      heroImage="/lovable-uploads/01dac59f-db1f-41ac-8eeb-9cb4989129f8.png"
       benefits={[
         {
           title: "Extreme Durability",
