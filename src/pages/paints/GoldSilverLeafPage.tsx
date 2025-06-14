@@ -55,6 +55,15 @@ const GoldSilverLeafPage = () => {
           image: "/lovable-uploads/59ff62f7-695b-498c-9a5a-3b6eff322330.png"
         }
       ]}
+      finishedProjects={[
+        "/lovable-uploads/3158a955-677d-4971-b79f-e25615328ffb.png",
+        "/lovable-uploads/e0b8b982-6daf-4551-8e3e-4b5af100504c.png",
+        "/lovable-uploads/4b4dc7fd-61a5-4944-b903-515d094e493b.png",
+        "/lovable-uploads/e1a12c37-f6e3-4f04-9857-ce9215800419.png",
+        "/lovable-uploads/0576a66c-32b2-440b-9b9c-71791a02d04c.png",
+        "/lovable-uploads/391273d1-ce6e-4f5d-b4d4-d4aefb1d6812.png",
+        "/lovable-uploads/a8350f85-1af1-4e99-94f6-a25faf367da5.png"
+      ]}
       techSpecs={[
         { label: "Material Options", value: "Genuine gold (23K, 22K), white gold, silver, imitation metals" },
         { label: "Substrate Preparation", value: "Ultra-smooth preparation with specialized sealers" },
