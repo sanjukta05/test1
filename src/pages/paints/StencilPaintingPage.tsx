@@ -27,6 +27,16 @@ const StencilPaintingPage = () => {
     "Business Bay"
   ];
 
+  // New Finished Projects with images and titles
+  const finishedProjects = [
+    { image: "/lovable-uploads/ce6d9530-ae6d-4152-a8e8-a42cf4c6c610.png", title: "Elegant Gold Damask Entrance" },
+    { image: "/lovable-uploads/291523e5-e33d-4b35-809f-4e5cd69673f9.png", title: "Modern Botanical Mural Living Room" },
+    { image: "/lovable-uploads/2f316cdb-2964-4825-9ea5-03c596f03346.png", title: "Sculptural Gold Leaf Hallway" },
+    { image: "/lovable-uploads/140f0258-40dd-4453-ad84-3432c57c9d73.png", title: "Golden Aviary Dining Room" },
+    { image: "/lovable-uploads/dd6bc815-ce5b-4551-a79a-20f8fa830370.png", title: "Geometric Blossom Bedroom" },
+    { image: "/lovable-uploads/00978e55-6e6f-4a4c-807d-cfd950e2b0f7.png", title: "Classic Peony Arch Bedroom" },
+  ];
+
   return (
     <ProductLayout
       type="paints"
@@ -60,17 +70,17 @@ const StencilPaintingPage = () => {
         {
           title: "Feature Ceilings",
           description: "Transform overlooked ceiling spaces into stunning design features that add unexpected visual interest and elevate the entire room.",
-          image: "https://images.unsplash.com/photo-1520642413789-2bd6770d59e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          image: "https://images.unsplash.com/photo-1520642413789-2bd6770d59e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA"
         },
         {
           title: "Accent Walls",
           description: "Create dramatic focal points in residential and commercial spaces with patterns that range from subtle tone-on-tone to bold statement designs.",
-          image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA"
         },
         {
           title: "Luxury Closets",
           description: "Elevate utilitarian storage spaces into luxurious dressing rooms with sophisticated stenciled patterns that create a sense of bespoke craftsmanship.",
-          image: "https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          image: "https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA"
         }
       ]}
       techSpecs={[
@@ -101,6 +111,7 @@ const StencilPaintingPage = () => {
           description: "For areas that have experienced fading due to sun exposure or other environmental factors, our artisans can selectively refresh colors without requiring complete reapplication."
         }
       ]}
+      finishedProjects={finishedProjects}
       inProgressProjects={inProgressImages}
       inProgressTitles={inProgressTitles}
     />
