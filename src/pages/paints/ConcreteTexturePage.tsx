@@ -15,7 +15,7 @@ const ConcreteTexturePage = () => {
       title="Concrete Texture"
       heroTitle="Sophisticated Concrete Finishes"
       heroDescription="Contemporary industrial-inspired surfaces that bring urban sophistication to interior and exterior spaces with remarkable versatility and elegance."
-      heroImage="/public/textures/concrete-texture.jpg"
+      heroImage="/lovable-uploads/concrete/6.png"
       benefits={[
         {
           title: "Urban Aesthetic",
