@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Shield, Droplet, Clock, Star } from 'lucide-react';
@@ -18,6 +19,34 @@ const inProgressTitles = [
   "The Meadows",
   "Palm Jumeirah",
   "Emirates Hills"
+];
+
+// Updated finished projects with titles according to the images
+const finishedProjects = [
+  {
+    image: "/lovable-uploads/5a1a3a99-4645-47b8-ba6c-1f7a7c29062d.png",
+    title: "Marble-Effect Epoxy Living Room"
+  },
+  {
+    image: "/lovable-uploads/bdb79e17-f267-4d98-a17d-b51b9b1be19f.png",
+    title: "Sleek Modern Kitchen Epoxy Floor"
+  },
+  {
+    image: "/lovable-uploads/60fccb75-69f9-4514-8116-a6a27029130b.png",
+    title: "Residential Open Space Epoxy"
+  },
+  {
+    image: "/lovable-uploads/2b252852-6ff7-49c1-80c8-968cc7895509.png",
+    title: "Panoramic Lounge with Metallic Epoxy"
+  },
+  {
+    image: "/lovable-uploads/e80c008d-8d22-4fc4-b042-540b18c20c9d.png",
+    title: "Blue Marble Epoxy Bathroom"
+  },
+  {
+    image: "/lovable-uploads/af8a3288-b269-44c6-9e69-b05a4e2d2224.png",
+    title: "Black Marble Epoxy Corridor"
+  }
 ];
 
 const DecorativeEpoxyPage = () => {
@@ -100,6 +129,7 @@ const DecorativeEpoxyPage = () => {
           description: "With proper care, decorative epoxy should maintain its appearance for 7-10 years before requiring a maintenance coat, depending on traffic and use patterns."
         }
       ]}
+      finishedProjects={finishedProjects}
       inProgressProjects={inProgressProjects}
       inProgressTitles={inProgressTitles}
     />
