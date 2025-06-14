@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useElfsightForm } from './ElfsightFormContext';
+
 interface ContactCTAProps {
   className?: string;
   location?: string;
@@ -19,8 +20,11 @@ export default function ContactCTA({
   onCtaClick
 }: ContactCTAProps) {
   const isDark = bgColor === 'dark';
+  const { openForm } = useElfsightForm();
 
-  // Elfsight form is shown in the right column instead of the old form
+  // Always use openForm when "onCtaClick" isn't specified
+  const handleCtaClick = onCtaClick || openForm;
+
   const ELFSIGHT_APP_ID = "4ae4b665-d18d-434d-bf98-3c9f9bc376b1";
   return <section className={cn("py-16 relative overflow-hidden", isDark ? "bg-deco-plum text-white" : "bg-white text-deco-plum", className)}>
       <div className="absolute inset-0 geometric-pattern opacity-10"></div>
@@ -69,7 +73,7 @@ export default function ContactCTA({
                 </div>
               </div>
               
-              <Button className={cn(isDark ? "bg-white text-deco-plum hover:bg-white/90" : "bg-deco-denim text-white hover:bg-deco-denim/90")} onClick={onCtaClick}>
+              <Button className={cn(isDark ? "bg-white text-deco-plum hover:bg-white/90" : "bg-deco-denim text-white hover:bg-deco-denim/90")} onClick={handleCtaClick}>
                 {cta}
               </Button>
             </div>

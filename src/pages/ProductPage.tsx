@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -6,6 +5,7 @@ import Footer from '../components/Footer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useElfsightForm } from '../components/ElfsightFormContext';
 
 // Product data (this would typically come from an API/database)
 const productData = {
@@ -158,6 +158,8 @@ const ProductPage = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [product, setProduct] = useState<any>(null);
 
+  const { openForm } = useElfsightForm();
+
   useEffect(() => {
     // In a real application, this would fetch data from an API
     if (type && id && productData[type as keyof typeof productData]?.[id as any]) {
@@ -194,12 +196,13 @@ const ProductPage = () => {
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{product.name}</h1>
               <p className="text-xl md:text-2xl text-white/90 mb-8">{product.shortDescription}</p>
-              <a 
-                href="#estimate" 
+              <button 
+                type="button"
+                onClick={openForm}
                 className="bg-deco-denim hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-full transition-colors inline-block"
               >
                 Get Estimate
-              </a>
+              </button>
             </div>
           </div>
         </section>
@@ -523,15 +526,16 @@ const ProductPage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
+              <button 
+                type="button"
+                onClick={openForm}
                 className="bg-deco-denim hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-full transition-colors inline-flex items-center justify-center"
               >
                 <span>Request an Estimate</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-              </a>
+              </button>
               
               <a 
                 href="/contact" 

@@ -13,10 +13,10 @@ import SpaceShowcase from '../components/SpaceShowcase';
 import DubaiSkyline from '../components/DubaiSkyline';
 import DistinctiveFinishesTabs from '../components/DistinctiveFinishesTabs';
 import { useElfsightForm } from '../components/ElfsightFormContext';
+
 const Index = () => {
   useEffect(() => {
     document.title = "DecoPaints | Transforming Spaces, Elevating Lifestyles";
-    // Dynamically load Elfsight script for WhatsApp and Call
     const scriptId = 'elfsight-platform';
     if (!document.getElementById(scriptId)) {
       const script = document.createElement('script');
@@ -26,9 +26,7 @@ const Index = () => {
       document.body.appendChild(script);
     }
   }, []);
-  const {
-    openForm
-  } = useElfsightForm();
+  const { openForm } = useElfsightForm();
   return <div className="min-h-screen flex flex-col scroll-smooth font-circular">
       <Navigation />
       <main className="flex-grow">
@@ -40,14 +38,12 @@ const Index = () => {
         <section id="textures" className="section bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              {/* enforce font-distrampler! */}
               <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Distinctive Finishes</h2>
               <GoldAccent className="mb-6" />
               <p className="text-lg text-deco-plum/80">
                 Discover our exquisite range of decorative surfaces, each with a unique character and unparalleled elegance.
               </p>
             </div>
-            {/* New tabbed navigation for wall & floor finishes */}
             <DistinctiveFinishesTabs />
           </div>
         </section>
@@ -71,7 +67,6 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              {/* Timeline Process Steps */}
               <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                 {[{
                 title: "Consultation",
@@ -259,11 +254,9 @@ const Index = () => {
       <div className="fixed z-50 right-4 bottom-6 flex flex-col items-end space-y-3 lg:space-y-4" style={{
       pointerEvents: 'none'
     }}>
-        {/* WhatsApp Chat Widget */}
         <div className="elfsight-app-75568a53-9d16-45b5-966f-65fc4c73a8e1" data-elfsight-app-lazy style={{
         pointerEvents: 'auto'
       }} />
-        {/* Click To Call Widget */}
         <div className="elfsight-app-f07d86dc-6bb2-445d-9b82-ffa7fed533d1" data-elfsight-app-lazy style={{
         pointerEvents: 'auto'
       }} />

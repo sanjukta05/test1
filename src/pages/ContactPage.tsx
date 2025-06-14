@@ -11,7 +11,6 @@ const ELFSIGHT_APP_ID = "4ae4b665-d18d-434d-bf98-3c9f9bc376b1";
 const ContactPage = () => {
   useEffect(() => {
     document.title = "Contact | DecoPaints";
-    // Dynamically insert Elfsight script only once
     if (!document.getElementById('elfsight-script')) {
       const script = document.createElement('script');
       script.id = 'elfsight-script';
@@ -89,7 +88,6 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </div>
-                {/* Removed Experience Center Hours section */}
                 <div className="mt-12">
                   <Button
                     className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded"
@@ -100,7 +98,6 @@ const ContactPage = () => {
                 </div>
               </div>
               
-              {/* Show Elfsight Form directly on the right */}
               <div>
                 <h3 className="text-xl font-bold mb-6">Request an Estimate</h3>
                 <div
@@ -117,7 +114,6 @@ const ContactPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-8">Find Us</h2>
             <div className="rounded-lg overflow-hidden shadow-lg h-96 md:h-[500px]">
-              {/* This would be replaced with an actual Google Maps or Mapbox integration */}
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.537133511753!2d55.23233491500953!3d25.044147283965648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bc629d74eb1%3A0x7f8f5d5a7b08d1e4!2sAl%20Quoz%2C%20Dubai!5e0!3m2!1sen!2sae!4v1652180484576!5m2!1sen!2sae" 
                 width="100%" 
@@ -127,6 +123,15 @@ const ContactPage = () => {
                 loading="lazy"
                 aria-label="DecoPaints UAE location map"
               ></iframe>
+            </div>
+            {/* Add a prominent CTA at the bottom */}
+            <div className="mt-12 flex flex-col items-center">
+              <Button
+                className="bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 px-10 rounded-full max-w-xs w-full"
+                onClick={openForm}
+              >
+                Book a Consultation
+              </Button>
             </div>
           </div>
         </section>
