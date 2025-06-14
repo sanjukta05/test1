@@ -42,6 +42,26 @@ export interface ProductProps {
   inProgressProjects?: string[]; // <-- add this line
 }
 
+const finishedTitlesByImage: { [filename: string]: string } = {
+  // MarmorinoPage finishedProjects defaults (add/update as needed)
+  "5ec99e9a-e4a6-4dfa-aede-f1b461595568.png": "Private Residence – Neutral Elegance",
+  "2811763e-e15f-4057-b440-09a2485592e8.png": "Modern Villa – Marmorino Walls",
+  "ae740c6e-aad1-4c76-9366-bf2580f152d6.png": "Majlis Hallway Accent Wall",
+  "1b906a20-cd68-4717-ae2d-8249647bf3c4.png": "Penthouse Suite Metallic Plaster",
+  "18e8db04-b183-434d-b432-ad3f7d6db1e7.png": "Entrance Feature with Art Niche",
+  "626c9756-9fc9-437a-8645-6508c66ee745.png": "Dining Room Texture Finish",
+  // Pearl and other product images not directly affected here (handled in source pages)
+};
+
+const inProgressTitles = [
+  "Business Bay",
+  "Dubai Hills",
+  "The Springs",
+  "Palm Jumeirah",
+  "Emirates Hills",
+  "Downtown Dubai"
+];
+
 const ProductLayout: React.FC<ProductProps> = ({
   type,
   title,
@@ -188,29 +208,37 @@ const ProductLayout: React.FC<ProductProps> = ({
               <TabsTrigger value="progress" className="font-grosa">In Progress</TabsTrigger>
             </TabsList>
             
+            {/* FINISHED PROJECTS: remove "Completed" label, update titles */}
             <TabsContent value="finished" className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {usedFinishedProjects.map((image, index) => (
-                  <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
-                    <div className="relative w-full">
-                      <AspectRatio ratio={4/3}>
-                        <img 
-                          src={image} 
-                          alt={`Finished project ${index + 1}`} 
-                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </AspectRatio>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 className="font-parafina text-lg font-bold">Project {index + 1}</h3>
-                        <p className="font-grosa text-sm">Completed</p>
+                {usedFinishedProjects.map((image, index) => {
+                  // extract filename for mapping, e.g. "/lovable-uploads/xxxx.png" → "xxxx.png"
+                  const filename = image.split('/').pop() || '';
+                  const altTitle =
+                    finishedTitlesByImage[filename] ||
+                    `Project ${index + 1}`;
+                  return (
+                    <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
+                      <div className="relative w-full">
+                        <AspectRatio ratio={4/3}>
+                          <img 
+                            src={image} 
+                            alt={altTitle} 
+                            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </AspectRatio>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                          <h3 className="font-parafina text-lg font-bold">{altTitle}</h3>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </TabsContent>
             
+            {/* IN PROGRESS: remove tags, update titles */}
             <TabsContent value="progress" className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {usedInProgressProjects.map((image, index) => (
@@ -219,17 +247,15 @@ const ProductLayout: React.FC<ProductProps> = ({
                       <AspectRatio ratio={4/3}>
                         <img 
                           src={image} 
-                          alt={`In progress project ${index + 1}`} 
+                          alt={inProgressTitles[index] ? inProgressTitles[index] : `Project ${index + 1}`} 
                           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                         />
                       </AspectRatio>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                       <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                        <h3 className="font-parafina text-lg font-bold">Project {index + 1}</h3>
-                        <p className="font-grosa text-sm">In Progress</p>
-                      </div>
-                      <div className="absolute top-4 right-4 bg-deco-gold text-white px-2 py-1 rounded-full text-xs font-grosa">
-                        In Progress
+                        <h3 className="font-parafina text-lg font-bold">
+                          {inProgressTitles[index] ? inProgressTitles[index] : `Project ${index + 1}`}
+                        </h3>
                       </div>
                     </div>
                   </div>
