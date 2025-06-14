@@ -15,7 +15,7 @@ const PearlFinishPage = () => {
       title="Pearl Finish"
       heroTitle="Light-Reflective Pearl Finish"
       heroDescription="Exquisite reflective surfaces that capture and play with light, adding subtle shimmer and sophisticated dimension to your walls and ceilings."
-      heroImage="/public/textures/marble-texture.jpg"
+      heroImage="/lovable-uploads/239ad9d5-e28d-4790-acec-14156fdbc4a4.png"
       benefits={[
         {
           title: "Enhanced Lighting",
@@ -40,13 +40,13 @@ const PearlFinishPage = () => {
       ]}
       applications={[
         {
-          title: "Luxury Dressing Room",
-          description: "The light-enhancing qualities create the perfect environment for dressing areas, providing accurate color rendering and a flattering glow.",
+          title: "Bedroom",
+          description: "The light-enhancing qualities create the perfect environment for bedroom areas, providing accurate color rendering and a flattering glow.",
           image: "/lovable-uploads/b2198335-5b4b-4126-8b47-88900589b988.png"
         },
         {
-          title: "Formal Dining Area",
-          description: "Adds sophistication and warmth to dining spaces, creating an atmosphere of elegant refinement that enhances the dining experience.",
+          title: "Formal Powder Room",
+          description: "Adds sophistication and warmth to powder room spaces, creating an atmosphere of elegant refinement that enhances the overall experience.",
           image: "/lovable-uploads/77629d79-d7e9-4530-9dd4-bd24aee82b28.png"
         },
         {
@@ -66,12 +66,28 @@ const PearlFinishPage = () => {
         { label: "Durability Rating", value: "Premium residential/light commercial" }
       ]}
       finishedProjects={[
-        "/lovable-uploads/6fb4e594-07d2-475a-8064-acedaf9e13ec.png",
-        "/lovable-uploads/d8c5c2cc-c2a0-4e4a-b4c5-22875adaa8b8.png",
-        "/lovable-uploads/dc78d120-27df-4a05-a962-a623b21bae43.png",
-        "/lovable-uploads/ae2d232a-3ee5-4ece-b8bd-844c9c90c9e7.png",
-        "/lovable-uploads/331c09b7-784e-4b2f-ad0c-e37a949644d4.png",
-        "/lovable-uploads/68c2bffa-1300-46ac-8063-dd99717262f9.png"
+        { image: "/lovable-uploads/6fb4e594-07d2-475a-8064-acedaf9e13ec.png", title: "Bedroom" },
+        { image: "/lovable-uploads/d8c5c2cc-c2a0-4e4a-b4c5-22875adaa8b8.png", title: "Bedroom Walls" },
+        { image: "/lovable-uploads/dc78d120-27df-4a05-a962-a623b21bae43.png", title: "Powder Room" },
+        { image: "/lovable-uploads/ae2d232a-3ee5-4ece-b8bd-844c9c90c9e7.png", title: "Minimal Powder Room" },
+        { image: "/lovable-uploads/331c09b7-784e-4b2f-ad0c-e37a949644d4.png", title: "Featured Wall" },
+        { image: "/lovable-uploads/68c2bffa-1300-46ac-8063-dd99717262f9.png", title: "Bathroom" },
+      ]}
+      inProgressProjects={[
+        "/lovable-uploads/1.png",
+        "/lovable-uploads/2.png",
+        "/lovable-uploads/3.png",
+        "/lovable-uploads/4.png",
+        "/lovable-uploads/5.png",
+        "/lovable-uploads/6.png"
+      ]}
+      inProgressTitles={[
+        "Business Bay",
+        "Dubai Hills",
+        "The Springs",
+        "Palm Jumeirah",
+        "Emirates Hills",
+        "Downtown Dubai"
       ]}
       maintenance={[
         {
@@ -92,8 +108,6 @@ const PearlFinishPage = () => {
         }
       ]}
       // ensuring the section title uses the default "Featured Applications"
-      // ("Pearl Finish Spaces: Luxury Dressing, Dining & Reception" is only used 
-      // if title === "Pearl Finish", but now it will be forced to "Featured Applications")
     />
   );
 };
