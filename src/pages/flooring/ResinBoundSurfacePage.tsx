@@ -11,6 +11,7 @@ const inProgressProjects = [
   "/lovable-uploads/049c4502-bba1-4d59-ad87-df6167ff50eb.png"
 ];
 
+// Use only *one* declaration – adjust titles as needed for your images
 const inProgressTitles = [
   "Applying Two-Tone Microcement",
   "Finishing with a Roller",
@@ -18,15 +19,6 @@ const inProgressTitles = [
   "Waterproofing a Villa Roof",
   "Leveling Indoor Floor",
   "Protective Coating Application"
-];
-
-const inProgressTitles = [
-  "Business Bay",
-  "Dubai Marina",
-  "The Springs",
-  "The Meadows",
-  "Palm Jumeirah",
-  "Emirates Hills"
 ];
 
 const ResinBoundSurfacePage = () => {
