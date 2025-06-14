@@ -40,19 +40,19 @@ const LimewashPage = () => {
       ]}
       applications={[
         {
-          title: "Heritage-Inspired Spaces",
-          description: "Perfect for spaces that seek to honor architectural traditions while providing modern comfort, creating a sense of timelessness and connection to the past.",
-          image: "https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Textured Modern Kitchen",
+          description: "Limewash brings warmth and artisanal texture to this contemporary kitchen, balancing sleek surfaces and modern fixtures with an inviting, handcrafted wall finish.",
+          image: "/lovable-uploads/bf315d03-438a-49b5-a0d0-35ba31c4d87c.png"
         },
         {
-          title: "Boutique Hotels",
-          description: "Creates signature spaces with character and warmth that provide a unique atmosphere, setting the property apart from standardized hospitality environments.",
-          image: "https://images.unsplash.com/photo-1551632436-cbf6d9df0852?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Blue Accent Majlis Lounge",
+          description: "A striking blue limewash feature wall creates depth and a calming ambiance in this modern majlis, contrasting beautifully with neutral tones and soft furnishings.",
+          image: "/lovable-uploads/7f11e469-de24-4335-879f-ba4fdba2936d.png"
         },
         {
-          title: "Residential Bedrooms",
-          description: "The soft, calming effect of Limewash creates tranquil sanctuaries perfect for rest and relaxation, bringing subtle movement and organic textures to private spaces.",
-          image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Cocooned Living Area",
+          description: "Subtle brown limewash brings a sense of coziness and sophistication to this living space, with organic movement and tonality enhancing the natural palette and tailored decor.",
+          image: "/lovable-uploads/a82f708e-6d29-4e3e-b6a2-edf6208f2c58.png"
         }
       ]}
       techSpecs={[
