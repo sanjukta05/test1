@@ -15,7 +15,7 @@ const PearlFinishPage = () => {
       title="Pearl Finish"
       heroTitle="Light-Reflective Pearl Finish"
       heroDescription="Exquisite reflective surfaces that capture and play with light, adding subtle shimmer and sophisticated dimension to your walls and ceilings."
-      heroImage="/public/textures/marble-texture.jpg" 
+      heroImage="/public/textures/marble-texture.jpg"
       benefits={[
         {
           title: "Enhanced Lighting",
@@ -40,17 +40,17 @@ const PearlFinishPage = () => {
       ]}
       applications={[
         {
-          title: "Luxury Dressing Rooms",
+          title: "Luxury Dressing Room",
           description: "The light-enhancing qualities create the perfect environment for dressing areas, providing accurate color rendering and a flattering glow.",
           image: "/lovable-uploads/b2198335-5b4b-4126-8b47-88900589b988.png"
         },
         {
-          title: "Formal Dining Areas",
+          title: "Formal Dining Area",
           description: "Adds sophistication and warmth to dining spaces, creating an atmosphere of elegant refinement that enhances the dining experience.",
           image: "/lovable-uploads/77629d79-d7e9-4530-9dd4-bd24aee82b28.png"
         },
         {
-          title: "Reception Rooms",
+          title: "Elegant Reception Room",
           description: "Creates an atmosphere of refined luxury in spaces designed to receive and impress guests, with walls that subtly change appearance as light conditions shift throughout the day.",
           image: "/lovable-uploads/952428ba-942d-4a78-af90-82ea97a08880.png"
         }
