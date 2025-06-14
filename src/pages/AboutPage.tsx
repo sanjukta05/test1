@@ -9,7 +9,11 @@ const AboutPage = () => {
   }, []);
   return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader title="About DecoPaints" description="Crafting Premium Finishes Since 2010" backgroundImage="https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=80&w=2000&h=600" />
+      <PageHeader
+        title="About DecoPaints"
+        description="Crafting Premium Finishes Since 2010"
+        backgroundImage="/lovable-uploads/f65dbab1-b79d-4c6b-bb8d-2761277f61d6.png"
+      />
       
       <main className="flex-grow">
         <section className="py-16 md:py-24 bg-white">
