@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Paintbrush, Layers, Star, Shield } from 'lucide-react';
@@ -61,6 +60,24 @@ const inProgressTitles = [
   "Emirates Hills"
 ];
 
+const applications = [
+  {
+    title: "Grand Lobby – Black & Gold Art Deco Swirl",
+    description: "A bold centerpiece in a luxury building lobby featuring dramatic black and gold metallic epoxy, creating a stunning art deco wave effect.",
+    image: "/lovable-uploads/914a97c4-50e6-4fde-ba41-3505159ef959.png"
+  },
+  {
+    title: "Modern Lounge – Golden Ember Epoxy",
+    description: "High-gloss, golden metallic epoxy flows through a penthouse lounge, echoing warm ambient light for a plush, inviting vibe.",
+    image: "/lovable-uploads/a452180c-2ca5-49e9-8951-88cf279d7b9b.png"
+  },
+  {
+    title: "Villa Foyer – Charcoal Mirror Metallic",
+    description: "Refined foyer with dark swirling patterns and high reflectivity, producing a show-stopping first impression.",
+    image: "/lovable-uploads/7b942e1f-ee28-4b07-a489-1cfc60901dbe.png"
+  }
+];
+
 const MetallicEpoxyPage = () => {
   useEffect(() => {
     document.title = "Metallic Epoxy Flooring | DecoPaints";
@@ -96,23 +113,7 @@ const MetallicEpoxyPage = () => {
           icon: <Star className="h-8 w-8" />
         }
       ]}
-      applications={[
-        {
-          title: "Statement Residential Areas",
-          description: "Create unforgettable impressions in entryways, living areas, or master suites with dramatic floors that become conversation pieces.",
-          image: "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "VIP Lounges",
-          description: "Provide sophisticated, attention-commanding flooring for exclusive areas designed to impress discerning clients and guests.",
-          image: "https://images.unsplash.com/photo-1630417886118-0d47acc7b1b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Luxury Retail",
-          description: "Create distinctive shopping environments that enhance brand positioning with floors that communicate sophistication and attention to detail.",
-          image: "https://images.unsplash.com/photo-1552233657-afa61a23874a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        }
-      ]}
+      applications={applications}
       techSpecs={[
         { label: "Effect Options", value: "Marble, cloud, geode, tiger eye, galaxy, lava flow" },
         { label: "Base Coat Specifications", value: "Solid color epoxy primer in complementary or contrasting shade" },
