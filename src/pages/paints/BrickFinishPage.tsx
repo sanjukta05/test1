@@ -83,6 +83,14 @@ const BrickFinishPage = () => {
           description: "Minor damage can be professionally touched up without requiring complete refinishing. Our technicians can match the original color and texture for seamless repairs."
         }
       ]}
+      finishedProjects={[
+        { image: "/lovable-uploads/facbc8bb-8349-446c-ba5d-d99d18221b5d.png", title: "Vanity Bathroom" },
+        { image: "/lovable-uploads/a826b8b5-e9c8-40b6-8bbb-551811939e52.png", title: "Modern Vanity" },
+        { image: "/lovable-uploads/cf38fd76-74fc-44d8-a8d5-279d9fc4ca11.png", title: "Contemporary Living" },
+        { image: "/lovable-uploads/f4850cfa-2a6f-43ff-b709-52e3e840e53d.png", title: "Spacious Living Room" },
+        { image: "/lovable-uploads/6f4bbde8-3a7c-4d1a-b5d6-da01e4b6bae6.png", title: "Warm Living Room" },
+        { image: "/lovable-uploads/c728d883-c979-430b-a82d-298168ede9ad.png", title: "Master Bedroom" },
+      ]}
       inProgressTitles={[
         "The Springs",
         "The Meadows",
@@ -96,4 +104,3 @@ const BrickFinishPage = () => {
 };
 
 export default BrickFinishPage;
-
