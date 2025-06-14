@@ -3,47 +3,25 @@ import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { toast } from "@/hooks/use-toast";
+
+const ELFSIGHT_APP_ID = "4ae4b665-d18d-434d-bf98-3c9f9bc376b1";
 
 const ContactPage = () => {
   useEffect(() => {
     document.title = "Contact | DecoPaints";
+    // Dynamically insert Elfsight script only once
+    if (!document.getElementById('elfsight-script')) {
+      const script = document.createElement('script');
+      script.id = 'elfsight-script';
+      script.src = 'https://static.elfsight.com/platform/platform.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    service: 'paints',
-    location: 'dubai',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    console.log(formData);
-    toast({
-      title: "Message Sent",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      service: 'paints',
-      location: 'dubai',
-    });
-  };
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -129,109 +107,38 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </div>
+                <div className="mt-12">
+                  <Dialog open={open} onOpenChange={setOpen}>
+                    <DialogTrigger asChild>
+                      <Button
+                        className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded"
+                        onClick={() => setOpen(true)}
+                      >
+                        Get Estimate
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="p-0 max-w-xl">
+                      <DialogHeader>
+                        <DialogTitle>Request Your Estimate</DialogTitle>
+                        <DialogClose
+                          className="absolute top-2 right-2 z-10 rounded-full p-2 hover:bg-gray-100"
+                          onClick={() => setOpen(false)}
+                        />
+                      </DialogHeader>
+                      <div className="p-4">
+                        {/* Elfsight Form Embed */}
+                        <div
+                          className={`elfsight-app-${ELFSIGHT_APP_ID}`}
+                          data-elfsight-app-lazy
+                          style={{ minHeight: 450 }}
+                        ></div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
               </div>
               
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input 
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      required
-                    />
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input 
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="your.email@example.com"
-                        required
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone</Label>
-                      <Input 
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+971 XX XXX XXXX"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="service">Service Interested In</Label>
-                    <select 
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                      required
-                    >
-                      <option value="paints">Decorative Paints</option>
-                      <option value="flooring">Specialty Flooring</option>
-                      <option value="consultation">Design Consultation</option>
-                      <option value="other">Other Services</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="location">Location</Label>
-                    <select 
-                      id="location"
-                      name="location"
-                      value={formData.location}
-                      onChange={handleChange}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                      required
-                    >
-                      <option value="dubai">Dubai</option>
-                      <option value="abudhabi">Abu Dhabi</option>
-                      <option value="sharjah">Sharjah</option>
-                      <option value="ajman">Ajman</option>
-                      <option value="rak">Ras Al Khaimah</option>
-                      <option value="fujairah">Fujairah</option>
-                      <option value="uaq">Umm Al Quwain</option>
-                    </select>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <textarea 
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      placeholder="Tell us about your project or question"
-                      className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                      required
-                    ></textarea>
-                  </div>
-                  
-                  <div className="pt-2">
-                    <Button type="submit" className="w-full bg-deco-denim hover:bg-deco-denim/90">
-                      Send Message
-                    </Button>
-                  </div>
-                </form>
-              </div>
+              {/* Removed the old form section entirely */}
             </div>
           </div>
         </section>
@@ -261,3 +168,4 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
