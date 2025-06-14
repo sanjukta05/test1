@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
@@ -12,6 +11,7 @@ import SocialProof from '../components/SocialProof';
 import ContactCTA from '../components/ContactCTA';
 import SpaceShowcase from '../components/SpaceShowcase';
 import DubaiSkyline from '../components/DubaiSkyline';
+import DistinctiveFinishesTabs from '../components/DistinctiveFinishesTabs';
 
 const Index = () => {
   useEffect(() => {
@@ -35,8 +35,8 @@ const Index = () => {
                 Discover our exquisite range of decorative surfaces, each with a unique character and unparalleled elegance.
               </p>
             </div>
-            
-            <TextureGrid />
+            {/* New tabbed navigation for wall & floor finishes */}
+            <DistinctiveFinishesTabs />
           </div>
         </section>
         
