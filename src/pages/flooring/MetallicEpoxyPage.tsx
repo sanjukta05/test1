@@ -3,8 +3,20 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Paintbrush, Layers, Star, Shield } from 'lucide-react';
 
-// NEW finishedProjects array with your uploaded images and custom titles
+// Updated finishedProjects array to include your latest uploads and custom titles
 const finishedProjects = [
+  {
+    image: "/lovable-uploads/914a97c4-50e6-4fde-ba41-3505159ef959.png",
+    title: "Grand Lobby – Black & Gold Art Deco Swirl"
+  },
+  {
+    image: "/lovable-uploads/a452180c-2ca5-49e9-8951-88cf279d7b9b.png",
+    title: "Penthouse Lounge – Golden Ember Epoxy"
+  },
+  {
+    image: "/lovable-uploads/7b942e1f-ee28-4b07-a489-1cfc60901dbe.png",
+    title: "Villa Foyer – Charcoal Mirror Metallic"
+  },
   {
     image: "/lovable-uploads/4416aa9c-bdde-456d-b4f2-ca799a83ee4f.png",
     title: "Modern Living Room – Dramatic Metallic Swirl"
