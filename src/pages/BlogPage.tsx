@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface BlogPost {
   id: number;
@@ -115,11 +116,13 @@ const BlogPage = () => {
               
               <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 <div className="relative">
-                  <img 
-                    src={featuredPost.image} 
-                    alt={featuredPost.title}
-                    className="rounded-lg shadow-lg w-full h-full object-cover"
-                  />
+                  <AspectRatio ratio={16 / 9}>
+                    <img 
+                      src={featuredPost.image} 
+                      alt={featuredPost.title}
+                      className="rounded-lg shadow-lg w-full h-full object-cover"
+                    />
+                  </AspectRatio>
                   <div className="absolute top-4 left-4">
                     <span className="bg-deco-plum text-white px-3 py-1 rounded-full text-sm">
                       Featured
@@ -177,13 +180,13 @@ const BlogPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {filteredPosts.map(post => (
                 <Card key={post.id} className="overflow-hidden hover:shadow-md transition-shadow">
-                  <div className="aspect-w-16 aspect-h-9">
+                  <AspectRatio ratio={16 / 9}>
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="object-cover w-full h-full"
+                      className="object-cover w-full h-full rounded-t-lg"
                     />
-                  </div>
+                  </AspectRatio>
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-3">
                       <span className="text-deco-denim text-sm uppercase tracking-wider">
