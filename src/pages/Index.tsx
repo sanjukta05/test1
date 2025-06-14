@@ -168,51 +168,93 @@ const Index = () => {
                 Explore our latest luxury projects across the UAE, showcasing the versatility and beauty of our finishes.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { 
-                  image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                  title: "Villa Renovation",
-                  location: "Palm Jumeirah",
-                  finish: "Venetian Marmorino"
-                },
-                { 
-                  image: "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                  title: "Luxury Apartment",
-                  location: "Downtown Dubai",
-                  finish: "Pearl Finish & Gold Leaf"
-                },
-                { 
-                  image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80",
-                  title: "Corporate Office",
-                  location: "DIFC",
-                  finish: "Micro-Cement & Metallic Epoxy"
-                }
-              ].map((project, index) => (
-                <div key={index} className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
-                  <div className="aspect-w-16 aspect-h-9 overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-6 bg-white">
-                    <h3 className="font-parafina text-xl font-bold mb-1">{project.title}</h3>
-                    <p className="text-deco-plum/70 mb-3">
-                      <span className="text-deco-gold">{project.location}</span> • {project.finish}
-                    </p>
-                    <Link to="/gallery" className="text-deco-denim font-medium hover:underline">View Project</Link>
-                  </div>
+              {/* Living Room Example */}
+              <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+                <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/d2b0fdec-880c-41f9-84c7-e432d73393f7.png"
+                    alt="Luxury Living Room"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
-              ))}
+                <div className="p-6 bg-white">
+                  <h3 className="font-parafina text-xl font-bold mb-1">Luxury Living Room</h3>
+                  <p className="text-deco-plum/70 mb-3">
+                    <span className="text-deco-gold">Downtown Dubai</span> • Venetian Marmorino
+                  </p>
+                  <button
+                    className="text-deco-denim font-medium hover:underline"
+                    onClick={() => {
+                      const el = document.getElementById('footer-deco-paints');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+              {/* Kitchen Example */}
+              <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+                <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/2046ad05-0e3a-487a-af78-a4865db63b4e.png"
+                    alt="Modern Kitchen"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="p-6 bg-white">
+                  <h3 className="font-parafina text-xl font-bold mb-1">Modern Kitchen</h3>
+                  <p className="text-deco-plum/70 mb-3">
+                    <span className="text-deco-gold">Palm Jumeirah</span> • Pearl Finish
+                  </p>
+                  <button
+                    className="text-deco-denim font-medium hover:underline"
+                    onClick={() => {
+                      const el = document.getElementById('footer-deco-paints');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
+              {/* Bathroom Example */}
+              <div className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+                <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/d3674917-53b5-47b9-9aaa-c3f0eb623a7b.png"
+                    alt="Spa Bathroom"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="p-6 bg-white">
+                  <h3 className="font-parafina text-xl font-bold mb-1">Spa-Inspired Bathroom</h3>
+                  <p className="text-deco-plum/70 mb-3">
+                    <span className="text-deco-gold">Dubai Marina</span> • Waterproof Microcement
+                  </p>
+                  <button
+                    className="text-deco-denim font-medium hover:underline"
+                    onClick={() => {
+                      const el = document.getElementById('footer-deco-paints');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    View Project
+                  </button>
+                </div>
+              </div>
             </div>
-            
             <div className="mt-12 text-center">
-              <Link to="/gallery" className="btn-outline inline-flex items-center">
+              <button
+                onClick={() => {
+                  const el = document.getElementById('footer-deco-paints');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="btn-outline inline-flex items-center"
+              >
                 View All Projects
-              </Link>
+              </button>
             </div>
           </div>
         </section>

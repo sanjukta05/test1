@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
           
           {/* Decorative Paints */}
-          <div>
+          <div id="footer-deco-paints">
             <h3 className="text-lg font-parafina font-bold mb-6">Decorative Paints</h3>
             <ul className="space-y-2 font-grosa">
               <li><Link to="/paints/marmorino" className="text-white/70 hover:text-white transition-colors">Marmorino</Link></li>
