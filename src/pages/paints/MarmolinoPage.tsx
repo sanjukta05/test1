@@ -40,19 +40,19 @@ const MarmolinoPage = () => {
       ]}
       applications={[
         {
-          title: "Luxury Villa Main Halls",
-          description: "Create a striking first impression with the timeless sophistication of Marmorino in grand entryways and main halls. The play of light on the textured surface adds dimension and elegance.",
-          image: "https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Contemporary Majlis Lounge",
+          description: "A sophisticated gathering space featuring organic forms, plush seating, and a statement metallic wall sculpture, perfectly complemented by the textured depth of Marmorino.",
+          image: "/lovable-uploads/5b3e87c4-9227-40a3-b7bd-242d5ffad0f0.png"
         },
         {
-          title: "High-End Hotel Lobbies",
-          description: "Marmorino provides the perfect backdrop for luxury hospitality environments, creating an atmosphere of refined elegance that welcomes distinguished guests.",
-          image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Sculptural Powder Room",
+          description: "The refined, stone-like finish of Marmorino pairs elegantly with architectural curves and soft, indirect lighting to transform this powder room into an artful retreat.",
+          image: "/lovable-uploads/76db8c79-7818-4b64-b792-f7a16589875b.png"
         },
         {
-          title: "Feature Walls",
-          description: "Transform ordinary spaces with the extraordinary visual impact of a Marmorino feature wall, establishing a sophisticated focal point in any room.",
-          image: "https://images.unsplash.com/photo-1608303588026-884930af2559?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Grand Entrance with Blue Feature Wall",
+          description: "An opulent entrance hall where the dramatic blue Marmorino accent wall becomes the focal point, setting a tone of luxury and modernity for the entire home.",
+          image: "/lovable-uploads/eb72038b-7745-4158-b34b-b4f94b22595d.png"
         }
       ]}
       techSpecs={[
@@ -88,3 +88,4 @@ const MarmolinoPage = () => {
 };
 
 export default MarmolinoPage;
+
