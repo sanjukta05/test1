@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Shield, Droplet, Clock, Star } from 'lucide-react';
@@ -49,6 +48,27 @@ const finishedProjects = [
   }
 ];
 
+const applications = [
+  {
+    title: "Modern Epoxy Kitchen",
+    description:
+      "A luxurious, high-gloss epoxy floor brings new brilliance and elegance to this premium kitchen setting.",
+    image: "/lovable-uploads/cbce1490-717b-41a7-8f32-485f84418296.png"
+  },
+  {
+    title: "Vibrant Epoxy Bar Interior",
+    description:
+      "A striking, multi-colored epoxy design transforms this bar and lounge into an artistic destination with a lively atmosphere.",
+    image: "/lovable-uploads/ec618d48-48d4-4fcd-8230-79733fc768e5.png"
+  },
+  {
+    title: "Contemporary Retail Space",
+    description:
+      "Creative, fluid epoxy floor art elevates the ambiance and sophistication of this modern retail store.",
+    image: "/lovable-uploads/df1d4202-6591-4beb-bb5f-9c28b33b69f6.png"
+  }
+];
+
 const DecorativeEpoxyPage = () => {
   useEffect(() => {
     document.title = "Decorative Epoxy Flooring | DecoPaints";
@@ -84,23 +104,7 @@ const DecorativeEpoxyPage = () => {
           icon: <Clock className="h-8 w-8" />
         }
       ]}
-      applications={[
-        {
-          title: "High-End Garages",
-          description: "Transform utilitarian garage spaces into showroom-quality environments worthy of displaying premium vehicles with floors that resist automotive chemicals and tire marks.",
-          image: "https://images.unsplash.com/photo-1621252179027-64f04c5f6fa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Commercial Spaces",
-          description: "Provide exceptional durability and easy maintenance for retail, healthcare, and institutional environments that require both beauty and performance.",
-          image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Luxury Kitchens",
-          description: "Create stunning, seamless surfaces that withstand the demands of cooking environments while providing sophisticated contemporary aesthetics.",
-          image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        }
-      ]}
+      applications={applications}
       techSpecs={[
         { label: "Thickness Options", value: "0.5mm thin coat to 3mm self-leveling systems" },
         { label: "Substrate Requirements", value: "Properly prepared concrete with <4% moisture content" },
