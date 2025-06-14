@@ -1,8 +1,8 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogClose, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useElfsightForm } from '../components/ElfsightFormContext';
 
@@ -89,24 +89,7 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </div>
-                
-                <div className="mt-12">
-                  <h3 className="text-xl font-bold mb-4">Experience Center Hours</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <p className="font-medium">Weekdays</p>
-                      <p className="text-deco-plum/80">9:00 AM - 6:00 PM</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Saturdays</p>
-                      <p className="text-deco-plum/80">10:00 AM - 4:00 PM</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Sundays</p>
-                      <p className="text-deco-plum/80">Closed</p>
-                    </div>
-                  </div>
-                </div>
+                {/* Removed Experience Center Hours section */}
                 <div className="mt-12">
                   <Button
                     className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded"
@@ -117,7 +100,15 @@ const ContactPage = () => {
                 </div>
               </div>
               
-              {/* Removed the old form section entirely */}
+              {/* Show Elfsight Form directly on the right */}
+              <div>
+                <h3 className="text-xl font-bold mb-6">Request an Estimate</h3>
+                <div
+                  className={`elfsight-app-${ELFSIGHT_APP_ID}`}
+                  data-elfsight-app-lazy
+                  style={{ minHeight: 500 }}
+                ></div>
+              </div>
             </div>
           </div>
         </section>
