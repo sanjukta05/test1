@@ -212,8 +212,8 @@ const CareersPage = () => {
               
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1565301660306-29e08751cc53?auto=format&fit=crop&q=80&w=600&h=400" 
-                  alt="Staff wellness activity" 
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=600&h=400"
+                  alt="Wellness team meeting"
                   className="rounded-lg shadow-md mb-4 w-full h-64 object-cover"
                 />
                 <h3 className="text-xl font-bold mb-2">Wellness & Balance</h3>
