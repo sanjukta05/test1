@@ -49,6 +49,25 @@ const finishedProjects = [
   }
 ];
 
+// New featured applications from uploaded images
+const terrazzoApplications = [
+  {
+    title: "Luxurious Terrazzo Bathroom",
+    description: "A serene, hotel-style bathroom featuring beautifully patterned terrazzo flooring and modern lighting design.",
+    image: "/lovable-uploads/928c4da9-4bb8-4a30-8732-ba77f3140d35.png"
+  },
+  {
+    title: "Designer Terrazzo Dining Room",
+    description: "An elegant formal dining area showcasing striking brown-toned terrazzo floors and custom accent wall paneling.",
+    image: "/lovable-uploads/0e46cf06-f50c-4fd6-839e-5cf18053e9ed.png"
+  },
+  {
+    title: "Marble & Terrazzo Kitchen",
+    description: "High-end kitchen space uniting dramatic marble finishes with modern terrazzo flooring for a contemporary look.",
+    image: "/lovable-uploads/924c39a8-986a-43bf-925c-60685a97c6d1.png"
+  }
+];
+
 const TerrazzoFlooringPage = () => {
   useEffect(() => {
     document.title = "Terrazzo Flooring | DecoPaints";
@@ -84,23 +103,7 @@ const TerrazzoFlooringPage = () => {
           icon: <Star className="h-8 w-8" />
         }
       ]}
-      applications={[
-        {
-          title: "Hotel Lobbies",
-          description: "Create unforgettable first impressions with custom terrazzo that incorporates brand colors and design motifs for a truly distinctive entrance experience.",
-          image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Luxury Residential",
-          description: "Elevate living spaces with the timeless sophistication of terrazzo flooring that serves as a stunning foundation for both contemporary and traditional interiors.",
-          image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        },
-        {
-          title: "Museum Spaces",
-          description: "Provide elegant, durable surfaces for high-traffic cultural institutions that require both aesthetic refinement and practical performance.",
-          image: "https://images.unsplash.com/photo-1594388732016-32ecf9fc47e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
-        }
-      ]}
+      applications={terrazzoApplications}
       techSpecs={[
         { label: "Aggregate Options", value: "Marble, granite, quartz, glass, shell, mother-of-pearl" },
         { label: "Thickness Variations", value: "6mm overlay to 25mm full bed" },
