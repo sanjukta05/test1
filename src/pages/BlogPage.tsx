@@ -6,6 +6,22 @@ import PageHeader from '../components/PageHeader';
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
+// 12 uploaded image URLs for blog use (replace with the actual file names/paths)
+const allBlogImages = [
+  "/lovable-uploads/86e618b5-70e2-41d9-9297-eb9666af2e74.png",
+  "/lovable-uploads/cf3703aa-7b33-40fb-a0f0-36daba46b91f.png",
+  "/lovable-uploads/e3b2e9bc-fa91-41bc-af6c-b77da66d07fa.png",
+  "/lovable-uploads/7e69dde9-8443-4deb-bd09-7eecad6d7a3a.png",
+  "/lovable-uploads/1537f467-aea6-4174-accb-0d20aa5f88d6.png",
+  "/lovable-uploads/c2f21f92-5b78-41a6-a393-b2af95db6e83.png",
+  "/lovable-uploads/2afc656c-ca9b-4bfc-8304-30fb589c032c.png",
+  "/lovable-uploads/a1080c58-d9f6-4887-8f92-493b3c0b8a8e.png",
+  "/lovable-uploads/61c73de1-1e51-4c64-a902-ccdc4a22c92f.png",
+  "/lovable-uploads/77a1934c-69e1-48ae-b2c7-882476a35cc7.png",
+  "/lovable-uploads/4c6273e6-eb0b-4979-b0f6-4a894a2e1f61.png",
+  "/lovable-uploads/86e618b5-70e2-41d9-9297-eb9666af2e74.png", // reusing the first one if more posts added; replace if new file
+];
+
 interface BlogPost {
   id: number;
   title: string;
@@ -16,22 +32,13 @@ interface BlogPost {
   featured?: boolean;
 }
 
-const uploadedImages = [
-  "/lovable-uploads/86e618b5-70e2-41d9-9297-eb9666af2e74.png",
-  "/lovable-uploads/cf3703aa-7b33-40fb-a0f0-36daba46b91f.png",
-  "/lovable-uploads/e3b2e9bc-fa91-41bc-af6c-b77da66d07fa.png",
-  "/lovable-uploads/7e69dde9-8443-4deb-bd09-7eecad6d7a3a.png",
-  "/lovable-uploads/1537f467-aea6-4174-accb-0d20aa5f88d6.png",
-];
-
-const blogPosts: BlogPost[] = [
+const rawBlogPosts: Omit<BlogPost, 'image'>[] = [
   {
     id: 1,
     title: "The Enduring Elegance of Venetian Plaster: A Renaissance Art Form in Modern Spaces",
     excerpt: "Explore how the centuries-old technique of Venetian plaster continues to captivate interior designers and homeowners with its depth, texture, and timeless appeal.",
     category: "techniques",
     date: "May 10, 2023",
-    image: uploadedImages[0],
     featured: true,
   },
   {
@@ -40,7 +47,6 @@ const blogPosts: BlogPost[] = [
     excerpt: "Discover how the decorative finishing industry is embracing sustainability without compromising on luxury or durability.",
     category: "trends",
     date: "April 22, 2023",
-    image: uploadedImages[1]
   },
   {
     id: 3,
@@ -48,7 +54,6 @@ const blogPosts: BlogPost[] = [
     excerpt: "Learn how color and texture influence mood and perception, and how to select the perfect decorative finish for different rooms in your home.",
     category: "design",
     date: "March 15, 2023",
-    image: uploadedImages[2]
   },
   {
     id: 4,
@@ -56,7 +61,6 @@ const blogPosts: BlogPost[] = [
     excerpt: "A behind-the-scenes look at how we used custom finishes to completely transform a Palm Jumeirah villa, from concept to completion.",
     category: "projects",
     date: "February 28, 2023",
-    image: uploadedImages[3]
   },
   {
     id: 5,
@@ -64,7 +68,6 @@ const blogPosts: BlogPost[] = [
     excerpt: "Explore the meticulous process of gold leaf application and how this ancient technique brings unmatched luxury to contemporary interiors.",
     category: "techniques",
     date: "January 18, 2023",
-    image: uploadedImages[4]
   },
   {
     id: 6,
@@ -72,9 +75,13 @@ const blogPosts: BlogPost[] = [
     excerpt: "A comparative analysis of micro-cement and traditional concrete flooring options, with insights on making the best choice for different spaces.",
     category: "comparisons",
     date: "December 5, 2022",
-    image: uploadedImages[0]
   },
 ];
+
+const blogPosts: BlogPost[] = rawBlogPosts.map((post, idx) => ({
+  ...post,
+  image: allBlogImages[idx % allBlogImages.length],
+}));
 
 const categories = [
   { value: 'all', label: 'All Categories' },
