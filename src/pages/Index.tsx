@@ -22,7 +22,7 @@ const Index = () => {
   const { openForm } = useElfsightForm();
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col scroll-smooth">
       <Navigation />
       <main className="flex-grow">
         {/* Hero Section with CTAs */}

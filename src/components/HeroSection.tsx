@@ -86,7 +86,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <a href="#discover" className={`btn-outline inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
+            <a href="#textures" className={`btn-outline inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
               <Building className="w-5 h-5" />
               Discover Our Finishes
             </a>
