@@ -1,6 +1,16 @@
+
 import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Clock, Star, Layers, Paintbrush } from 'lucide-react';
+
+const inProgressTitles = [
+  "Business Bay",
+  "Dubai Marina",
+  "The Springs",
+  "The Meadows",
+  "Palm Jumeirah",
+  "Emirates Hills"
+];
 
 const TerrazzoFlooringPage = () => {
   useEffect(() => {
@@ -8,22 +18,13 @@ const TerrazzoFlooringPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const inProgressTitles = [
-    "Business Bay",
-    "Dubai Marina",
-    "The Springs",
-    "The Meadows",
-    "Palm Jumeirah",
-    "Emirates Hills"
-  ];
-
   return (
     <ProductLayout
       type="flooring"
       title="Terrazzo Flooring"
       heroTitle="Luxurious Terrazzo Finishes"
       heroDescription="Timeless flooring with stunning custom aggregate designs that combine artistic beauty with unmatched durability for statement surfaces."
-      heroImage="/public/textures/terrazzo-texture.jpg"
+      heroImage="/lovable-uploads/2913e48c-2719-48e2-af7a-5a65f2b8d26e.png"
       benefits={[
         {
           title: "Endless Design Possibilities",
