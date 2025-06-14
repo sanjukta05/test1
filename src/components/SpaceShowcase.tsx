@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
@@ -19,7 +20,8 @@ const SpaceCard = ({
         <img src={image} alt={title} className="object-cover w-full h-full" />
       </AspectRatio>
       <div className="p-6">
-        <h3 className="font-parafina text-xl font-bold mb-3">{title}</h3>
+        {/* CHANGED: card titles use font-distrampler */}
+        <h3 className="font-distrampler text-xl font-bold mb-3">{title}</h3>
         <ul className="space-y-2">
           {features.map((feature, index) => <li key={index} className="flex items-start">
               <Check className="h-5 w-5 text-deco-gold mr-2 flex-shrink-0 mt-0.5" />
@@ -50,7 +52,8 @@ export default function SpaceShowcase() {
   return <section className="section bg-deco-beige">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="font-parafina text-3xl mb-4 font-normal md:text-5xl">Transforming Every Space</h2>
+          {/* CHANGED: section heading uses font-distrampler */}
+          <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Transforming Every Space</h2>
           <div className="h-0.5 bg-deco-gold mx-auto w-24 mb-6"></div>
           <p className="font-grosa text-lg text-deco-plum/80">
             Our finishes adapt to every environment, enhancing the unique character of each space while maintaining cohesive luxury throughout your property.
