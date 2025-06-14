@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Droplet, Building, Paintbrush } from 'lucide-react';
 const BrandPromise = () => {
@@ -15,20 +16,20 @@ const BrandPromise = () => {
     description: "Surfaces that endure. Our commitment to quality ensures your investment maintains its beauty and integrity for generations to come.",
     icon: <Building className="h-12 w-12 text-deco-plum" />
   }];
-  return <section id="brand-promise" className="section bg-deco-beige relative overflow-hidden">
+  return <section id="brand-promise" className="section bg-deco-beige relative overflow-hidden font-circular">
       {/* Subtle Geometric Pattern Overlay */}
       <div className="absolute inset-0 geometric-pattern opacity-5"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="text-3xl font-parafina mb-4 font-normal md:text-5xl">Brand Promise.</h2>
-          <p className="text-lg font-grosa text-deco-plum/80">
+          <h2 className="text-3xl font-distrampler mb-4 font-normal md:text-5xl">Brand Promise.</h2>
+          <p className="text-lg text-deco-plum/80">
             Our commitment to excellence is reflected in every project we undertake.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {brandValues.map((value, index) => <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer relative overflow-hidden group" onMouseEnter={() => setActiveIndex(index)} onMouseLeave={() => setActiveIndex(null)}>
+          {brandValues.map((value, index) => <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer relative overflow-hidden group font-circular" onMouseEnter={() => setActiveIndex(index)} onMouseLeave={() => setActiveIndex(null)}>
               {/* Subtle Gold Accent Line */}
               <div className="absolute top-0 left-0 w-full h-1 bg-deco-gold transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
               
@@ -36,9 +37,9 @@ const BrandPromise = () => {
                 <div className={`mb-6 transition-transform duration-300 ${activeIndex === index ? 'transform -translate-y-2' : ''}`}>
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-parafina font-bold mb-4">{value.title}</h3>
+                <h3 className="text-xl font-distrampler font-bold mb-4">{value.title}</h3>
                 <div className={`transition-all duration-500 overflow-hidden ${activeIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-deco-plum/80 font-grosa">{value.description}</p>
+                  <p className="text-deco-plum/80">{value.description}</p>
                 </div>
               </div>
               

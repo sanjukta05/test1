@@ -44,7 +44,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   const toggleVideo = () => {
     setIsVideoPlaying(!isVideoPlaying);
   };
-  return <section className="relative min-h-screen flex items-center overflow-hidden bg-deco-plum geometric-pattern">
+  return <section className="relative min-h-screen flex items-center overflow-hidden bg-deco-plum geometric-pattern font-circular">
       {/* Background Video or Image */}
       {isVideoPlaying ? <div className="absolute inset-0 z-0">
           <video autoPlay muted loop className="object-cover w-full h-full opacity-40">
@@ -72,22 +72,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Content */}
       <div className="container mx-auto px-4 py-20 md:py-24 lg:py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-zinc-50 text-8xl font-normal">
+          <h1 className="text-zinc-50 text-8xl font-normal font-distrampler">
             {heroSlides[activeHero].heading}
           </h1>
           
           <div className={`overflow-hidden h-12 mb-8 transition-all duration-1000 ${showTagline ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="font-grosa text-xl text-white/90 animate-fade-in md:text-2xl">
+            <p className="text-xl text-white/90 animate-fade-in md:text-2xl font-circular">
               {heroSlides[activeHero].subheading}
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <a href="#textures" className={`btn-outline inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
+            <a href="#textures" className={`btn-outline inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'} font-circular`}>
               <Building className="w-5 h-5" />
               Discover Our Finishes
             </a>
-            <button type="button" className={`btn-cta inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`} onClick={openEstimateForm}>
+            <button type="button" className={`btn-cta inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'} font-circular`} onClick={openEstimateForm}>
               <Paintbrush className="w-5 h-5" />
               Get Estimate
             </button>

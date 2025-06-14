@@ -29,7 +29,7 @@ const Index = () => {
   const {
     openForm
   } = useElfsightForm();
-  return <div className="min-h-screen flex flex-col scroll-smooth">
+  return <div className="min-h-screen flex flex-col scroll-smooth font-circular">
       <Navigation />
       <main className="flex-grow">
         {/* Hero Section with CTAs */}
@@ -40,9 +40,9 @@ const Index = () => {
         <section id="textures" className="section bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-parafina text-3xl mb-4 font-normal md:text-5xl">Distinctive Finishes</h2>
+              <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Distinctive Finishes</h2>
               <GoldAccent className="mb-6" />
-              <p className="font-grosa text-lg text-deco-plum/80">
+              <p className="text-lg text-deco-plum/80">
                 Discover our exquisite range of decorative surfaces, each with a unique character and unparalleled elegance.
               </p>
             </div>
@@ -59,12 +59,12 @@ const Index = () => {
         <FeaturedCollections />
         
         {/* Process Experience Section */}
-        <section className="section bg-deco-beige relative overflow-hidden">
+        <section className="section bg-deco-beige relative overflow-hidden font-circular">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-parafina text-3xl md:text-4xl font-bold mb-4">Our Artisanal Process</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-4">Our Artisanal Process</h2>
               <GoldAccent className="mb-6" />
-              <p className="font-grosa text-lg text-deco-plum/80">
+              <p className="text-lg text-deco-plum/80">
                 Every project is approached with meticulous attention to detail and executed with master craftsmanship.
               </p>
             </div>
@@ -98,13 +98,13 @@ const Index = () => {
                         {step.icon}
                       </div>
                     </div>
-                    <h3 className="font-parafina text-xl font-bold mb-2">{step.title}</h3>
-                    <p className="font-grosa text-center text-sm text-deco-plum/80">{step.desc}</p>
+                    <h3 className="font-distrampler text-xl font-bold mb-2">{step.title}</h3>
+                    <p className="text-center text-sm text-deco-plum/80">{step.desc}</p>
                   </div>)}
               </div>
               
               <div className="mt-16 text-center">
-                <button type="button" className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all" onClick={openForm}>
+                <button type="button" className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all font-circular" onClick={openForm}>
                   <Paintbrush className="h-5 w-5 mr-2" />
                   Schedule Consultation
                 </button>
@@ -114,12 +114,12 @@ const Index = () => {
         </section>
         
         {/* Why Choose Us Section */}
-        <section className="section bg-white relative">
+        <section className="section bg-white relative font-circular">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-parafina text-3xl md:text-4xl font-bold mb-4">Why DecoPaints Stands Apart</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-4">Why DecoPaints Stands Apart</h2>
               <GoldAccent className="mb-6" />
-              <p className="font-grosa text-lg text-deco-plum/80">
+              <p className="text-lg text-deco-plum/80">
                 Our commitment to excellence and innovation has established us as the UAE's premier decorative finishing company.
               </p>
             </div>
@@ -151,8 +151,8 @@ const Index = () => {
               desc: "We stand behind our work with an industry-leading warranty on all our finishes."
             }].map((feature, index) => <div key={index} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all border-t-2 border-deco-gold/30">
                   <div className="mb-6">{feature.icon}</div>
-                  <h3 className="font-parafina text-xl font-bold mb-3">{feature.title}</h3>
-                  <p className="font-grosa text-deco-plum/80">{feature.desc}</p>
+                  <h3 className="font-distrampler text-xl font-bold mb-3">{feature.title}</h3>
+                  <p className="text-deco-plum/80">{feature.desc}</p>
                 </div>)}
             </div>
           </div>
@@ -165,12 +165,12 @@ const Index = () => {
         <DubaiSkyline />
         
         {/* Recent Projects */}
-        <section className="section bg-white">
+        <section className="section bg-white font-circular">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="font-parafina text-3xl md:text-4xl font-bold mb-4">Recent Transformations</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-4">Recent Transformations</h2>
               <GoldAccent className="mb-6" />
-              <p className="font-grosa text-lg text-deco-plum/80">
+              <p className="text-lg text-deco-plum/80">
                 Explore our latest luxury projects across the UAE, showcasing the versatility and beauty of our finishes.
               </p>
             </div>
@@ -181,11 +181,11 @@ const Index = () => {
                   <img src="/lovable-uploads/b5c2a002-66ff-44ac-a016-767aef2a4169.png" alt="Luxury Living Room" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
                 <div className="p-6 bg-white">
-                  <h3 className="font-parafina text-xl font-bold mb-1">Luxury Living Room</h3>
+                  <h3 className="font-distrampler text-xl font-bold mb-1">Luxury Living Room</h3>
                   <p className="text-deco-plum/70 mb-3">
                     <span className="text-deco-gold">Downtown Dubai</span> • Venetian Marmorino
                   </p>
-                  <button className="text-deco-denim font-medium hover:underline" onClick={() => {
+                  <button className="text-deco-denim font-medium hover:underline font-circular" onClick={() => {
                   const el = document.getElementById('footer-deco-paints');
                   if (el) el.scrollIntoView({
                     behavior: 'smooth'
@@ -201,11 +201,11 @@ const Index = () => {
                   <img src="/lovable-uploads/1c5cc876-67e7-46b5-bf7e-33955c2f1fed.png" alt="Modern Kitchen" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
                 <div className="p-6 bg-white">
-                  <h3 className="font-parafina text-xl font-bold mb-1">Modern Kitchen</h3>
+                  <h3 className="font-distrampler text-xl font-bold mb-1">Modern Kitchen</h3>
                   <p className="text-deco-plum/70 mb-3">
                     <span className="text-deco-gold">Palm Jumeirah</span> • Pearl Finish
                   </p>
-                  <button className="text-deco-denim font-medium hover:underline" onClick={() => {
+                  <button className="text-deco-denim font-medium hover:underline font-circular" onClick={() => {
                   const el = document.getElementById('footer-deco-paints');
                   if (el) el.scrollIntoView({
                     behavior: 'smooth'
@@ -221,11 +221,11 @@ const Index = () => {
                   <img src="/lovable-uploads/a595e994-b78b-4726-afbb-5007408bbd6c.png" alt="Spa-Inspired Bathroom" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
                 <div className="p-6 bg-white">
-                  <h3 className="font-parafina text-xl font-bold mb-1">Spa-Inspired Bathroom</h3>
+                  <h3 className="font-distrampler text-xl font-bold mb-1">Spa-Inspired Bathroom</h3>
                   <p className="text-deco-plum/70 mb-3">
                     <span className="text-deco-gold">Dubai Marina</span> • Waterproof Microcement
                   </p>
-                  <button className="text-deco-denim font-medium hover:underline" onClick={() => {
+                  <button className="text-deco-denim font-medium hover:underline font-circular" onClick={() => {
                   const el = document.getElementById('footer-deco-paints');
                   if (el) el.scrollIntoView({
                     behavior: 'smooth'
@@ -242,7 +242,7 @@ const Index = () => {
               if (el) el.scrollIntoView({
                 behavior: 'smooth'
               });
-            }} className="btn-outline inline-flex items-center">
+            }} className="btn-outline inline-flex items-center font-circular">
                 View All Projects
               </button>
             </div>

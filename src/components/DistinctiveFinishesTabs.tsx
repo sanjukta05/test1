@@ -21,19 +21,19 @@ const floorFinishes = [
 ];
 
 const DistinctiveFinishesTabs = () => (
-  <div className="w-full max-w-5xl mx-auto">
+  <div className="w-full max-w-5xl mx-auto font-circular">
     {/* Removed section title as requested */}
     <Tabs defaultValue="wall" className="w-full">
       <TabsList className="max-w-xs mx-auto grid grid-cols-2 mb-8 rounded-full bg-deco-beige shadow-inner overflow-hidden">
         <TabsTrigger
           value="wall"
-          className="font-parafina text-deco-plum data-[state=active]:bg-deco-plum data-[state=active]:text-white"
+          className="text-deco-plum data-[state=active]:bg-deco-plum data-[state=active]:text-white font-circular"
         >
           Wall Finish
         </TabsTrigger>
         <TabsTrigger
           value="floor"
-          className="font-parafina text-deco-plum data-[state=active]:bg-deco-denim data-[state=active]:text-white"
+          className="text-deco-plum data-[state=active]:bg-deco-denim data-[state=active]:text-white font-circular"
         >
           Floor Finish
         </TabsTrigger>
@@ -41,8 +41,8 @@ const DistinctiveFinishesTabs = () => (
       <TabsContent value="wall" className="animate-fadeIn">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {wallFinishes.map((item, i) => (
-            <div key={i} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg bg-white flex flex-col items-center">
-              <div className="font-grosa font-semibold text-deco-plum mt-4 mb-2 text-center">{item.label}</div>
+            <div key={i} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg bg-white flex flex-col items-center font-circular">
+              <div className="font-distrampler font-semibold text-deco-plum mt-4 mb-2 text-center">{item.label}</div>
               <img
                 src={item.img}
                 alt={item.label}
@@ -56,8 +56,8 @@ const DistinctiveFinishesTabs = () => (
       <TabsContent value="floor" className="animate-fadeIn">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {floorFinishes.map((item, i) => (
-            <div key={i} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg bg-white flex flex-col items-center">
-              <div className="font-grosa font-semibold text-black mt-4 mb-2 text-center">{item.label}</div>
+            <div key={i} className="overflow-hidden rounded-xl shadow-sm hover:shadow-lg bg-white flex flex-col items-center font-circular">
+              <div className="font-distrampler font-semibold text-black mt-4 mb-2 text-center">{item.label}</div>
               <img
                 src={item.img}
                 alt={item.label}
