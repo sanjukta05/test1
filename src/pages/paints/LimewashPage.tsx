@@ -3,31 +3,30 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Shield, History, Layers, Wind } from 'lucide-react';
 
-// Update the titles here:
 const finishedProjects = [
   {
     image: "/lovable-uploads/77846c41-588f-4d24-ab63-d65b10cffbef.png",
-    title: "Luxury Bedroom",
+    title: "Living Room",
   },
   {
     image: "/lovable-uploads/a846e2ce-7fc7-4041-9b51-8ee9b33f7379.png",
-    title: "Bathroom",
+    title: "Minimal Living Area",
   },
   {
     image: "/lovable-uploads/05be3b1d-6149-4264-9ecd-d0abf61558c4.png",
-    title: "Minimal Bathroom",
+    title: "Luxury Featured Wall",
   },
   {
     image: "/lovable-uploads/faee09c5-816c-4b94-87a0-66d42a63a9be.png",
-    title: "Living Area",
+    title: "Office Space",
   },
   {
     image: "/lovable-uploads/5a7b46fd-8260-4993-8ca0-7db3cc056d17.png",
-    title: "Bedroom",
+    title: "Featured Wall",
   },
   {
     image: "/lovable-uploads/d6d88a4a-9fd8-4ed8-96aa-433fd7230c54.png",
-    title: "Minimal Bedroom",
+    title: "Powder Room",
   }
 ];
 
@@ -137,4 +136,3 @@ const LimewashPage = () => {
 };
 
 export default LimewashPage;
-

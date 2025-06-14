@@ -3,6 +3,51 @@ import React, { useEffect } from 'react';
 import ProductLayout from '../../components/ProductLayout';
 import { Home, Building, Layers, Paintbrush } from 'lucide-react';
 
+const finishedProjects = [
+  {
+    image: "/lovable-uploads/a2fbec00-f91c-416f-89eb-78cf2e9caaff.png",
+    title: "Living Room",
+  },
+  {
+    image: "/lovable-uploads/b575e31a-99cc-4c7c-bafd-f7144792ddc9.png",
+    title: "Minimal Living Area",
+  },
+  {
+    image: "/lovable-uploads/9b7f0826-ba57-4957-8917-f57eab16106d.png",
+    title: "Luxury Featured Wall",
+  },
+  {
+    image: "/lovable-uploads/108645d9-ddd9-464a-894b-53d7415a4f97.png",
+    title: "Office Space",
+  },
+  {
+    image: "/lovable-uploads/8f8ed56e-9757-4f21-9967-74540153d516.png",
+    title: "Featured Wall",
+  },
+  {
+    image: "/lovable-uploads/0bed9588-f10a-4f11-ba76-eb3f47a2bba0.png",
+    title: "Powder Room",
+  }
+];
+
+const inProgressProjects = [
+  "/lovable-uploads/93803875-40dc-4965-92f2-c4f1b4b5e697.png",
+  "/lovable-uploads/f68759a2-a052-40f4-9070-a999bf30d9ee.png",
+  "/lovable-uploads/8793995d-b1d9-4dee-bf3e-6727fa72fddc.png",
+  "/lovable-uploads/60996304-0f8f-4079-8fb7-af891718b418.png",
+  "/lovable-uploads/a295b12f-a3c2-475e-8414-9650496a6343.png",
+  "/lovable-uploads/c51787c6-ca5d-482e-8690-c05d084e6ee1.png"
+];
+
+const inProgressTitles = [
+  "Business Bay",
+  "Dubai Hills",
+  "The Springs",
+  "Palm Jumeirah",
+  "Emirates Hills",
+  "Downtown Dubai"
+];
+
 const ConcreteTexturePage = () => {
   useEffect(() => {
     document.title = "Concrete Texture | DecoPaints";
@@ -83,22 +128,9 @@ const ConcreteTexturePage = () => {
           description: "Minor damage can be professionally repaired without requiring complete refinishing. Our technicians can match existing textures and colors for seamless repairs."
         }
       ]}
-      finishedProjects={[
-        "/lovable-uploads/a2fbec00-f91c-416f-89eb-78cf2e9caaff.png",
-        "/lovable-uploads/b575e31a-99cc-4c7c-bafd-f7144792ddc9.png",
-        "/lovable-uploads/9b7f0826-ba57-4957-8917-f57eab16106d.png",
-        "/lovable-uploads/108645d9-ddd9-464a-894b-53d7415a4f97.png",
-        "/lovable-uploads/8f8ed56e-9757-4f21-9967-74540153d516.png",
-        "/lovable-uploads/0bed9588-f10a-4f11-ba76-eb3f47a2bba0.png"
-      ]}
-      inProgressProjects={[
-        "/lovable-uploads/93803875-40dc-4965-92f2-c4f1b4b5e697.png",
-        "/lovable-uploads/f68759a2-a052-40f4-9070-a999bf30d9ee.png",
-        "/lovable-uploads/8793995d-b1d9-4dee-bf3e-6727fa72fddc.png",
-        "/lovable-uploads/60996304-0f8f-4079-8fb7-af891718b418.png",
-        "/lovable-uploads/a295b12f-a3c2-475e-8414-9650496a6343.png",
-        "/lovable-uploads/c51787c6-ca5d-482e-8690-c05d084e6ee1.png"
-      ]}
+      finishedProjects={finishedProjects}
+      inProgressProjects={inProgressProjects}
+      inProgressTitles={inProgressTitles}
     />
   );
 };
