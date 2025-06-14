@@ -25,6 +25,7 @@ const MicroCementPage = () => {
       heroTitle="Seamless Contemporary Flooring"
       heroDescription="Modern, minimalist surfaces with subtle texture that create uninterrupted expanses of sophisticated flooring perfect for contemporary spaces."
       heroImage="/lovable-uploads/8dbe1205-3074-4563-b29e-0a2356d97437.png"
+      heroImageClassName="bg-bottom" {/* CROP TO FLOOR SHOW */}
       benefits={[
         {
           title: "Seamless Installation",
@@ -98,3 +99,4 @@ const MicroCementPage = () => {
 };
 
 export default MicroCementPage;
+

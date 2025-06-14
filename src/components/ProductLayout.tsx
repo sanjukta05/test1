@@ -34,6 +34,7 @@ export interface ProductProps {
   heroTitle: string;
   heroDescription: string;
   heroImage: string;
+  heroImageClassName?: string; // ADD THIS
   benefits: Benefit[];
   applications: Application[];
   techSpecs: TechSpec[];
@@ -69,6 +70,7 @@ const ProductLayout: React.FC<ProductProps> = ({
   heroTitle,
   heroDescription,
   heroImage,
+  heroImageClassName,
   benefits,
   applications,
   techSpecs,
@@ -118,7 +120,7 @@ const ProductLayout: React.FC<ProductProps> = ({
       <section className="pt-28 pb-16 md:pt-36 md:pb-24 relative bg-deco-plum overflow-hidden">
         {/* Hero Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-40"
+          className={`absolute inset-0 bg-cover bg-center opacity-40 ${heroImageClassName ? heroImageClassName : ""}`}
           style={{ backgroundImage: `url(${heroImage})` }}
           aria-hidden="true"
         ></div>
