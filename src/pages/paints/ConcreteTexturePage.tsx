@@ -95,7 +95,7 @@ const ConcreteTexturePage = () => {
           image: "/lovable-uploads/0826e6b7-0bb6-44d1-82e0-a01bf84d3f12.png"
         },
         {
-          title: "Contemporary Bedrooms",
+          title: "Powder Room",
           description: "Use sophisticated concrete textures as feature walls in bedrooms to enhance modern design and create a serene, cohesive environment.",
           image: "/lovable-uploads/18d7b529-e483-43a7-b1bb-6f1913778706.png"
         }
