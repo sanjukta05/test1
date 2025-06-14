@@ -42,17 +42,17 @@ const ConcreteTexturePage = () => {
         {
           title: "Modern Lofts",
           description: "Create authentic industrial-inspired living spaces with the sophistication of expertly applied concrete finishes that add character without overwhelming the space.",
-          image: "https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          image: "/lovable-uploads/d8b65986-406f-4890-a2bd-807e06515cff.png"
         },
         {
-          title: "Commercial Spaces",
-          description: "Provide durability and contemporary style for retail environments, offices, and hospitality spaces that require both aesthetic appeal and practical performance.",
-          image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Luxury Bathrooms & Spas",
+          description: "Transform bathrooms and relaxation spaces with moisture-resistant concrete textures for a refined, spa-like atmosphere.",
+          image: "/lovable-uploads/0826e6b7-0bb6-44d1-82e0-a01bf84d3f12.png"
         },
         {
-          title: "Luxury Retail",
-          description: "Create sophisticated backdrops for high-end retail displays where the subtle texture of concrete complements product presentations without competing for attention.",
-          image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
+          title: "Contemporary Bedrooms",
+          description: "Use sophisticated concrete textures as feature walls in bedrooms to enhance modern design and create a serene, cohesive environment.",
+          image: "/lovable-uploads/18d7b529-e483-43a7-b1bb-6f1913778706.png"
         }
       ]}
       techSpecs={[
