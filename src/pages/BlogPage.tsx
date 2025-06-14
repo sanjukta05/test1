@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -22,7 +21,7 @@ const BlogPage = () => {
   
   const [filter, setFilter] = useState<string>('all');
   
-  // Sample blog posts data - in a real application, this would come from an API
+  // Sample blog posts data - using user-uploaded images for post images
   const blogPosts: BlogPost[] = [
     {
       id: 1,
@@ -30,7 +29,8 @@ const BlogPage = () => {
       excerpt: "Explore how the centuries-old technique of Venetian plaster continues to captivate interior designers and homeowners with its depth, texture, and timeless appeal.",
       category: "techniques",
       date: "May 10, 2023",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1000&h=600",
+      // 1st image
+      image: "/lovable-uploads/77a1934c-69e1-48ae-b2c7-882476a35cc7.png",
       featured: true
     },
     {
@@ -39,7 +39,8 @@ const BlogPage = () => {
       excerpt: "Discover how the decorative finishing industry is embracing sustainability without compromising on luxury or durability.",
       category: "trends",
       date: "April 22, 2023",
-      image: "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=80&w=1000&h=600"
+      // 2nd image
+      image: "/lovable-uploads/4c6273e6-eb0b-4979-b0f6-4a894a2e1f61.png"
     },
     {
       id: 3,
@@ -47,7 +48,8 @@ const BlogPage = () => {
       excerpt: "Learn how color and texture influence mood and perception, and how to select the perfect decorative finish for different rooms in your home.",
       category: "design",
       date: "March 15, 2023",
-      image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=1000&h=600"
+      // 3rd image
+      image: "/lovable-uploads/c2f21f92-5b78-41a6-a393-b2af95db6e83.png"
     },
     {
       id: 4,
@@ -55,7 +57,8 @@ const BlogPage = () => {
       excerpt: "A behind-the-scenes look at how we used custom finishes to completely transform a Palm Jumeirah villa, from concept to completion.",
       category: "projects",
       date: "February 28, 2023",
-      image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&q=80&w=1000&h=600"
+      // 4th image
+      image: "/lovable-uploads/2afc656c-ca9b-4bfc-8304-30fb589c032c.png"
     },
     {
       id: 5,
@@ -63,7 +66,8 @@ const BlogPage = () => {
       excerpt: "Explore the meticulous process of gold leaf application and how this ancient technique brings unmatched luxury to contemporary interiors.",
       category: "techniques",
       date: "January 18, 2023",
-      image: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&q=80&w=1000&h=600"
+      // 5th image
+      image: "/lovable-uploads/a1080c58-d9f6-4887-8f92-493b3c0b8a8e.png"
     },
     {
       id: 6,
@@ -71,7 +75,8 @@ const BlogPage = () => {
       excerpt: "A comparative analysis of micro-cement and traditional concrete flooring options, with insights on making the best choice for different spaces.",
       category: "comparisons",
       date: "December 5, 2022",
-      image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=80&w=1000&h=600"
+      // 6th image
+      image: "/lovable-uploads/61c73de1-1e51-4c64-a902-ccdc4a22c92f.png"
     },
   ];
   
