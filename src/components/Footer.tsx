@@ -21,7 +21,7 @@ const Footer = () => {
           
           {/* Decorative Paints */}
           <div id="footer-deco-paints">
-            <h3 className="text-lg font-distrampler font-bold mb-6">Decorative Paints</h3>
+            <h3 className="font-distrampler mb-6 font-normal text-lg">Decorative Paints</h3>
             <ul className="space-y-2 font-circular">
               <li><Link to="/paints/marmorino" className="text-white/70 hover:text-white transition-colors">Marmorino</Link></li>
               <li><Link to="/paints/limewash" className="text-white/70 hover:text-white transition-colors">Limewash</Link></li>
@@ -35,7 +35,7 @@ const Footer = () => {
           
           {/* Decorative Flooring */}
           <div>
-            <h3 className="text-lg font-distrampler font-bold mb-6">Decorative Flooring</h3>
+            <h3 className="font-distrampler mb-6 text-xl font-normal">Decorative Flooring</h3>
             <ul className="space-y-2 font-circular">
               <li><Link to="/flooring/micro-cement" className="text-white/70 hover:text-white transition-colors">Micro-Topping & Micro-Cement</Link></li>
               <li><Link to="/flooring/terrazzo-flooring" className="text-white/70 hover:text-white transition-colors">Terrazzo Flooring</Link></li>
