@@ -83,9 +83,16 @@ const MarmolinoPage = () => {
           description: "Every 3-5 years, consider a professional maintenance treatment with specialized wax to refresh the surface and enhance protection, especially for high-traffic areas."
         }
       ]}
+      inProgressProjects={[
+        "/lovable-uploads/cd423463-f33a-4d7f-9f02-6f32d28763e5.png", // Ceiling Painting in Progress
+        "/lovable-uploads/dd0c2755-a141-4c68-9b6b-ff315a0f4f42.png", // Trowel Finish Application
+        "/lovable-uploads/a1f15039-2870-44e2-b79d-51e0913c3dc7.png", // Detail Work on Upper Molding
+        "/lovable-uploads/138f4aa9-0c70-48f1-8aba-a208cf2c0039.png", // Niche Feature Preparation
+        "/lovable-uploads/2d68aef8-ae6a-41e5-b2dc-be292b244a70.png", // Wall Painting Application
+        "/lovable-uploads/62e227a4-f4ef-4fd0-b233-aabb1884d31e.png", // Doorway Masking and Prep
+      ]}
     />
   );
 };
 
 export default MarmolinoPage;
-
