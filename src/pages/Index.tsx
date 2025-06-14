@@ -40,6 +40,7 @@ const Index = () => {
         <section id="textures" className="section bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto mb-16 text-center">
+              {/* enforce font-distrampler! */}
               <h2 className="font-distrampler text-3xl mb-4 font-normal md:text-5xl">Distinctive Finishes</h2>
               <GoldAccent className="mb-6" />
               <p className="text-lg text-deco-plum/80">

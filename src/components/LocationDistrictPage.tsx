@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
@@ -87,7 +86,7 @@ const LocationDistrictPage: React.FC<LocationDistrictPageProps> = ({
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Top-Rated Decorative Paint & Flooring Services in {district}, {emirate}</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-6">Top-Rated Decorative Paint & Flooring Services in {district}, {emirate}</h2>
               <p className="text-deco-plum/80 mb-6 text-lg">
                 {description}
               </p>
@@ -111,7 +110,7 @@ const LocationDistrictPage: React.FC<LocationDistrictPageProps> = ({
         <section className="py-16 bg-deco-beige">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Our {district} {emirate} Experience</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-6 text-center">Our {district} {emirate} Experience</h2>
               <p className="text-center mb-12 max-w-3xl mx-auto text-deco-plum/80">
                 With years of experience serving the {district} area, we've developed specialized techniques 
                 that address the unique challenges and design preferences of this distinctive neighborhood.
@@ -158,7 +157,7 @@ const LocationDistrictPage: React.FC<LocationDistrictPageProps> = ({
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Most Popular Decorative Finishes in {district}, {emirate}</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-6">Most Popular Decorative Finishes in {district}, {emirate}</h2>
               <p className="mb-12 text-deco-plum/80">
                 Based on our extensive experience in {district}, these are the most requested decorative paint and flooring 
                 solutions that perfectly complement the local architecture and design preferences.
@@ -248,7 +247,7 @@ const LocationDistrictPage: React.FC<LocationDistrictPageProps> = ({
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Services in {district}, {emirate}</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-6">Our Services in {district}, {emirate}</h2>
               <p className="mb-12 text-deco-plum/80">
                 We offer a comprehensive range of decorative paint and flooring services tailored to the unique 
                 needs of {district} properties, delivered by our local team of skilled artisans.
@@ -281,7 +280,7 @@ const LocationDistrictPage: React.FC<LocationDistrictPageProps> = ({
           <div className="absolute inset-0 geometric-pattern opacity-5"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">{district} {emirate} Design Trends</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-6">{district} {emirate} Design Trends</h2>
               <p className="mb-8 text-deco-plum/80">
                 Our design team closely monitors the evolving design landscape in {district}, 
                 ensuring our decorative paint and flooring solutions remain at the cutting edge of local trends.
@@ -324,7 +323,7 @@ const LocationDistrictPage: React.FC<LocationDistrictPageProps> = ({
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">FAQs About Our {district} {emirate} Services</h2>
+              <h2 className="font-distrampler text-3xl md:text-4xl font-bold mb-6 text-center">FAQs About Our {district} {emirate} Services</h2>
               <p className="text-center mb-12 text-deco-plum/80">
                 Common questions about our decorative paint and flooring services in {district}
               </p>

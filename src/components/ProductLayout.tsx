@@ -144,7 +144,7 @@ const ProductLayout: React.FC<ProductProps> = ({
               <span className="text-white">{title}</span>
             </div>
             
-            <h1 className="font-parafina text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <h1 className="font-distrampler text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               {heroTitle}
             </h1>
             
@@ -180,7 +180,7 @@ const ProductLayout: React.FC<ProductProps> = ({
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-parafina text-3xl font-bold mb-4">Signature Benefits</h2>
+            <h2 className="font-distrampler text-3xl font-bold mb-4">Signature Benefits</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-grosa text-gray-700">
               Discover what makes our {title} finish stand out from conventional options
@@ -206,7 +206,7 @@ const ProductLayout: React.FC<ProductProps> = ({
         <div className="absolute inset-0 geometric-pattern opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-parafina text-3xl font-bold mb-4">Palette of Success</h2>
+            <h2 className="font-distrampler text-3xl font-bold mb-4">Palette of Success</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-grosa text-gray-700">
               Witness the transformation power of our {title} finish through real projects
@@ -290,7 +290,7 @@ const ProductLayout: React.FC<ProductProps> = ({
       <section className="py-16 bg-white relative">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-parafina text-3xl font-bold mb-4">Maintenance Guide</h2>
+            <h2 className="font-distrampler text-3xl font-bold mb-4">Maintenance Guide</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-grosa text-gray-700">
               Protect your investment and ensure long-lasting beauty
@@ -313,7 +313,7 @@ const ProductLayout: React.FC<ProductProps> = ({
         <div className="absolute inset-0 geometric-pattern opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-parafina text-3xl font-bold mb-4">{featuredApplicationsTitle}</h2>
+            <h2 className="font-distrampler text-3xl font-bold mb-4">{featuredApplicationsTitle}</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-grosa text-gray-700">
               Explore spaces where our {title} finish creates exceptional environments
@@ -347,7 +347,7 @@ const ProductLayout: React.FC<ProductProps> = ({
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-parafina text-3xl font-bold mb-4">Technical Specifications</h2>
+            <h2 className="font-distrampler text-3xl font-bold mb-4">Technical Specifications</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-grosa text-gray-700">
               Essential information for professional application and performance
@@ -372,7 +372,7 @@ const ProductLayout: React.FC<ProductProps> = ({
         <div className="absolute inset-0 geometric-pattern opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-parafina text-3xl font-bold mb-4">Ready to Transform Your Space?</h2>
+            <h2 className="font-distrampler text-3xl font-bold mb-4">Ready to Transform Your Space?</h2>
             <div className="h-1 w-16 bg-deco-gold mx-auto mb-6"></div>
             <p className="font-grosa text-white/90 mb-8">
               Our expert team is ready to bring the beauty of {title} to your project. 
