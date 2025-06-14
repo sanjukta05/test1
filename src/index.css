@@ -1,7 +1,22 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* === Custom Fonts === */
+@font-face {
+  font-family: 'Distrampler';
+  src: url('/lovable-uploads/Distrampler.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Circular Std Book';
+  src: url('/lovable-uploads/CircularStd-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
@@ -81,9 +96,23 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Circular Std Book', Outfit, Arial, sans-serif;
   }
 
-  /* Import custom fonts */
+  /* Override p, span, ul, li, etc, to use CircularStd-Book */
+  p, span, li, ul, ol, a, label, input, textarea, button, td, th, div, section, article, nav, aside, small, strong, em {
+    font-family: 'Circular Std Book', Outfit, Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  /* Headings use Distrampler (with fallbacks for size consistency) */
+  h1, h2, h3 {
+    font-family: 'Distrampler', 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: .01em;
+  }
+
+  /* Maintain previous font imports as fallback (optional) */
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');

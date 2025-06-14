@@ -5,7 +5,7 @@ import Logo from './Logo';
 
 const Footer = () => {
   return (
-    <footer className="bg-deco-plum text-white relative overflow-hidden">
+    <footer className="bg-deco-plum text-white relative overflow-hidden font-circular">
       {/* Gold accent line */}
       <div className="h-1 w-full bg-deco-gold"></div>
       
@@ -16,15 +16,15 @@ const Footer = () => {
             <div className="mb-6">
               <Logo variant="light" className="mb-6" />
             </div>
-            <p className="text-white/70 font-grosa mb-6">
+            <p className="text-white/70 font-circular mb-6">
               Premium decorative paints and flooring solutions crafted with artisanal techniques and premium materials.
             </p>
           </div>
           
           {/* Decorative Paints */}
           <div id="footer-deco-paints">
-            <h3 className="text-lg font-parafina font-bold mb-6">Decorative Paints</h3>
-            <ul className="space-y-2 font-grosa">
+            <h3 className="text-lg font-distrampler font-bold mb-6">Decorative Paints</h3>
+            <ul className="space-y-2 font-circular">
               <li><Link to="/paints/marmorino" className="text-white/70 hover:text-white transition-colors">Marmorino</Link></li>
               <li><Link to="/paints/limewash" className="text-white/70 hover:text-white transition-colors">Limewash</Link></li>
               <li><Link to="/paints/concrete-texture" className="text-white/70 hover:text-white transition-colors">Concrete Texture</Link></li>
@@ -37,8 +37,8 @@ const Footer = () => {
           
           {/* Decorative Flooring */}
           <div>
-            <h3 className="text-lg font-parafina font-bold mb-6">Decorative Flooring</h3>
-            <ul className="space-y-2 font-grosa">
+            <h3 className="text-lg font-distrampler font-bold mb-6">Decorative Flooring</h3>
+            <ul className="space-y-2 font-circular">
               <li><Link to="/flooring/micro-cement" className="text-white/70 hover:text-white transition-colors">Micro-Topping & Micro-Cement</Link></li>
               <li><Link to="/flooring/terrazzo-flooring" className="text-white/70 hover:text-white transition-colors">Terrazzo Flooring</Link></li>
               <li><Link to="/flooring/resin-bound-surface" className="text-white/70 hover:text-white transition-colors">Resin Bound Surface</Link></li>
@@ -50,8 +50,8 @@ const Footer = () => {
           
           {/* Contact & Newsletter */}
           <div>
-            <h3 className="text-lg font-parafina font-bold mb-6">Contact</h3>
-            <ul className="space-y-3 font-grosa mb-8">
+            <h3 className="text-lg font-distrampler font-bold mb-6">Contact</h3>
+            <ul className="space-y-3 font-circular mb-8">
               <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-deco-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -108,12 +108,12 @@ const Footer = () => {
         
         {/* Bottom Footer */}
         <div className="pt-8 border-t border-white/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-white/60 text-sm font-grosa">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 font-circular">
+            <div className="text-white/60 text-sm font-circular">
               © {new Date().getFullYear()} DecoPaints. All rights reserved.
             </div>
             
-            <div className="flex space-x-6 text-sm font-grosa">
+            <div className="flex space-x-6 text-sm font-circular">
               <a href="#" className="text-white/60 hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="text-white/60 hover:text-white transition-colors">Terms of Service</a>
             </div>

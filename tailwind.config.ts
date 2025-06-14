@@ -67,7 +67,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        // Add custom fonts
+        'distrampler': ['Distrampler', 'serif'],
+        'circular': ['Circular Std Book', 'sans-serif'],
+        // Previous fonts as fallback:
         'parafina': ['Playfair Display', 'serif'],
         'grosa': ['Outfit', 'sans-serif'],
         'grosa-mono': ['Space Mono', 'monospace'],
