@@ -15,7 +15,7 @@ const GoldSilverLeafPage = () => {
       title="Gold & Silver Leaf"
       heroTitle="Ultimate Luxury Metallic Surfaces"
       heroDescription="Exquisite hand-applied metallic finishes that transform ordinary surfaces into extraordinary statements of opulence and refined taste."
-      heroImage="/public/textures/marble-texture.jpg"
+      heroImage="/lovable-uploads/1f50b99c-3f66-4a3d-8860-1de4242d9631.png"
       benefits={[
         {
           title: "Ultimate Luxury",
@@ -105,4 +105,3 @@ const GoldSilverLeafPage = () => {
 };
 
 export default GoldSilverLeafPage;
-
