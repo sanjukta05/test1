@@ -12,6 +12,34 @@ const inProgressTitles = [
   "Emirates Hills"
 ];
 
+// Finished project images with descriptive titles
+const finishedProjects = [
+  {
+    image: "/lovable-uploads/28b12075-6eab-42c4-b635-55e7a3915811.png",
+    title: "Luxury Bedroom Suite"
+  },
+  {
+    image: "/lovable-uploads/aeb30724-ad30-49a3-9a59-41f24e5a9e97.png",
+    title: "Modern Salon Interior"
+  },
+  {
+    image: "/lovable-uploads/9cd90f96-2594-4fec-bbcd-27bec98fd6ec.png",
+    title: "Designer Master Bedroom"
+  },
+  {
+    image: "/lovable-uploads/0c88fedc-62e4-4e7d-b800-8cb9d34f3fe3.png",
+    title: "Boutique Retail Store"
+  },
+  {
+    image: "/lovable-uploads/9c370e18-45c1-4b82-ab00-5f1050d31f6d.png",
+    title: "Minimalist Staircase & Living Space"
+  },
+  {
+    image: "/lovable-uploads/ee44578a-fe20-4a3a-b08f-e58cd408e658.png",
+    title: "Elegant Office Lounge"
+  }
+];
+
 const MicroCementPage = () => {
   useEffect(() => {
     document.title = "Micro-Cement & Micro-Topping | DecoPaints";
@@ -19,7 +47,6 @@ const MicroCementPage = () => {
   }, []);
 
   return (
-    // This prop helps crop the hero image to show the flooring
     <ProductLayout
       type="flooring"
       title="Micro-Cement & Micro-Topping"
@@ -63,7 +90,7 @@ const MicroCementPage = () => {
         {
           title: "Boutique Retail",
           description: "Provide sophisticated, durable flooring that creates the perfect backdrop for merchandise display while withstanding the demands of commercial traffic.",
-          image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA"
+          image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA"
         }
       ]}
       techSpecs={[
@@ -95,6 +122,7 @@ const MicroCementPage = () => {
         }
       ]}
       inProgressTitles={inProgressTitles}
+      finishedProjects={finishedProjects}
     />
   );
 };
