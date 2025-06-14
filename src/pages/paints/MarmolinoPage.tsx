@@ -15,7 +15,7 @@ const MarmolinoPage = () => {
       title="Marmorino"
       heroTitle="Marmorino Polished Plaster"
       heroDescription="Classical Italian-inspired luxury surfaces with an authentic limestone appearance that adds depth, texture, and timeless elegance to your walls."
-      heroImage="/public/textures/marble-texture.jpg"
+      heroImage="/lovable-uploads/d1d8cfca-a7f5-4e28-bf52-0a7d78330467.png"
       benefits={[
         {
           title: "Breathable Surface",
