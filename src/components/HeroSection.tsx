@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { ArrowDown, Paintbrush, Droplet, Building } from 'lucide-react';
 interface HeroSectionProps {
@@ -8,19 +9,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
   const [showTagline, setShowTagline] = useState(false);
   const [activeHero, setActiveHero] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const heroSlides = [{
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    heading: 'Elevate Every Surface',
-    subheading: 'Transforming Spaces, Elevating Lifestyles'
-  }, {
-    image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    heading: 'Artisan Craftsmanship',
-    subheading: 'Techniques Perfected by Master Craftsmen'
-  }, {
-    image: 'https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80',
-    heading: 'Luxury in Every Detail',
-    subheading: 'Premium Materials, Extraordinary Results'
-  }];
+  // Updated hero slides to use user-uploaded images
+  const heroSlides = [
+    {
+      image: '/lovable-uploads/394a4a9c-b389-49d9-b662-9ecfcb213a23.png',
+      heading: 'Elevate Every Surface',
+      subheading: 'Transforming Spaces, Elevating Lifestyles'
+    },
+    {
+      image: '/lovable-uploads/67b298fb-1e2b-4587-bed1-fde91b74b433.png',
+      heading: 'Artisan Craftsmanship',
+      subheading: 'Techniques Perfected by Master Craftsmen'
+    },
+    {
+      image: '/lovable-uploads/25ef366b-9ad1-444b-9469-2fb1ec3065e4.png',
+      heading: 'Luxury in Every Detail',
+      subheading: 'Premium Materials, Extraordinary Results'
+    }
+  ];
   useEffect(() => {
     setIsLoaded(true);
 
@@ -58,9 +64,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
       {/* Subtle Gold Shimmer Overlay */}
       <div className="absolute inset-0 gold-shimmer opacity-20"></div>
       
-      {/* Background Video Toggle */}
-      
-
       {/* Arch Motif */}
       <div className="absolute bottom-0 left-0 right-0 h-80 bg-arch-gradient opacity-50"></div>
 
@@ -106,3 +109,4 @@ const HeroSection: React.FC<HeroSectionProps> = ({ openEstimateForm }) => {
     </section>;
 };
 export default HeroSection;
+
