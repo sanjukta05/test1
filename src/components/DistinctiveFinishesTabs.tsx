@@ -22,10 +22,7 @@ const floorFinishes = [
 
 const DistinctiveFinishesTabs = () => (
   <div className="w-full max-w-5xl mx-auto">
-    {/* Section Title */}
-    <h3 className="text-2xl md:text-3xl font-parafina font-bold text-deco-denim mb-4 text-center">
-      Explore Our Signature Finishes
-    </h3>
+    {/* Removed section title as requested */}
     <Tabs defaultValue="wall" className="w-full">
       <TabsList className="max-w-xs mx-auto grid grid-cols-2 mb-8 rounded-full bg-deco-beige shadow-inner overflow-hidden">
         <TabsTrigger
