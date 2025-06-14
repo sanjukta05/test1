@@ -55,15 +55,14 @@ const PearlFinishPage = () => {
           image: "/lovable-uploads/952428ba-942d-4a78-af90-82ea97a08880.png"
         }
       ]}
-      techSpecs={[
-        { label: "Light Reflectivity", value: "30-60% increased light reflection (finish dependent)" },
-        { label: "Base Requirements", value: "Ultra-smooth base preparation essential" },
-        { label: "Application Techniques", value: "Proprietary multi-layer application with specialized tools" },
-        { label: "Curing Time", value: "24 hours between coats, 7 days for full cure" },
-        { label: "Pearl Content", value: "Natural and synthetic pearl essence" },
-        { label: "Finish Options", value: "Subtle sheen to high luster" },
-        { label: "VOC Content", value: "Low VOC (<25g/L)" },
-        { label: "Durability Rating", value: "Premium residential/light commercial" }
+      // New finished project images from user uploads
+      finishedProjects={[
+        "/lovable-uploads/6fb4e594-07d2-475a-8064-acedaf9e13ec.png",
+        "/lovable-uploads/d8c5c2cc-c2a0-4e4a-b4c5-22875adaa8b8.png",
+        "/lovable-uploads/dc78d120-27df-4a05-a962-a623b21bae43.png",
+        "/lovable-uploads/ae2d232a-3ee5-4ece-b8bd-844c9c90c9e7.png",
+        "/lovable-uploads/331c09b7-784e-4b2f-ad0c-e37a949644d4.png",
+        "/lovable-uploads/68c2bffa-1300-46ac-8063-dd99717262f9.png"
       ]}
       maintenance={[
         {
@@ -83,6 +82,9 @@ const PearlFinishPage = () => {
           description: "Keep a small amount of the original finish for any future touch-ups. Our specially trained artisans can also perform touch-ups that blend seamlessly with the existing finish."
         }
       ]}
+      // ensuring the section title uses the default "Featured Applications"
+      // ("Pearl Finish Spaces: Luxury Dressing, Dining & Reception" is only used 
+      // if title === "Pearl Finish", but now it will be forced to "Featured Applications")
     />
   );
 };
