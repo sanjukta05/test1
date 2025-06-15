@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -15,46 +16,47 @@ const SustainabilityPage = () => {
         description="Responsible Practices for a Better Tomorrow"
         backgroundImage="/lovable-uploads/78e0e2c7-2ff0-47fd-b70b-aec0c55e7f54.png"
       />
-      
+
       <main className="flex-grow">
-        <section className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto mb-16 text-center">
-              <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Approach to Sustainability</h2>
-              <p className="text-deco-plum/80 text-xl">
+        {/* Our Approach to Sustainability */}
+        <section className="py-10 md:py-24 bg-white">
+          <div className="container mx-auto px-2 md:px-4">
+            <div className="max-w-2xl md:max-w-4xl mx-auto mb-10 md:mb-16 text-center px-2">
+              <h2 className="text-2xl md:text-3xl mb-4 md:mb-6 font-normal md:text-5xl">Our Approach to Sustainability</h2>
+              <p className="text-deco-plum/80 text-base md:text-xl">
                 At DecoPaints, sustainability isn't just a trend—it's a core value that guides our operations, 
                 product development, and business relationships. We believe that premium finishes can and should 
                 be environmentally responsible, creating spaces that are both beautiful and healthy.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-2xl md:max-w-6xl mx-auto mb-14 md:mb-20">
               <div>
-                <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto mb-6">
+                <AspectRatio ratio={4 / 3} className="w-full max-w-full md:max-w-md mx-auto mb-4 md:mb-6">
                   <img src="/lovable-uploads/f5c50385-8d91-4c57-8b64-4d49cd2eeed0.png" alt="Eco-friendly manufacturing process" className="rounded-lg shadow-lg object-cover w-full h-full" />
                 </AspectRatio>
-                <h3 className="text-2xl font-bold mb-4">Environmental Responsibility</h3>
-                <p className="text-deco-plum/80 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4">Environmental Responsibility</h3>
+                <p className="text-deco-plum/80 mb-2 md:mb-4 text-base md:text-lg">
                   We carefully select raw materials that minimize environmental impact while maintaining the highest quality standards. 
                   Many of our decorative finishes utilize natural ingredients such as lime, clay, and mineral pigments that have been 
                   used for centuries.
                 </p>
-                <p className="text-deco-plum/80">
+                <p className="text-deco-plum/80 text-base md:text-lg">
                   Our manufacturing processes prioritize resource efficiency, waste reduction, and responsible disposal practices. 
                   We continuously work to reduce our carbon footprint through energy efficiency measures and renewable energy utilization.
                 </p>
               </div>
-              
+
               <div>
-                <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto mb-6">
+                <AspectRatio ratio={4 / 3} className="w-full max-w-full md:max-w-md mx-auto mb-4 md:mb-6">
                   <img src="/lovable-uploads/e9a2d86d-cc04-4611-bff6-24a57f765daa.png" alt="Natural raw materials" className="rounded-lg shadow-lg object-cover w-full h-full" />
                 </AspectRatio>
-                <h3 className="text-2xl font-bold mb-4">Indoor Air Quality</h3>
-                <p className="text-deco-plum/80 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4">Indoor Air Quality</h3>
+                <p className="text-deco-plum/80 mb-2 md:mb-4 text-base md:text-lg">
                   We understand that the finishes in your home directly impact the air you breathe. That's why we've developed our 
                   premium product lines to feature low-VOC or VOC-free formulations that don't compromise on durability or aesthetics.
                 </p>
-                <p className="text-deco-plum/80">
+                <p className="text-deco-plum/80 text-base md:text-lg">
                   Many of our lime-based products actively improve indoor air quality through natural properties that absorb carbon 
                   dioxide and inhibit mold and bacterial growth, creating healthier living environments.
                 </p>
@@ -321,3 +323,4 @@ const SustainabilityPage = () => {
     </div>;
 };
 export default SustainabilityPage;
+
