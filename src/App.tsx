@@ -53,6 +53,8 @@ import StampedConcretePage from "./pages/flooring/StampedConcretePage";
 import React from "react";
 import { ElfsightFormProvider } from "./components/ElfsightFormContext";
 import ElfsightFormModal from "./components/ElfsightFormModal";
+import ElfsightWidgets from "./components/ElfsightWidgets";
+import GetEstimateMobileButton from "./components/GetEstimateMobileButton";
 
 const App = () => {
   // Create QueryClient inside the component body
@@ -70,6 +72,10 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        {/* Add Elfsight click-to-call and WhatsApp widgets globally (bottom right on every page) */}
+        <ElfsightWidgets />
+        {/* Add Get Estimate floating button (bottom left, mobile only) globally */}
+        <GetEstimateMobileButton />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />

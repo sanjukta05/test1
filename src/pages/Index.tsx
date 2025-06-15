@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
@@ -28,7 +27,8 @@ const Index = () => {
     }
   }, []);
   const { openForm } = useElfsightForm();
-  return <div className="min-h-screen flex flex-col scroll-smooth font-circular">
+  return (
+    <div className="min-h-screen flex flex-col scroll-smooth font-circular">
       <Navigation />
       <main className="flex-grow">
         {/* Hero Section with CTAs */}
@@ -249,25 +249,7 @@ const Index = () => {
         <ContactCTA cta="Transform Your Space." onCtaClick={openForm} />
       </main>
       <Footer />
-      
-      {/* --- WHATSAPP + CALL WIDGETS (STICKY BOTTOM RIGHT) --- */}
-      <div className="fixed z-50 right-4 bottom-6 flex flex-col items-end space-y-3 lg:space-y-4" style={{
-      pointerEvents: 'none'
-    }}>
-        <div className="elfsight-app-75568a53-9d16-45b5-966f-65fc4c73a8e1" data-elfsight-app-lazy style={{
-        pointerEvents: 'auto'
-      }} />
-        <div className="elfsight-app-f07d86dc-6bb2-445d-9b82-ffa7fed533d1" data-elfsight-app-lazy style={{
-        pointerEvents: 'auto'
-      }} />
-      </div>
-
-      {/* --- GET ESTIMATE BUTTON (BOTTOM LEFT, MOBILE ONLY) --- */}
-      <button type="button" className="fixed left-4 bottom-6 z-40 bg-deco-denim text-white px-6 py-4 rounded-full shadow-lg hover:shadow-xl transition-all group flex items-center gap-2
-          block md:hidden" onClick={openForm}>
-        <Paintbrush className="h-5 w-5 group-hover:animate-pulse" />
-        Get Estimate.
-      </button>
-    </div>;
+    </div>
+  );
 };
 export default Index;
