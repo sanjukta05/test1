@@ -1,12 +1,17 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useElfsightForm } from '../components/ElfsightFormContext';
+
 const AboutPage = () => {
   useEffect(() => {
     document.title = "About | DecoPaints";
   }, []);
+  const { openForm } = useElfsightForm();
+
   return <div className="min-h-screen flex flex-col">
       <Navigation />
       <PageHeader title="About DecoPaints" description="Crafting Premium Finishes Since 2010" backgroundImage="/lovable-uploads/f65dbab1-b79d-4c6b-bb8d-2761277f61d6.png" />
@@ -145,12 +150,16 @@ const AboutPage = () => {
               Transform your space with the region's most trusted decorative finishing experts.
             </p>
             
-            <a href="#estimate" className="bg-deco-denim hover:bg-opacity-90 text-white font-medium py-4 px-8 rounded-full transition-colors inline-flex items-center">
+            <button
+              type="button"
+              onClick={openForm}
+              className="bg-deco-denim hover:bg-opacity-90 text-white font-medium py-4 px-8 rounded-full transition-colors inline-flex items-center"
+            >
               <span className="text-lg">Get a Personalized Estimate</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
-            </a>
+            </button>
           </div>
         </section>
       </main>
