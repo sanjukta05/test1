@@ -117,7 +117,7 @@ const ProductLayout: React.FC<ProductProps> = ({
             <div className="h-1 w-20 bg-deco-gold mb-6"></div>
             
             {/* Subheading/line below heading */}
-            <p className="font-circular text-xl text-white/90 max-w-2xl mb-8">
+            <p className="font-circular text-xl max-w-2xl mb-8 text-white">
               {heroDescription}
             </p>
             
@@ -153,15 +153,13 @@ const ProductLayout: React.FC<ProductProps> = ({
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, i) => (
-              <div key={i} className="flex flex-col items-start p-6 rounded-lg bg-white hover:shadow-md transition-shadow border">
+            {benefits.map((benefit, i) => <div key={i} className="flex flex-col items-start p-6 rounded-lg bg-white hover:shadow-md transition-shadow border">
                 <div className="h-16 w-16 flex items-center justify-center rounded-full bg-deco-beige text-deco-plum mb-4">
                   {benefit.icon || <Paintbrush className="h-8 w-8" />}
                 </div>
                 <h3 className="font-distrampler text-xl font-bold text-deco-plum mb-2">{benefit.title}</h3>
                 <p className="font-circular text-gray-700">{benefit.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -188,17 +186,17 @@ const ProductLayout: React.FC<ProductProps> = ({
             <TabsContent value="finished" className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {(Array.isArray(usedFinishedProjects) ? usedFinishedProjects : []).map((proj, index) => {
-                  let image: string, projTitle: string | undefined;
-                  if (typeof proj === "string") {
-                    image = proj;
-                    // fallback logic for title (for legacy)
-                    const filename = image.split('/').pop() || '';
-                    projTitle = finishedTitlesByImage[filename] || `Project ${index + 1}`;
-                  } else {
-                    image = proj.image;
-                    projTitle = proj.title; // always prefer supplied title
-                  }
-                  return <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
+                let image: string, projTitle: string | undefined;
+                if (typeof proj === "string") {
+                  image = proj;
+                  // fallback logic for title (for legacy)
+                  const filename = image.split('/').pop() || '';
+                  projTitle = finishedTitlesByImage[filename] || `Project ${index + 1}`;
+                } else {
+                  image = proj.image;
+                  projTitle = proj.title; // always prefer supplied title
+                }
+                return <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
                         <div className="relative w-full">
                           <AspectRatio ratio={4 / 3}>
                             <img src={image} alt={projTitle ?? `Project ${index + 1}`} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" />
@@ -209,7 +207,7 @@ const ProductLayout: React.FC<ProductProps> = ({
                           </div>
                         </div>
                       </div>;
-                })}
+              })}
               </div>
             </TabsContent>
             
@@ -217,8 +215,8 @@ const ProductLayout: React.FC<ProductProps> = ({
             <TabsContent value="progress" className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {usedInProgressProjects.map((image, index) => {
-                  let title = inProgressTitles && inProgressTitles[index] ? inProgressTitles[index] : `Project ${index + 1}`;
-                  return <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
+                let title = inProgressTitles && inProgressTitles[index] ? inProgressTitles[index] : `Project ${index + 1}`;
+                return <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
                         <div className="relative w-full">
                           <AspectRatio ratio={4 / 3}>
                             <img src={image} alt={title} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" />
@@ -229,7 +227,7 @@ const ProductLayout: React.FC<ProductProps> = ({
                           </div>
                         </div>
                       </div>;
-                })}
+              })}
               </div>
             </TabsContent>
           </Tabs>
@@ -248,12 +246,10 @@ const ProductLayout: React.FC<ProductProps> = ({
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {maintenance.map((item, i) => (
-              <div key={i} className="bg-deco-beige p-6 rounded-lg">
+            {maintenance.map((item, i) => <div key={i} className="bg-deco-beige p-6 rounded-lg">
                 <h3 className="font-distrampler text-xl font-bold text-deco-plum mb-3">{item.title}</h3>
                 <p className="font-circular text-gray-700">{item.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -271,8 +267,7 @@ const ProductLayout: React.FC<ProductProps> = ({
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {applications.map((app, i) => (
-              <div key={i} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            {applications.map((app, i) => <div key={i} className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative w-full">
                   <AspectRatio ratio={16 / 9}>
                     <img src={app.image} alt={app.title} className="object-cover w-full h-full" />
@@ -283,8 +278,7 @@ const ProductLayout: React.FC<ProductProps> = ({
                 <div className="p-6">
                   <p className="font-circular text-gray-700">{app.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -302,12 +296,10 @@ const ProductLayout: React.FC<ProductProps> = ({
           
           <div className="bg-white rounded-lg border max-w-3xl mx-auto overflow-hidden">
             <div className="grid grid-cols-1 divide-y divide-gray-200">
-              {techSpecs.map((spec, i) => (
-                <div key={i} className="flex py-4 px-6">
+              {techSpecs.map((spec, i) => <div key={i} className="flex py-4 px-6">
                   <div className="w-1/3 font-circular font-medium">{spec.label}</div>
                   <div className="w-2/3 font-circular text-gray-700">{spec.value}</div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
