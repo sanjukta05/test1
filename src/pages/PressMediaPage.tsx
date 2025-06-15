@@ -37,19 +37,22 @@ const PressMediaPage = () => {
     title: "The Artisans Behind UAE's Most Luxurious Interiors",
     publication: "Emirates Home",
     date: "March 2023",
-    image: "/lovable-uploads/photo-1488590528505-98d2b5aba04b.png" // png extension
+    image: "/lovable-uploads/photo-1488590528505-98d2b5aba04b.png",
+    alt: "Laptop and workspace of creative artisan"
   }, {
     id: 2,
     title: "Sustainability Meets Luxury: The Future of Decorative Finishes",
     publication: "Design Middle East",
     date: "January 2023",
-    image: "/lovable-uploads/photo-1461749280684-dccba630e2f6.png" // png extension
+    image: "/lovable-uploads/photo-1461749280684-dccba630e2f6.png",
+    alt: "Monitor displaying design code"
   }, {
     id: 3,
-    title: "Behind the Scenes: The Making of Dubai's Most Exclusive Interiors",
+    title: "UAE Design Inspiration: Modern, Green Offices",
     publication: "Architectural Digest Arabia",
-    date: "December 2022",
-    image: "/lovable-uploads/photo-1486312338219-ce68d2c6f44d.png" // png extension
+    date: "February 2023",
+    image: "/lovable-uploads/photo-1581091226825-a6a2a5aee158.png",
+    alt: "Woman working on laptop in a stylish office"
   }];
   const awardRecognitions = [{
     title: "Middle East Design Award",
@@ -129,16 +132,21 @@ const PressMediaPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {mediaFeatures.map(feature => <div key={feature.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                  <img src={feature.image} alt={feature.title} className="w-full h-48 object-cover" onError={e => {
-                // fallback to jpg if png is not found, or show a transparent placeholder
-                const element = e.currentTarget as HTMLImageElement;
-                if (element.src.endsWith('.png')) {
-                  element.src = feature.image.replace('.png', '.jpg');
-                } else {
-                  element.src = '/placeholder.svg';
-                }
-              }} />
+              {mediaFeatures.map(feature => 
+                <div key={feature.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                  <img
+                    src={feature.image}
+                    alt={feature.alt}
+                    className="w-full h-48 object-cover"
+                    onError={e => {
+                      const element = e.currentTarget as HTMLImageElement;
+                      if (element.src.endsWith('.png')) {
+                        element.src = feature.image.replace('.png', '.jpg');
+                      } else {
+                        element.src = '/placeholder.svg';
+                      }
+                    }}
+                  />
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 line-clamp-2">{feature.title}</h3>
                     <div className="flex justify-between items-center mb-4">
@@ -152,7 +160,8 @@ const PressMediaPage = () => {
                       </svg>
                     </a>
                   </div>
-                </div>)}
+                </div>
+              )}
             </div>
           </div>
         </section>
