@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,12 +53,12 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         // Brand Colors
-        "deco-plum": "hsl(var(--deco-plum))",
+        "deco-plum": "#47143d", // Deep purple
         "deco-beige": "hsl(var(--deco-beige))",
         "deco-lavender": "hsl(var(--deco-lavender))",
         "deco-denim": "hsl(var(--deco-denim))",
         "deco-misty": "hsl(var(--deco-misty))",
-        "deco-gold": "hsl(var(--deco-gold))",
+        "deco-gold": "#B99750", // Gold
       },
       borderRadius: {
         lg: "var(--radius)",

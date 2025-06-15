@@ -51,12 +51,12 @@
     --radius: 0.5rem;
     
     /* Brand Colors */
-    --deco-plum: 272 42% 17%;
+    --deco-plum: #47143d;    /* NEW: Deep purple */
     --deco-beige: 43 71% 95%;
     --deco-lavender: 272 12% 69%;
     --deco-denim: 195 30% 57%;
     --deco-misty: 195 28% 84%;
-    --deco-gold: 43 53% 62%;
+    --deco-gold: #B99750;   /* NEW: Gold */
   }
  
   .dark {
