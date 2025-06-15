@@ -1,9 +1,9 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 const SustainabilityPage = () => {
   useEffect(() => {
     document.title = "Sustainability | DecoPaints";
@@ -91,7 +91,9 @@ const SustainabilityPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <img src="/lovable-uploads/4d7745d5-a235-4778-8620-db73f529a77b.png" alt="" className="rounded-lg shadow-md h-full w-full object-cover" />
+                    <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto">
+                      <img src="/lovable-uploads/4d7745d5-a235-4778-8620-db73f529a77b.png" alt="" className="rounded-lg shadow-md object-cover w-full h-full" />
+                    </AspectRatio>
                   </div>
                 </div>
               </TabsContent>
@@ -99,7 +101,9 @@ const SustainabilityPage = () => {
               <TabsContent value="packaging" className="mt-6">
                 <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
                   <div>
-                    <img src="/lovable-uploads/c6c449b5-dadc-454e-9643-bdecc8853896.png" alt="" className="rounded-lg shadow-md h-full w-full object-cover" />
+                    <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto">
+                      <img src="/lovable-uploads/c6c449b5-dadc-454e-9643-bdecc8853896.png" alt="" className="rounded-lg shadow-md object-cover w-full h-full" />
+                    </AspectRatio>
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-4">Packaging Innovation</h3>
@@ -132,7 +136,9 @@ const SustainabilityPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <img src="/lovable-uploads/45cebf87-1be7-44bd-8123-a08b8b8b0e80.png" alt="" className="rounded-lg shadow-md h-full w-full object-cover" />
+                    <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto">
+                      <img src="/lovable-uploads/45cebf87-1be7-44bd-8123-a08b8b8b0e80.png" alt="" className="rounded-lg shadow-md object-cover w-full h-full" />
+                    </AspectRatio>
                   </div>
                 </div>
               </TabsContent>
@@ -140,7 +146,9 @@ const SustainabilityPage = () => {
               <TabsContent value="community" className="mt-6">
                 <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
                   <div>
-                    <img src="/lovable-uploads/9ad311a1-805b-4eae-8223-7bb8fe09cc77.png" alt="" className="rounded-lg shadow-md h-full w-full object-cover" />
+                    <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto">
+                      <img src="/lovable-uploads/9ad311a1-805b-4eae-8223-7bb8fe09cc77.png" alt="" className="rounded-lg shadow-md object-cover w-full h-full" />
+                    </AspectRatio>
                   </div>
                   <div>
                     <h3 className="mb-4 text-5xl font-normal">Supporting Local Communities</h3>
