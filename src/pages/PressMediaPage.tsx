@@ -46,21 +46,21 @@ const PressMediaPage = () => {
       title: "The Artisans Behind UAE's Most Luxurious Interiors",
       publication: "Emirates Home",
       date: "March 2023",
-      image: "/lovable-uploads/photo-1488590528505-98d2b5aba04b.jpg"
+      image: "/lovable-uploads/photo-1488590528505-98d2b5aba04b.png", // png extension
     },
     {
       id: 2,
       title: "Sustainability Meets Luxury: The Future of Decorative Finishes",
       publication: "Design Middle East",
       date: "January 2023",
-      image: "/lovable-uploads/photo-1461749280684-dccba630e2f6.jpg"
+      image: "/lovable-uploads/photo-1461749280684-dccba630e2f6.png", // png extension
     },
     {
       id: 3,
       title: "Behind the Scenes: The Making of Dubai's Most Exclusive Interiors",
       publication: "Architectural Digest Arabia",
       date: "December 2022",
-      image: "/lovable-uploads/photo-1486312338219-ce68d2c6f44d.jpg"
+      image: "/lovable-uploads/photo-1486312338219-ce68d2c6f44d.png", // png extension
     },
   ];
   
@@ -167,6 +167,15 @@ const PressMediaPage = () => {
                     src={feature.image} 
                     alt={feature.title}
                     className="w-full h-48 object-cover"
+                    onError={(e) => {
+                      // fallback to jpg if png is not found, or show a transparent placeholder
+                      const element = e.currentTarget as HTMLImageElement;
+                      if (element.src.endsWith('.png')) {
+                        element.src = feature.image.replace('.png', '.jpg');
+                      } else {
+                        element.src = '/placeholder.svg';
+                      }
+                    }}
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 line-clamp-2">{feature.title}</h3>
@@ -230,7 +239,7 @@ const PressMediaPage = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm text-center">
                   <div className="h-16 flex items-center justify-center mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-deco-plum" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">Image Gallery</h3>
