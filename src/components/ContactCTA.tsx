@@ -72,7 +72,7 @@ export default function ContactCTA({
                 </div>
               </div>
               
-              <Button className={cn(isDark ? "bg-white text-deco-plum hover:bg-white/90" : "bg-deco-denim text-white hover:bg-deco-denim/90")} onClick={handleCtaClick}>
+              <Button className={cn(isDark ? "bg-white text-deco-plum hover:bg-white/90" : "bg-deco-plum text-white hover:bg-deco-plum/90")} onClick={handleCtaClick}>
                 {cta.endsWith('.') ? cta : cta + '.'}
               </Button>
             </div>

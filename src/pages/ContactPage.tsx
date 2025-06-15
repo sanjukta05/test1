@@ -81,7 +81,7 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <div className="mt-12">
-                  <Button className="w-full bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 rounded" onClick={openForm}>
+                  <Button className="w-full bg-deco-plum hover:bg-deco-plum/90 text-white font-bold py-3 rounded" onClick={openForm}>
                     Get Estimate.
                   </Button>
                 </div>
@@ -107,7 +107,7 @@ const ContactPage = () => {
             </div>
             {/* Add a prominent CTA at the bottom */}
             <div className="mt-12 flex flex-col items-center">
-              <Button onClick={openForm} className="bg-deco-denim hover:bg-deco-denim/90 text-white font-bold py-3 px-10 rounded-full max-w-xs w-full text-lg">
+              <Button onClick={openForm} className="bg-deco-plum hover:bg-deco-plum/90 text-white font-bold py-3 px-10 rounded-full max-w-xs w-full text-lg">
                 Book a Consultation.
               </Button>
             </div>

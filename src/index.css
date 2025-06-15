@@ -120,7 +120,7 @@
 
 @layer components {
   .btn-cta {
-    @apply bg-deco-denim text-white px-6 py-3 rounded-full shadow-sm hover:bg-opacity-90 transition-all font-medium;
+    @apply bg-deco-plum text-white px-6 py-3 rounded-full shadow-sm hover:bg-deco-plum/90 transition-all font-medium;
   }
 
   .btn-secondary {
@@ -128,7 +128,7 @@
   }
 
   .btn-outline {
-    @apply border-2 border-deco-denim text-deco-denim px-6 py-3 rounded-full hover:bg-deco-denim hover:text-white transition-all font-medium;
+    @apply border-2 border-deco-plum text-deco-plum px-6 py-3 rounded-full hover:bg-deco-plum hover:text-white transition-all font-medium;
   }
 
   .btn-gold {
