@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { ArrowDown, Paintbrush, Droplet, Building } from 'lucide-react';
 interface HeroSectionProps {
@@ -51,9 +52,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <source src="/videos/luxury-texture.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </div> : <div className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${isLoaded ? 'opacity-40' : 'opacity-0'}`} style={{
-      backgroundImage: `url('${heroSlides[activeHero].image}')`
-    }} aria-hidden="true"></div>}
+        </div> : 
+        <div
+          key={activeHero} // force remount on slide change
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity transition-[background-image] duration-1000 ${isLoaded ? 'opacity-70' : 'opacity-0'}`}
+          style={{
+            backgroundImage: `url('${heroSlides[activeHero].image}')`
+          }}
+          aria-hidden="true"
+        ></div>
+      }
       
       {/* Background Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-deco-plum/40 to-deco-plum/90"></div>
@@ -111,3 +119,4 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     </section>;
 };
 export default HeroSection;
+
