@@ -87,7 +87,11 @@ const BlogPage = () => {
   const featuredPost = blogPosts.find(post => post.featured);
   return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader title="Blog & Insights" description="Expert Knowledge and Creative Inspiration" backgroundImage="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000&h=600" />
+      <PageHeader
+        title="Blog & Insights"
+        description="Expert Knowledge and Creative Inspiration"
+        backgroundImage="/lovable-uploads/afc93e07-379c-4be5-a5bc-9cbb0b81e715.png"
+      />
       
       <main className="flex-grow">
         {/* Featured Post */}
