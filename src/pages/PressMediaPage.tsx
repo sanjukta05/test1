@@ -37,21 +37,21 @@ const PressMediaPage = () => {
     title: "The Artisans Behind UAE's Most Luxurious Interiors",
     publication: "Emirates Home",
     date: "March 2023",
-    image: "/lovable-uploads/photo-1488590528505-98d2b5aba04b.png",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b.jpg",
     alt: "Laptop and workspace of creative artisan"
   }, {
     id: 2,
     title: "Sustainability Meets Luxury: The Future of Decorative Finishes",
     publication: "Design Middle East",
     date: "January 2023",
-    image: "/lovable-uploads/photo-1461749280684-dccba630e2f6.png",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6.jpg",
     alt: "Monitor displaying design code"
   }, {
     id: 3,
     title: "UAE Design Inspiration: Modern, Green Offices",
     publication: "Architectural Digest Arabia",
     date: "February 2023",
-    image: "/lovable-uploads/photo-1581091226825-a6a2a5aee158.png",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158.jpg",
     alt: "Woman working on laptop in a stylish office"
   }];
   const awardRecognitions = [{
@@ -139,12 +139,7 @@ const PressMediaPage = () => {
                     alt={feature.alt}
                     className="w-full h-48 object-cover"
                     onError={e => {
-                      const element = e.currentTarget as HTMLImageElement;
-                      if (element.src.endsWith('.png')) {
-                        element.src = feature.image.replace('.png', '.jpg');
-                      } else {
-                        element.src = '/placeholder.svg';
-                      }
+                      e.currentTarget.src = '/placeholder.svg';
                     }}
                   />
                   <div className="p-6">
@@ -250,7 +245,7 @@ const PressMediaPage = () => {
                   <div className="flex items-start">
                     <div className="bg-deco-beige p-2 rounded-full mr-3">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-deco-plum" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 012.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
