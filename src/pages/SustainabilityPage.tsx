@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -29,7 +30,7 @@ const SustainabilityPage = () => {
             
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20">
               <div>
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000&h=600" alt="Eco-friendly manufacturing process" className="rounded-lg shadow-lg mb-6" />
+                <img src="/lovable-uploads/f5c50385-8d91-4c57-8b64-4d49cd2eeed0.png" alt="Eco-friendly manufacturing process" className="rounded-lg shadow-lg mb-6" />
                 <h3 className="text-2xl font-bold mb-4">Environmental Responsibility</h3>
                 <p className="text-deco-plum/80 mb-4">
                   We carefully select raw materials that minimize environmental impact while maintaining the highest quality standards. 
@@ -43,7 +44,7 @@ const SustainabilityPage = () => {
               </div>
               
               <div>
-                <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&q=80&w=1000&h=600" alt="Natural raw materials" className="rounded-lg shadow-lg mb-6" />
+                <img src="/lovable-uploads/e9a2d86d-cc04-4611-bff6-24a57f765daa.png" alt="Natural raw materials" className="rounded-lg shadow-lg mb-6" />
                 <h3 className="text-2xl font-bold mb-4">Indoor Air Quality</h3>
                 <p className="text-deco-plum/80 mb-4">
                   We understand that the finishes in your home directly impact the air you breathe. That's why we've developed our 
@@ -304,7 +305,6 @@ const SustainabilityPage = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>;
 };
