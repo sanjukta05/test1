@@ -289,3 +289,12 @@
     display: none;
   }
 }
+
+/* === Font Color Overrides for Paragraphs & Subheadings === */
+p,
+h2,
+h3,
+h4,
+h5 {
+  color: #000 !important;
+}
