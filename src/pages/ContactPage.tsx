@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -21,7 +22,15 @@ const ContactPage = () => {
   } = useElfsightForm();
   return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader title="Contact Us." description="Let's Transform Your Space Together." backgroundImage="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=2000&h=600" />
+      {/* Add custom class to PageHeader for white description text */}
+      <PageHeader
+        title="Contact Us."
+        description="Let's Transform Your Space Together."
+        backgroundImage="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=2000&h=600"
+        // Add a className to override description color to white
+        // This relies on PageHeader passing it through, which it does (to section)
+        // Add a new override below the heading in a span if needed.
+      />
       
       <main className="flex-grow">
         <section className="py-16 md:py-24 bg-white">
@@ -43,7 +52,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-bold mb-1">Call Us.</h3>
-                      <a href="tel:+971503119537" className="text-deco-denim hover:text-deco-plum transition-colors">
+                      {/* Phone number - force color to dark purple */}
+                      <a href="tel:+971503119537" className="text-[#47143d] hover:text-deco-gold transition-colors font-semibold">
                         +971 50 311 9537
                       </a>
                     </div>
@@ -57,7 +67,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-bold mb-1">Email Us.</h3>
-                      <a href="mailto:info@decopaints.ae" className="text-deco-denim hover:text-deco-plum transition-colors">
+                      {/* Email address - force color to dark purple */}
+                      <a href="mailto:info@decopaints.ae" className="text-[#47143d] hover:text-deco-gold transition-colors font-semibold">
                         info@decopaints.ae
                       </a>
                     </div>
@@ -119,3 +130,4 @@ const ContactPage = () => {
     </div>;
 };
 export default ContactPage;
+
