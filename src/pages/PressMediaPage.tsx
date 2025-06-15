@@ -37,22 +37,22 @@ const PressMediaPage = () => {
     title: "The Artisans Behind UAE's Most Luxurious Interiors",
     publication: "Emirates Home",
     date: "March 2023",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b.jpg",
-    alt: "Laptop and workspace of creative artisan"
+    image: "/lovable-uploads/839c717b-394c-45f4-b008-3a02824438e2.png",
+    alt: "Modern luxury bathroom with black brick walls, illuminated circular mirror, wood detail, and plants."
   }, {
     id: 2,
     title: "Sustainability Meets Luxury: The Future of Decorative Finishes",
     publication: "Design Middle East",
     date: "January 2023",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6.jpg",
-    alt: "Monitor displaying design code"
+    image: "/lovable-uploads/a286f3e7-75c4-4847-aa4a-99f0ff6c5b44.png",
+    alt: "Luxurious interior lounge featuring dramatic blue marble flooring and elegant furniture."
   }, {
     id: 3,
     title: "UAE Design Inspiration: Modern, Green Offices",
     publication: "Architectural Digest Arabia",
     date: "February 2023",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158.jpg",
-    alt: "Woman working on laptop in a stylish office"
+    image: "/lovable-uploads/39f43e63-8964-44ac-ab14-bc2d60f6653b.png",
+    alt: "Contemporary vanity space with patterned walls, round mirror, and modern lighting."
   }];
   const awardRecognitions = [{
     title: "Middle East Design Award",
