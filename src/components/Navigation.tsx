@@ -179,7 +179,7 @@ const Navigation = () => {
           </nav>
 
           {/* Get Estimate Button */}
-          <Link to="/contact" className="hidden md:inline-flex items-center bg-deco-denim text-white px-6 py-2 rounded-full hover:shadow-md transition-all">
+          <Link to="/contact" className="hidden md:inline-flex items-center bg-deco-plum text-white px-6 py-2 rounded-full hover:shadow-md transition-all">
             Get Estimate
           </Link>
 
@@ -265,7 +265,7 @@ const Navigation = () => {
               </div>
             </div>
             
-            <Link to="/contact" className="bg-deco-denim text-white px-6 py-3 rounded-full text-center">
+            <Link to="/contact" className="bg-deco-plum text-white px-6 py-3 rounded-full text-center">
               Get Estimate
             </Link>
           </nav>
