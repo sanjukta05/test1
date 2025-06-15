@@ -83,11 +83,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <a href="#textures" className={`btn-outline inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'} font-circular`}>
+            <a
+              href="#textures"
+              className={`inline-flex items-center gap-2 text-lg font-circular transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}
+              style={{ backgroundColor: '#B99750', color: '#fff', borderRadius: '9999px', padding: '12px 28px', fontWeight: 500, boxShadow: '0 1px 4px 0 rgba(50,20,90,0.04)' }}
+            >
               <Building className="w-5 h-5" />
               Discover Our Finishes
             </a>
-            <button type="button" className={`btn-cta inline-flex items-center gap-2 text-lg transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'} font-circular`} onClick={openEstimateForm}>
+            <button
+              type="button"
+              className={`inline-flex items-center gap-2 text-lg font-circular transition-all duration-1000 ${isLoaded ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}
+              style={{ backgroundColor: '#B99750', color: '#fff', borderRadius: '9999px', padding: '12px 28px', fontWeight: 500, boxShadow: '0 1px 4px 0 rgba(50,20,90,0.04)' }}
+              onClick={openEstimateForm}
+            >
               <Paintbrush className="w-5 h-5" />
               Get Estimate
             </button>

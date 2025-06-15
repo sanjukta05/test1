@@ -34,7 +34,7 @@ const Index = () => {
         {/* Hero Section with CTAs */}
         <HeroSection openEstimateForm={openForm} />
         <BrandPromise />
-        
+
         {/* Texture Section */}
         <section id="textures" className="section bg-white">
           <div className="container mx-auto px-4">
@@ -101,7 +101,11 @@ const Index = () => {
               </div>
               
               <div className="mt-16 text-center">
-                <button type="button" onClick={openForm} className="bg-deco-denim text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all font-circular text-lg">
+                <button
+                  type="button"
+                  onClick={openForm}
+                  className="bg-deco-plum text-white px-6 py-3 rounded-full inline-flex items-center hover:shadow-lg transition-all font-circular text-lg"
+                >
                   <Paintbrush className="h-5 w-5 mr-2" />
                   Schedule Consultation.
                 </button>
@@ -233,18 +237,21 @@ const Index = () => {
               </div>
             </div>
             <div className="mt-12 text-center">
-              <button onClick={() => {
-              const el = document.getElementById('footer-deco-paints');
-              if (el) el.scrollIntoView({
-                behavior: 'smooth'
-              });
-            }} className="btn-outline inline-flex items-center font-circular">
+              <button
+                onClick={() => {
+                  const el = document.getElementById('footer-deco-paints');
+                  if (el) el.scrollIntoView({
+                    behavior: 'smooth'
+                  });
+                }}
+                className="bg-deco-plum text-white px-6 py-3 rounded-full inline-flex items-center font-circular text-lg hover:shadow-lg transition-all"
+              >
                 View All Projects.
               </button>
             </div>
           </div>
         </section>
-        
+
         {/* Contact CTA */}
         <ContactCTA cta="Transform Your Space." onCtaClick={openForm} />
       </main>
