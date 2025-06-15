@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -7,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from 'lucide-react';
 
-// Update: Use 3 uploaded images, keep only 6 locations (remove Umm Al Quwain)
+// Use all 6 uploaded images for 6 locations (one per location, in order)
 const locationData = [
   {
     name: "Dubai",
@@ -29,19 +30,19 @@ const locationData = [
   },
   {
     name: "Ajman",
-    image: "https://images.unsplash.com/photo-1529027903438-baa64663196a?auto=format&fit=crop&q=80&w=1000&h=600",
+    image: "/lovable-uploads/21bdf105-895d-4e81-bec3-bc6936561dd2.png",
     description: "Providing premium decorative finishes to the growing real estate developments in Ajman and surrounding areas.",
     path: "/locations/ajman"
   },
   {
     name: "Ras Al Khaimah",
-    image: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80&w=1000&h=600",
+    image: "/lovable-uploads/ba27fd41-1cc2-465c-88a9-35e7b90ac2da.png",
     description: "Extending our luxury finishes to the northernmost region, known for its natural beauty and growing luxury resorts.",
     path: "/locations/rak"
   },
   {
     name: "Fujairah",
-    image: "https://images.unsplash.com/photo-1559762717-99c81ac85459?auto=format&fit=crop&q=80&w=1000&h=600",
+    image: "/lovable-uploads/62e227a4-f4ef-4fd0-b233-aabb1884d31e.png",
     description: "Bringing our artisanal finishes to the eastern coast, specialized in solutions for the coastal environment.",
     path: "/locations/fujairah"
   }
@@ -118,7 +119,6 @@ const LocationsIndex = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>;
 };
