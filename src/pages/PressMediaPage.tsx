@@ -96,9 +96,9 @@ const PressMediaPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <PageHeader 
-        title="Press & Media"
-        description="Latest News, Media Coverage, and Resources"
-        backgroundImage="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000&h=600"
+        title="Press & Media."
+        description="Latest News, Media Coverage, and Resources."
+        backgroundImage="/lovable-uploads/8d1007c1-5891-4364-91c8-7a6972b3d8fc.png"
       />
       
       <main className="flex-grow">
