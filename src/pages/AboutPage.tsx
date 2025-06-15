@@ -9,18 +9,14 @@ const AboutPage = () => {
   }, []);
   return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader
-        title="About DecoPaints"
-        description="Crafting Premium Finishes Since 2010"
-        backgroundImage="/lovable-uploads/f65dbab1-b79d-4c6b-bb8d-2761277f61d6.png"
-      />
+      <PageHeader title="About DecoPaints" description="Crafting Premium Finishes Since 2010" backgroundImage="/lovable-uploads/f65dbab1-b79d-4c6b-bb8d-2761277f61d6.png" />
       
       <main className="flex-grow">
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="font-distrampler text-5xl mb-6 font-normal">Our Story</h2>
+                <h2 className="font-distrampler text-5xl mb-6 font-normal">Our Story.</h2>
                 <p className="font-circular text-xl mb-6 text-deco-plum/80">
                   Founded in 2010, DecoPaints began with a singular vision: to bring the timeless beauty of 
                   artisanal finishes to contemporary spaces. Our journey started in the heart of Dubai with 
@@ -34,11 +30,7 @@ const AboutPage = () => {
                 </p>
               </div>
               <div className="relative flex flex-col items-center space-y-6">
-                <img 
-                  src="/lovable-uploads/879dd430-1a68-471a-a24d-ba955c5e5cb5.png" 
-                  alt="Modern luxury bedroom interior with neutral tones and artistic finishes" 
-                  className="rounded-lg shadow-lg w-full object-cover max-h-[370px] mb-5"
-                />
+                <img src="/lovable-uploads/879dd430-1a68-471a-a24d-ba955c5e5cb5.png" alt="Modern luxury bedroom interior with neutral tones and artistic finishes" className="rounded-lg shadow-lg w-full object-cover max-h-[370px] mb-5" />
                 <div className="absolute -bottom-6 -right-6 bg-deco-plum text-white p-4 rounded-lg shadow-lg">
                   <p className="font-bold">13+ Years</p>
                   <p className="text-sm">of Artistic Excellence</p>
@@ -50,7 +42,7 @@ const AboutPage = () => {
 
         <section className="py-16 md:py-24 bg-deco-beige">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl mb-12 text-center font-normal md:text-5xl">Our Values</h2>
+            <h2 className="text-3xl mb-12 text-center font-normal md:text-5xl">Our Values.</h2>
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -97,7 +89,7 @@ const AboutPage = () => {
 
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl mb-12 text-center font-normal md:text-5xl">Frequently Asked Questions</h2>
+            <h2 className="text-3xl mb-12 text-center font-normal md:text-5xl">Frequently Asked Questions.</h2>
             
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
@@ -148,7 +140,7 @@ const AboutPage = () => {
         
         <section className="py-16 md:py-24 bg-deco-plum text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Expertise at Your Service</h2>
+            <h2 className="text-3xl mb-6 font-normal md:text-5xl">Our Expertise at Your Service.</h2>
             <p className="text-xl mb-12 max-w-3xl mx-auto text-white/90">
               Transform your space with the region's most trusted decorative finishing experts.
             </p>
