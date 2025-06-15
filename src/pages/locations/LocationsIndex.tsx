@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -7,85 +6,64 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from 'lucide-react';
-
-const locationData = [
-  {
-    name: "Dubai",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1000&h=600",
-    description: "Our flagship location with our main Experience Center, serving all districts from Downtown to Marina, Palm Jumeirah to Arabian Ranches.",
-    path: "/locations/dubai"
-  },
-  {
-    name: "Abu Dhabi",
-    image: "https://images.unsplash.com/photo-1551041377-19c3d646fca0?auto=format&fit=crop&q=80&w=1000&h=600",
-    description: "Serving the capital with premium decorative finishing solutions for residential and commercial properties throughout Abu Dhabi.",
-    path: "/locations/abudhabi"
-  },
-  {
-    name: "Sharjah",
-    image: "https://images.unsplash.com/photo-1553855994-ef3319430bf3?auto=format&fit=crop&q=80&w=1000&h=600",
-    description: "Offering our complete range of decorative paints and flooring solutions to the cultural capital.",
-    path: "/locations/sharjah"
-  },
-  {
-    name: "Ajman",
-    image: "https://images.unsplash.com/photo-1529027903438-baa64663196a?auto=format&fit=crop&q=80&w=1000&h=600",
-    description: "Providing premium decorative finishes to the growing real estate developments in Ajman and surrounding areas.",
-    path: "/locations/ajman"
-  },
-  {
-    name: "Ras Al Khaimah",
-    image: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80&w=1000&h=600",
-    description: "Extending our luxury finishes to the northernmost region, known for its natural beauty and growing luxury resorts.",
-    path: "/locations/rak"
-  },
-  {
-    name: "Fujairah",
-    image: "https://images.unsplash.com/photo-1559762717-99c81ac85459?auto=format&fit=crop&q=80&w=1000&h=600",
-    description: "Bringing our artisanal finishes to the eastern coast, specialized in solutions for the coastal environment.",
-    path: "/locations/fujairah"
-  },
-  {
-    name: "Umm Al Quwain",
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80&w=1000&h=600",
-    description: "Servicing both residential and hospitality projects in this charming and traditional region.",
-    path: "/locations/uaq"
-  },
-];
-
+const locationData = [{
+  name: "Dubai",
+  image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1000&h=600",
+  description: "Our flagship location with our main Experience Center, serving all districts from Downtown to Marina, Palm Jumeirah to Arabian Ranches.",
+  path: "/locations/dubai"
+}, {
+  name: "Abu Dhabi",
+  image: "https://images.unsplash.com/photo-1551041377-19c3d646fca0?auto=format&fit=crop&q=80&w=1000&h=600",
+  description: "Serving the capital with premium decorative finishing solutions for residential and commercial properties throughout Abu Dhabi.",
+  path: "/locations/abudhabi"
+}, {
+  name: "Sharjah",
+  image: "https://images.unsplash.com/photo-1553855994-ef3319430bf3?auto=format&fit=crop&q=80&w=1000&h=600",
+  description: "Offering our complete range of decorative paints and flooring solutions to the cultural capital.",
+  path: "/locations/sharjah"
+}, {
+  name: "Ajman",
+  image: "https://images.unsplash.com/photo-1529027903438-baa64663196a?auto=format&fit=crop&q=80&w=1000&h=600",
+  description: "Providing premium decorative finishes to the growing real estate developments in Ajman and surrounding areas.",
+  path: "/locations/ajman"
+}, {
+  name: "Ras Al Khaimah",
+  image: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&q=80&w=1000&h=600",
+  description: "Extending our luxury finishes to the northernmost region, known for its natural beauty and growing luxury resorts.",
+  path: "/locations/rak"
+}, {
+  name: "Fujairah",
+  image: "https://images.unsplash.com/photo-1559762717-99c81ac85459?auto=format&fit=crop&q=80&w=1000&h=600",
+  description: "Bringing our artisanal finishes to the eastern coast, specialized in solutions for the coastal environment.",
+  path: "/locations/fujairah"
+}, {
+  name: "Umm Al Quwain",
+  image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80&w=1000&h=600",
+  description: "Servicing both residential and hospitality projects in this charming and traditional region.",
+  path: "/locations/uaq"
+}];
 const LocationsIndex = () => {
   useEffect(() => {
     document.title = "Our Locations | DecoPaints";
   }, []);
-  
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader 
-        title="Our UAE Locations"
-        description="Serving Premium Clients Across All Emirates"
-        backgroundImage="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=2000&h=600"
-      />
+      <PageHeader title="Our UAE Locations" description="Serving Premium Clients Across All Emirates" backgroundImage="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=2000&h=600" />
       
       <main className="flex-grow">
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Select Your Location</h2>
+              <h2 className="md:text-4xl mb-6 text-center font-normal text-5xl">Select Your Location</h2>
               <p className="text-center mb-12 max-w-3xl mx-auto text-deco-plum/80">
                 DecoPaints provides premium decorative finishes across all seven emirates. 
                 Find your nearest location and explore our services tailored to your region.
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {locationData.map((location) => (
-                  <Card key={location.name} className="overflow-hidden">
+                {locationData.map(location => <Card key={location.name} className="overflow-hidden">
                     <div className="h-48 overflow-hidden">
-                      <img 
-                        src={location.image} 
-                        alt={`${location.name} location`}
-                        className="w-full h-full object-cover transition-transform hover:scale-105"
-                      />
+                      <img src={location.image} alt={`${location.name} location`} className="w-full h-full object-cover transition-transform hover:scale-105" />
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-2xl font-bold mb-2">{location.name}</h3>
@@ -96,8 +74,7 @@ const LocationsIndex = () => {
                         </Button>
                       </Link>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
             </div>
           </div>
@@ -106,7 +83,7 @@ const LocationsIndex = () => {
         <section className="py-16 bg-deco-beige">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">UAE-Wide Service</h2>
+              <h2 className="md:text-4xl mb-6 text-5xl font-normal">UAE-Wide Service</h2>
               <p className="mb-8 text-deco-plum/80">
                 Our expert craftsmen travel across all seven emirates to deliver premium decorative finishes 
                 to commercial and residential clients. Each location has a dedicated team familiar with the 
@@ -131,8 +108,6 @@ const LocationsIndex = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default LocationsIndex;
