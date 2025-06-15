@@ -9,7 +9,11 @@ const SustainabilityPage = () => {
   }, []);
   return <div className="min-h-screen flex flex-col">
       <Navigation />
-      <PageHeader title="Our Sustainability Commitment" description="Responsible Practices for a Better Tomorrow" backgroundImage="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=2000&h=600" />
+      <PageHeader
+        title="Our Sustainability Commitment"
+        description="Responsible Practices for a Better Tomorrow"
+        backgroundImage="/lovable-uploads/78e0e2c7-2ff0-47fd-b70b-aec0c55e7f54.png"
+      />
       
       <main className="flex-grow">
         <section className="py-16 md:py-24 bg-white">
