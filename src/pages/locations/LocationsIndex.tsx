@@ -30,7 +30,7 @@ const locationData = [
   },
   {
     name: "Ajman",
-    image: "/lovable-uploads/21bdf105-895d-4e81-bec3-bc6936561dd2.png",
+    image: "/lovable-uploads/90e05707-9775-4ad7-a54e-3aeb0f75ba42.png",
     description: "Providing premium decorative finishes to the growing real estate developments in Ajman and surrounding areas.",
     path: "/locations/ajman"
   },
@@ -42,7 +42,7 @@ const locationData = [
   },
   {
     name: "Fujairah",
-    image: "/lovable-uploads/62e227a4-f4ef-4fd0-b233-aabb1884d31e.png",
+    image: "/lovable-uploads/8ba459d4-187e-4f47-aab5-df4d1c208a04.png",
     description: "Bringing our artisanal finishes to the eastern coast, specialized in solutions for the coastal environment.",
     path: "/locations/fujairah"
   }
