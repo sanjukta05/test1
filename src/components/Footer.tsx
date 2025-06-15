@@ -2,6 +2,8 @@ import React from 'react';
 import { Instagram, Facebook, Twitter, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
+import CallButton from './CallButton';
+
 const Footer = () => {
   return <footer className="bg-deco-plum text-white relative overflow-hidden font-circular">
       {/* Gold accent line */}
@@ -115,6 +117,9 @@ const Footer = () => {
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-contain bg-repeat-x bg-bottom opacity-10" style={{
       backgroundImage: 'url(/dubai-skyline.svg)'
     }}></div>
+      {/* Floating Call Button */}
+      <CallButton />
     </footer>;
 };
+
 export default Footer;

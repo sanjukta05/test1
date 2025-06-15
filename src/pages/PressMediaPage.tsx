@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -47,21 +46,21 @@ const PressMediaPage = () => {
       title: "The Artisans Behind UAE's Most Luxurious Interiors",
       publication: "Emirates Home",
       date: "March 2023",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1000&h=600"
+      image: "/lovable-uploads/photo-1488590528505-98d2b5aba04b.jpg"
     },
     {
       id: 2,
       title: "Sustainability Meets Luxury: The Future of Decorative Finishes",
       publication: "Design Middle East",
       date: "January 2023",
-      image: "https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?auto=format&fit=crop&q=80&w=1000&h=600"
+      image: "/lovable-uploads/photo-1461749280684-dccba630e2f6.jpg"
     },
     {
       id: 3,
       title: "Behind the Scenes: The Making of Dubai's Most Exclusive Interiors",
       publication: "Architectural Digest Arabia",
       date: "December 2022",
-      image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&q=80&w=1000&h=600"
+      image: "/lovable-uploads/photo-1486312338219-ce68d2c6f44d.jpg"
     },
   ];
   
@@ -263,7 +262,7 @@ const PressMediaPage = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm text-center">
                   <div className="h-16 flex items-center justify-center mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-deco-plum" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">Media Events</h3>
