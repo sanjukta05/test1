@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -83,13 +82,13 @@ const SustainabilityPage = () => {
               </TabsList>
               
               <TabsContent value="materials" className="mt-6">
-                <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 bg-white p-4 md:p-8 rounded-lg shadow-sm">
                   <div>
-                    <h3 className="text-2xl font-bold mb-4">Responsible Sourcing</h3>
-                    <p className="text-deco-plum/80 mb-4">
+                    <h3 className="text-2xl font-bold mb-3 md:mb-4">Responsible Sourcing</h3>
+                    <p className="text-deco-plum/80 mb-3 md:mb-4">
                       We carefully select suppliers who share our commitment to environmental responsibility and ethical business practices.
                     </p>
-                    <ul className="list-disc pl-5 space-y-2 text-deco-plum/80">
+                    <ul className="list-disc pl-5 space-y-1 md:space-y-2 text-deco-plum/80">
                       <li>Natural lime from certified sustainable quarries</li>
                       <li>Clay and mineral pigments from responsible sources</li>
                       <li>Locally sourced materials when possible to reduce transportation emissions</li>
@@ -97,7 +96,7 @@ const SustainabilityPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto">
+                    <AspectRatio ratio={4 / 3} className="w-full max-w-xs md:max-w-md mx-auto mt-5 md:mt-0">
                       <img src="/lovable-uploads/4d7745d5-a235-4778-8620-db73f529a77b.png" alt="" className="rounded-lg shadow-md object-cover w-full h-full" />
                     </AspectRatio>
                   </div>
@@ -105,18 +104,18 @@ const SustainabilityPage = () => {
               </TabsContent>
               
               <TabsContent value="packaging" className="mt-6">
-                <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 bg-white p-4 md:p-8 rounded-lg shadow-sm">
                   <div>
-                    <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto">
+                    <AspectRatio ratio={4 / 3} className="w-full max-w-xs md:max-w-md mx-auto mb-4 md:mb-0">
                       <img src="/lovable-uploads/c6c449b5-dadc-454e-9643-bdecc8853896.png" alt="" className="rounded-lg shadow-md object-cover w-full h-full" />
                     </AspectRatio>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-4">Packaging Innovation</h3>
-                    <p className="text-deco-plum/80 mb-4">
+                    <h3 className="text-2xl font-bold mb-3 md:mb-4">Packaging Innovation</h3>
+                    <p className="text-deco-plum/80 mb-3 md:mb-4">
                       We're continually reimagining our packaging to minimize waste while ensuring our products are protected during transport.
                     </p>
-                    <ul className="list-disc pl-5 space-y-2 text-deco-plum/80">
+                    <ul className="list-disc pl-5 space-y-1 md:space-y-2 text-deco-plum/80">
                       <li>Recycled and recyclable packaging materials</li>
                       <li>Bulk packaging options for commercial projects</li>
                       <li>Refill programs to reduce container usage</li>
@@ -127,13 +126,13 @@ const SustainabilityPage = () => {
               </TabsContent>
               
               <TabsContent value="emissions" className="mt-6">
-                <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 bg-white p-4 md:p-8 rounded-lg shadow-sm">
                   <div>
-                    <h3 className="text-2xl font-bold mb-4">Carbon Reduction Strategy</h3>
-                    <p className="text-deco-plum/80 mb-4">
+                    <h3 className="text-2xl font-bold mb-3 md:mb-4">Carbon Reduction Strategy</h3>
+                    <p className="text-deco-plum/80 mb-3 md:mb-4">
                       We're working toward carbon neutrality through a comprehensive approach to emissions reduction.
                     </p>
-                    <ul className="list-disc pl-5 space-y-2 text-deco-plum/80">
+                    <ul className="list-disc pl-5 space-y-1 md:space-y-2 text-deco-plum/80">
                       <li>Energy-efficient manufacturing facilities</li>
                       <li>Solar power integration at our Dubai headquarters</li>
                       <li>Electric vehicle fleet for local deliveries</li>
@@ -142,7 +141,7 @@ const SustainabilityPage = () => {
                     </ul>
                   </div>
                   <div>
-                    <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto">
+                    <AspectRatio ratio={4 / 3} className="w-full max-w-xs md:max-w-md mx-auto mt-5 md:mt-0">
                       <img src="/lovable-uploads/45cebf87-1be7-44bd-8123-a08b8b8b0e80.png" alt="" className="rounded-lg shadow-md object-cover w-full h-full" />
                     </AspectRatio>
                   </div>
@@ -150,18 +149,18 @@ const SustainabilityPage = () => {
               </TabsContent>
               
               <TabsContent value="community" className="mt-6">
-                <div className="grid md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 bg-white p-4 md:p-8 rounded-lg shadow-sm">
                   <div>
-                    <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto">
+                    <AspectRatio ratio={4 / 3} className="w-full max-w-xs md:max-w-md mx-auto mb-4 md:mb-0">
                       <img src="/lovable-uploads/9ad311a1-805b-4eae-8223-7bb8fe09cc77.png" alt="" className="rounded-lg shadow-md object-cover w-full h-full" />
                     </AspectRatio>
                   </div>
                   <div>
-                    <h3 className="mb-4 text-5xl font-normal">Supporting Local Communities</h3>
-                    <p className="text-deco-plum/80 mb-4">
+                    <h3 className="mb-3 md:mb-4 text-2xl md:text-5xl font-normal">Supporting Local Communities</h3>
+                    <p className="text-deco-plum/80 mb-3 md:mb-4">
                       We believe in giving back to the communities where we operate and helping create more sustainable urban environments.
                     </p>
-                    <ul className="list-disc pl-5 space-y-2 text-deco-plum/80">
+                    <ul className="list-disc pl-5 space-y-1 md:space-y-2 text-deco-plum/80">
                       <li>Annual community beautification projects</li>
                       <li>Training programs for local artisans in traditional techniques</li>
                       <li>Educational workshops on sustainable building practices</li>
@@ -323,4 +322,3 @@ const SustainabilityPage = () => {
     </div>;
 };
 export default SustainabilityPage;
-
