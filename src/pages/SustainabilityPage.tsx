@@ -30,7 +30,9 @@ const SustainabilityPage = () => {
             
             <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20">
               <div>
-                <img src="/lovable-uploads/f5c50385-8d91-4c57-8b64-4d49cd2eeed0.png" alt="Eco-friendly manufacturing process" className="rounded-lg shadow-lg mb-6" />
+                <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto mb-6">
+                  <img src="/lovable-uploads/f5c50385-8d91-4c57-8b64-4d49cd2eeed0.png" alt="Eco-friendly manufacturing process" className="rounded-lg shadow-lg object-cover w-full h-full" />
+                </AspectRatio>
                 <h3 className="text-2xl font-bold mb-4">Environmental Responsibility</h3>
                 <p className="text-deco-plum/80 mb-4">
                   We carefully select raw materials that minimize environmental impact while maintaining the highest quality standards. 
@@ -44,7 +46,9 @@ const SustainabilityPage = () => {
               </div>
               
               <div>
-                <img src="/lovable-uploads/e9a2d86d-cc04-4611-bff6-24a57f765daa.png" alt="Natural raw materials" className="rounded-lg shadow-lg mb-6" />
+                <AspectRatio ratio={4 / 3} className="w-full max-w-md mx-auto mb-6">
+                  <img src="/lovable-uploads/e9a2d86d-cc04-4611-bff6-24a57f765daa.png" alt="Natural raw materials" className="rounded-lg shadow-lg object-cover w-full h-full" />
+                </AspectRatio>
                 <h3 className="text-2xl font-bold mb-4">Indoor Air Quality</h3>
                 <p className="text-deco-plum/80 mb-4">
                   We understand that the finishes in your home directly impact the air you breathe. That's why we've developed our 
@@ -192,7 +196,7 @@ const SustainabilityPage = () => {
               <div className="text-center">
                 <div className="h-20 flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-deco-plum" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-.181h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                   </svg>
                 </div>
                 <h3 className="font-bold mb-2">LEED<span className="text-deco-denim">points</span></h3>
