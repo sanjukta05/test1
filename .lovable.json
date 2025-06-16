@@ -1,3 +1,5 @@
 {
-  "root": "."
+  "buildCommand": "npm run build",
+  "previewCommand": "npm run preview",
+  "installCommand": "npm install"
 }
