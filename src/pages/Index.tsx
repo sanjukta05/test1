@@ -183,7 +183,7 @@ const Index = () => {
                 <div className="p-6 bg-white">
                   <h3 className="font-distrampler text-xl font-bold mb-1">Luxury Living Room</h3>
                   <p className="text-deco-plum/70 mb-3">
-                    <span className="text-deco-gold">Downtown Dubai</span> • Venetian Marmorino
+                    <span className="text-deco-gold">Downtown Dubai</span> 
                   </p>
                   <button className="text-deco-denim font-medium hover:underline font-circular" onClick={() => {
                   const el = document.getElementById('footer-deco-paints');
@@ -203,7 +203,7 @@ const Index = () => {
                 <div className="p-6 bg-white">
                   <h3 className="font-distrampler text-xl font-bold mb-1">Modern Kitchen</h3>
                   <p className="text-deco-plum/70 mb-3">
-                    <span className="text-deco-gold">Palm Jumeirah</span> • Pearl Finish
+                    <span className="text-deco-gold">Palm Jumeirah</span> 
                   </p>
                   <button className="text-deco-denim font-medium hover:underline font-circular" onClick={() => {
                   const el = document.getElementById('footer-deco-paints');
@@ -223,7 +223,7 @@ const Index = () => {
                 <div className="p-6 bg-white">
                   <h3 className="font-distrampler text-xl font-bold mb-1">Spa-Inspired Bathroom</h3>
                   <p className="text-deco-plum/70 mb-3">
-                    <span className="text-deco-gold">Dubai Marina</span> • Waterproof Microcement
+                    <span className="text-deco-gold">Dubai Marina</span> 
                   </p>
                   <button className="text-deco-denim font-medium hover:underline font-circular" onClick={() => {
                   const el = document.getElementById('footer-deco-paints');
