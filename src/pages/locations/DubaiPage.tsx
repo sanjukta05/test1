@@ -45,28 +45,8 @@ const DubaiPage = () => {
   }, {
     name: "DIFC",
     slug: "difc"
-  }, {
-    name: "Silicon Oasis",
-    slug: "silicon-oasis"
-  }, {
-    name: "Al Quoz",
-    slug: "al-quoz"
-  }, {
-    name: "Mirdif",
-    slug: "mirdif"
-  }, {
-    name: "International City",
-    slug: "international-city"
-  }, {
-    name: "Motor City",
-    slug: "motor-city"
-  }, {
-    name: "Dubai Land",
-    slug: "dubai-land"
-  }, {
-    name: "Creek Harbour",
-    slug: "creek-harbour"
   }];
+  
   return <div className="min-h-screen flex flex-col">
       <Navigation />
       <PageHeader title="Dubai's Best Decorative Paints & Flooring Company" description="Premium decorative finishes for Dubai's luxury properties" backgroundImage="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=2000&h=600" />
