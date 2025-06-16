@@ -1,136 +1,17 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
-import Index from "./pages/Index";
-import AboutPage from "./pages/AboutPage";
-import CareersPage from "./pages/CareersPage";
-import BlogPage from "./pages/BlogPage";
-import SustainabilityPage from "./pages/SustainabilityPage";
-import PressMediaPage from "./pages/PressMediaPage";
-import ContactPage from "./pages/ContactPage";
-import ProductPage from "./pages/ProductPage";
-import NotFound from "./pages/NotFound";
 
-// Location Pages
-import LocationsIndex from "./pages/locations/LocationsIndex";
-import DubaiPage from "./pages/locations/DubaiPage";
-import AbuDhabiPage from "./pages/locations/AbuDhabiPage";
-import SharjahPage from "./pages/locations/SharjahPage";
-import AjmanPage from "./pages/locations/AjmanPage";
-import RasAlKhaimahPage from "./pages/locations/RasAlKhaimahPage";
-import FujairahPage from "./pages/locations/FujairahPage";
-import UmmAlQuwainPage from "./pages/locations/UmmAlQuwainPage";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Toaster } from "@/components/ui/sonner";
+import Index from "@/pages/Index";
 
-// Location District Pages
-import DubaiDistricts from "./pages/locations/dubai/DubaiDistricts";
-import AbuDhabiDistricts from "./pages/locations/abudhabi/AbuDhabiDistricts";
-import SharjahDistricts from "./pages/locations/sharjah/SharjahDistricts";
-import AjmanDistricts from "./pages/locations/ajman/AjmanDistricts";
-import RAKDistricts from "./pages/locations/rak/RAKDistricts";
-import FujairahDistricts from "./pages/locations/fujairah/FujairahDistricts";
-import UAQDistricts from "./pages/locations/uaq/UAQDistricts";
-
-// Paint Product Pages
-import MarmolinoPage from "./pages/paints/MarmolinoPage";
-import LimewashPage from "./pages/paints/LimewashPage";
-import ConcreteTexturePage from "./pages/paints/ConcreteTexturePage";
-import PearlFinishPage from "./pages/paints/PearlFinishPage";
-import GoldSilverLeafPage from "./pages/paints/GoldSilverLeafPage";
-import BrickFinishPage from "./pages/paints/BrickFinishPage";
-import StencilPaintingPage from "./pages/paints/StencilPaintingPage";
-
-// Flooring Product Pages
-import MicroCementPage from "./pages/flooring/MicroCementPage";
-import TerrazzoFlooringPage from "./pages/flooring/TerrazzoFlooringPage";
-import ResinBoundSurfacePage from "./pages/flooring/ResinBoundSurfacePage";
-import DecorativeEpoxyPage from "./pages/flooring/DecorativeEpoxyPage";
-import MetallicEpoxyPage from "./pages/flooring/MetallicEpoxyPage";
-import StampedConcretePage from "./pages/flooring/StampedConcretePage";
-
-import React from "react";
-import { ElfsightFormProvider } from "./components/ElfsightFormContext";
-import ElfsightFormModal from "./components/ElfsightFormModal";
-import ElfsightWidgets from "./components/ElfsightWidgets";
-import GetEstimateMobileButton from "./components/GetEstimateMobileButton";
-
-const App = () => {
-  // Create QueryClient inside the component body
-  const [queryClient] = useState(() => new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 1000 * 60 * 5, // 5 minutes
-        retry: 1,
-      },
-    },
-  }));
-
+function App() {
   return (
-    <ElfsightFormProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        {/* Add Elfsight click-to-call and WhatsApp widgets globally (bottom right on every page) */}
-        <ElfsightWidgets />
-        {/* Add Get Estimate floating button (bottom left, mobile only) globally */}
-        <GetEstimateMobileButton />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/sustainability" element={<SustainabilityPage />} />
-            <Route path="/press-media" element={<PressMediaPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/product/:type/:id" element={<ProductPage />} />
-            
-            {/* Location Pages */}
-            <Route path="/locations" element={<LocationsIndex />} />
-            <Route path="/locations/dubai" element={<DubaiPage />} />
-            <Route path="/locations/abudhabi" element={<AbuDhabiPage />} />
-            <Route path="/locations/sharjah" element={<SharjahPage />} />
-            <Route path="/locations/ajman" element={<AjmanPage />} />
-            <Route path="/locations/rak" element={<RasAlKhaimahPage />} />
-            <Route path="/locations/fujairah" element={<FujairahPage />} />
-            <Route path="/locations/uaq" element={<UmmAlQuwainPage />} />
-            
-            {/* Location District Pages */}
-            <Route path="/locations/dubai/:district" element={<DubaiDistricts />} />
-            <Route path="/locations/abudhabi/:district" element={<AbuDhabiDistricts />} />
-            <Route path="/locations/sharjah/:district" element={<SharjahDistricts />} />
-            <Route path="/locations/ajman/:district" element={<AjmanDistricts />} />
-            <Route path="/locations/rak/:district" element={<RAKDistricts />} />
-            <Route path="/locations/fujairah/:district" element={<FujairahDistricts />} />
-            <Route path="/locations/uaq/:district" element={<UAQDistricts />} />
-            
-            {/* Paint Product Pages */}
-            <Route path="/paints/marmorino" element={<MarmolinoPage />} />
-            <Route path="/paints/limewash" element={<LimewashPage />} />
-            <Route path="/paints/concrete-texture" element={<ConcreteTexturePage />} />
-            <Route path="/paints/pearl-finish" element={<PearlFinishPage />} />
-            <Route path="/paints/gold-silver-leaf" element={<GoldSilverLeafPage />} />
-            <Route path="/paints/brick-finish" element={<BrickFinishPage />} />
-            <Route path="/paints/stencil-painting" element={<StencilPaintingPage />} />
-            
-            {/* Flooring Product Pages */}
-            <Route path="/flooring/micro-cement" element={<MicroCementPage />} />
-            <Route path="/flooring/terrazzo-flooring" element={<TerrazzoFlooringPage />} />
-            <Route path="/flooring/resin-bound-surface" element={<ResinBoundSurfacePage />} />
-            <Route path="/flooring/decorative-epoxy" element={<DecorativeEpoxyPage />} />
-            <Route path="/flooring/metallic-epoxy" element={<MetallicEpoxyPage />} />
-            <Route path="/flooring/stamped-concrete" element={<StampedConcretePage />} />
-            
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-      {/* Add ElfsightFormModal at root so it is globally accessible */}
-      <ElfsightFormModal />
-    </ElfsightFormProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Index />} />
+      </Routes>
+      <Toaster />
+    </Router>
   );
-};
+}
 
 export default App;
