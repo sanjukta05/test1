@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,12 +54,12 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         // Brand Colors
-        "deco-plum": "#47143d", // Deep purple
+        "deco-plum": "#47143d",
         "deco-beige": "hsl(var(--deco-beige))",
         "deco-lavender": "hsl(var(--deco-lavender))",
         "deco-denim": "hsl(var(--deco-denim))",
         "deco-misty": "hsl(var(--deco-misty))",
-        "deco-gold": "#B99750", // Gold
+        "deco-gold": "#B99750",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -66,12 +67,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        'distrampler': ['Distrampler', 'serif'],
-        'circular': ['Circular Std Book', 'sans-serif'],
-        // Previous fonts as fallback:
-        'parafina': ['Playfair Display', 'serif'],
-        'grosa': ['Outfit', 'sans-serif'],
-        'grosa-mono': ['Space Mono', 'monospace'],
+        'playfair': ['Playfair Display', 'serif'],
+        'outfit': ['Outfit', 'sans-serif'],
+        'space-mono': ['Space Mono', 'monospace'],
       },
       keyframes: {
         "accordion-down": {
@@ -92,34 +90,11 @@ export default {
             transform: "translateY(0)"
           }
         },
-        "subtle-bounce": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" }
-        },
-        "shimmer": {
-          "0%": { left: "-100%" },
-          "50%, 100%": { left: "100%" }
-        },
-        "float": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-15px)" }
-        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
-        "subtle-bounce": "subtle-bounce 2s infinite ease-in-out",
-        "shimmer": "shimmer 4s infinite ease-in-out",
-        "float": "float 5s infinite ease-in-out"
-      },
-      backgroundImage: {
-        'marble-texture': "url('/textures/marble-texture.jpg')",
-        'concrete-texture': "url('/textures/concrete-texture.jpg')",
-        'limewash-texture': "url('/textures/limewash-texture.jpg')",
-        'terrazzo-texture': "url('/textures/terrazzo-texture.jpg')",
-        'geometric-pattern': "url('/textures/geometric-pattern.svg')",
-        'arch-gradient': "radial-gradient(circle at 50% 100%, rgba(50, 33, 59, 0.9), rgba(50, 33, 59, 0.7))",
       },
     },
   },
