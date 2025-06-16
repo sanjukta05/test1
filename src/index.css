@@ -1,8 +1,14 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* === Custom Fonts === */
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* === Custom Local Fonts === */
 @font-face {
   font-family: 'Distrampler';
   src: url('/lovable-uploads/Distrampler.otf') format('opentype');
@@ -51,12 +57,12 @@
     --radius: 0.5rem;
     
     /* Brand Colors */
-    --deco-plum: #47143d;    /* NEW: Deep purple */
+    --deco-plum: #47143d;
     --deco-beige: 43 71% 95%;
     --deco-lavender: 272 12% 69%;
     --deco-denim: 195 30% 57%;
     --deco-misty: 195 28% 84%;
-    --deco-gold: #B99750;   /* NEW: Gold */
+    --deco-gold: #B99750;
   }
  
   .dark {
@@ -99,40 +105,34 @@
     font-family: 'Circular Std Book', Outfit, Arial, sans-serif;
   }
 
-  /* Override p, span, ul, li, etc, to use CircularStd-Book */
+  /* Typography */
   p, span, li, ul, ol, a, label, input, textarea, button, td, th, div, section, article, nav, aside, small, strong, em {
     font-family: 'Circular Std Book', Outfit, Arial, sans-serif;
     font-weight: 400;
   }
 
-  /* Headings use Distrampler (with fallbacks for size consistency) */
   h1, h2, h3 {
     font-family: 'Distrampler', 'Playfair Display', serif;
     font-weight: 400;
     letter-spacing: .01em;
   }
-
-  /* Maintain previous font imports as fallback (optional) */
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 }
 
 @layer components {
   .btn-cta {
-    @apply bg-deco-plum text-white px-6 py-3 rounded-full shadow-sm hover:bg-deco-plum/90 transition-all font-medium;
+    @apply bg-slate-900 text-white px-6 py-3 rounded-full shadow-sm hover:bg-slate-800 transition-all font-medium;
   }
 
   .btn-secondary {
-    @apply bg-deco-plum bg-opacity-90 text-white px-6 py-3 rounded-full shadow-sm hover:bg-opacity-100 transition-all font-medium;
+    @apply bg-slate-700 text-white px-6 py-3 rounded-full shadow-sm hover:bg-slate-800 transition-all font-medium;
   }
 
   .btn-outline {
-    @apply border-2 border-deco-plum text-deco-plum px-6 py-3 rounded-full hover:bg-deco-plum hover:text-white transition-all font-medium;
+    @apply border-2 border-slate-900 text-slate-900 px-6 py-3 rounded-full hover:bg-slate-900 hover:text-white transition-all font-medium;
   }
 
   .btn-gold {
-    @apply bg-deco-gold text-deco-plum px-6 py-3 rounded-full shadow-sm hover:brightness-105 transition-all font-medium;
+    @apply bg-yellow-600 text-white px-6 py-3 rounded-full shadow-sm hover:bg-yellow-700 transition-all font-medium;
   }
 
   .section {
@@ -140,104 +140,7 @@
   }
 
   .link-hover {
-    @apply relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-deco-plum after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
-  }
-
-  /* Texture classes */
-  .texture-marble {
-    background-image: url('/textures/marble-texture.jpg');
-    background-size: cover;
-    @apply bg-blend-overlay;
-  }
-
-  .texture-concrete {
-    background-image: url('/textures/concrete-texture.jpg');
-    background-size: cover;
-    @apply bg-blend-overlay;
-  }
-
-  .texture-limewash {
-    background-image: url('/textures/limewash-texture.jpg');
-    background-size: cover;
-    @apply bg-blend-overlay;
-  }
-
-  .texture-terrazzo {
-    background-image: url('/textures/terrazzo-texture.jpg');
-    background-size: cover;
-    @apply bg-blend-overlay;
-  }
-
-  .gold-shimmer {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .gold-shimmer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-      90deg, 
-      transparent, 
-      rgba(212, 185, 106, 0.15), 
-      transparent
-    );
-    transform: skewX(-25deg);
-    animation: shimmer 4s infinite ease-in-out;
-  }
-
-  .pearl-shimmer {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .pearl-shimmer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-      90deg, 
-      transparent, 
-      rgba(255, 255, 255, 0.25), 
-      transparent
-    );
-    transform: skewX(-25deg);
-    animation: shimmer 6s infinite ease-in-out;
-  }
-
-  .arch-shape {
-    position: relative;
-  }
-
-  .arch-shape::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60%;
-    background: inherit;
-    border-radius: 100% 100% 0 0;
-    transform: scaleX(1.5);
-    z-index: -1;
-  }
-
-  .geometric-pattern {
-    background-image: url('/textures/geometric-pattern.svg');
-    background-size: 300px;
-    background-repeat: repeat;
-    @apply bg-blend-overlay bg-opacity-5;
-  }
-
-  .gradient-bg {
-    background: linear-gradient(135deg, hsla(var(--deco-plum), 0.95), hsla(var(--deco-plum), 0.8));
+    @apply relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-slate-900 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 }
 
@@ -290,11 +193,7 @@
   }
 }
 
-/* === Font Color Overrides for Paragraphs & Subheadings === */
-p,
-h2,
-h3,
-h4,
-h5 {
+/* Typography overrides */
+p, h2, h3, h4, h5 {
   color: #000 !important;
 }
