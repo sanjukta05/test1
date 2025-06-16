@@ -1,6 +1,4 @@
 
-import { Badge } from "@/components/ui/badge";
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
@@ -11,9 +9,9 @@ const Index = () => {
         <p className="text-lg text-gray-600 mb-6">
           Your project has been updated to the latest Lovable version!
         </p>
-        <Badge variant="default" className="text-sm">
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80">
           Latest Version
-        </Badge>
+        </div>
       </div>
     </div>
   );
