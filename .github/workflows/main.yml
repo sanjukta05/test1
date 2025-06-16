@@ -1,0 +1,48 @@
+name: Copy All Files to Repo 2
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  copy-root:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout source repo (Repo 1)
+      - name: Checkout source repo
+        uses: actions/checkout@v3
+
+      # Copy files to destination repo (Repo 2)
+      - name: Copy all files to Repo 2
+        env:
+          REPO2_TOKEN: ${{ secrets.REPO2_TOKEN }}
+        run: |
+          # Set variables
+          DEST_REPO="github.com/halogroups/dp-web-main-v1-prod.git"
+          DEST_BRANCH="main"
+          DEST_DIR="repo2"
+          GIT_EMAIL="your-email@example.com"
+          GIT_USER="teamhalo-git"
+
+          # Clone destination repo
+          git clone --single-branch --branch $DEST_BRANCH https://$REPO2_TOKEN@$DEST_REPO $DEST_DIR
+
+          # Remove all files in destination repo except .git
+          cd $DEST_DIR
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cd ..
+
+          # Copy all files from source repo to destination repo, excluding .git
+          rsync -av --exclude='.git' ./ $DEST_DIR/
+
+          cd $DEST_DIR
+          git config user.email "$GIT_EMAIL"
+          git config user.name "$GIT_USER"
+
+          # Add and commit changes if any
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "QC: Copy all files from Repo 1 root"
+            git push origin $DEST_BRANCH
+          else
+            echo "No changes to commit."
+          fi
