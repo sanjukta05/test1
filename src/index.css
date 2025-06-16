@@ -8,21 +8,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
-/* === Custom Local Fonts === */
-@font-face {
-  font-family: 'Distrampler';
-  src: url('/lovable-uploads/Distrampler.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Circular Std Book';
-  src: url('/lovable-uploads/CircularStd-Book.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 @layer base {
   :root {
